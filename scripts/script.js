@@ -1,0 +1,1433 @@
+'use strict';
+
+window.addEventListener('DOMContentLoaded', () => {
+    fix100vh();
+
+    window.addEventListener('resize', () => {
+        fix100vh();
+        setTooltipPosition();
+        toggleTableOverlay();
+        if (!!filtersContainer && filtersContainer.classList.contains('cases-filters--open-filters')) {
+            filtersContainer.classList.remove('cases-filters--open-filters');
+        }
+        setBalanceBlock();
+        if (!!filtersContainer && filtersContainer.classList.contains('cases-filters--fixed')) {
+            balanceBlock.style.transform = window.innerWidth > 768 ? `translateX(-50%) translateY(${filtersContainer.clientHeight}px)` : `translateX(-50%) translateY(-4px)`;
+        }
+        const caseAccordionBtns = document.querySelectorAll('.js-case-accordion-btn');
+
+        !!caseAccordionBtns && caseAccordionBtns.forEach(btn => {
+            updateCaseBlocksMaxHeight(btn);
+        });
+        setFilterSticky();
+        !!noDropContent && setHeightForNoDropContent();
+    });
+
+    // Spine animation
+    const spineContainers = document.querySelectorAll('.js-spine-animation');
+    let upgradeBodySpine = null;
+    let upgradeHandsSpine = null;
+
+    if ((spineContainers.length != 0) && (typeof spine !== 'undefined')) {
+        Promise.all([
+            spine.getSkeleton('upgrade-body').whenReady,
+            spine.getSkeleton('upgrade-hands').whenReady
+        ]).then(([body, hands]) => {
+            upgradeBodySpine = body;
+            upgradeHandsSpine = hands;
+
+            const bodyTrack = body.state.setAnimation(0, 'idle', true);
+            const handsTrack = hands.state.setAnimation(0, 'idle', true);
+
+            bodyTrack.trackTime = 0;
+            handsTrack.trackTime = 0;
+        });
+    }
+    // END Spine animation
+
+    // Splide slider
+
+    const slideContainer = document.querySelector('.skins-slider.splide');
+    const slideDrawItemContainer = document.querySelector('.draw-item__slider');
+    const slideGiveawaysItemContainer = document.querySelector('.giveaways-distr__slider');
+    const slideHeroBannersContainer = document.querySelector('.hero-banners__slider');
+
+    if (!!slideContainer) {
+        const splide = new Splide( '.skins-slider.splide', {
+            perPage: 7,
+            pagination: false,
+            padding: '2.4rem',
+            perMove: 1,
+            gap: '1.2rem',
+            paginationKeyboard: true,
+            breakpoints: {
+                1440: {
+                    padding: '1.6rem',
+                },
+                1223: {
+                    perPage: 6
+                },
+                1051: {
+                    perPage: 5
+                },
+                895: {
+                    perPage: 4
+                },
+                707: {
+                    perPage: 3
+                },
+                535: {
+                    perPage: 2
+                }
+            }
+        } );
+        splide.mount();
+    }
+
+    if (!!slideDrawItemContainer) {
+        const sliders = document.querySelectorAll('.draw-item__slider');
+        for (let index = 0; index < sliders.length; index++) {
+            const drawSplide = new Splide( `.draw-item__slider[data-skin-slider="${index}"]`, {
+                perPage: 1,
+                type: 'loop',
+                paginationKeyboard: true,
+                autoplay: true,
+                interval: 2500,
+            } );
+            drawSplide.mount();
+            drawSplide.on('move', () => {
+                const activeSlide = drawSplide.Components.Elements.slides[drawSplide.index];
+                const activeSlideType = activeSlide.dataset.slideSkinType;
+                setTimeout(() => {
+                    drawSplide.root.offsetParent.setAttribute('data-skin-type', activeSlideType);
+                }, 50);
+            });
+            
+        }
+    }
+
+    if (!!slideGiveawaysItemContainer) {
+        const sliders = document.querySelectorAll('.giveaways-distr__slider');
+        for (let index = 0; index < sliders.length; index++) {
+            const giveawaysSplide = new Splide( `.giveaways-distr__slider[data-skin-slider="${index}"]`, {
+                perPage: 1,
+                type: 'loop',
+                paginationKeyboard: true,
+                autoplay: true,
+                speed: 2000,
+                interval: 4000,
+                updateOnMove: true
+            } );
+            giveawaysSplide.mount();
+        }
+    }
+
+    if (!!slideHeroBannersContainer) {
+        const splide = new Splide( '.hero-banners__slider', {
+            perPage: 1,
+            type: 'loop',
+            paginationKeyboard: true,
+            autoplay: true,
+            interval: 2500,
+        } );
+        splide.mount();
+    }
+
+    const slideGiveawaySkinsContainer = document.querySelector('.js-giveaway-slider');
+
+    if (!!slideGiveawaySkinsContainer) {
+        const slides = [...slideGiveawaySkinsContainer.querySelectorAll('.js-giveaway-slide')];
+        const prevButton = slideGiveawaySkinsContainer.querySelector('.js-giveaway-arrow-prev');
+        const nextButton = slideGiveawaySkinsContainer.querySelector('.js-giveaway-arrow-next');
+        
+        const ANIMATION_DURATION = 700;
+        const AUTOPLAY_INTERVAL = 2500;
+        const SLIDE_COUNT = slides.length;
+
+        let currentIndex = 0;
+        let isAnimating = false;
+        let autoplayTimer = null; 
+        let isHovered = false;
+
+        const positions = ['is-left', 'is-center', 'is-right'];
+
+        const setPosition = (slide, position) => {
+            slide.classList.remove(...positions);
+
+            if (position) {
+                slide.classList.add(position);
+            }
+        };
+
+        const getIndex = (index) => {
+            return (index + SLIDE_COUNT) % SLIDE_COUNT;
+        };
+
+        const render = () => {
+            slides.forEach((slide) => {
+                setPosition(slide, null);
+            });
+
+            if (SLIDE_COUNT === 1) {
+                setPosition(slides[0], 'is-center');
+
+                return;
+            }
+
+            if (SLIDE_COUNT === 2) {
+                const centerIndex = currentIndex;
+                const rightIndex = getIndex(currentIndex + 1);
+
+                setPosition(slides[centerIndex], 'is-center');
+                setPosition(slides[rightIndex], 'is-right');
+
+                return;
+            }
+
+            const leftIndex = getIndex(currentIndex - 1);
+            const centerIndex = currentIndex;
+            const rightIndex = getIndex(currentIndex + 1);
+
+            setPosition(slides[leftIndex], 'is-left');
+            setPosition(slides[centerIndex], 'is-center');
+            setPosition(slides[rightIndex], 'is-right');
+        };
+
+        const stopAutoplay = () => { 
+            if (autoplayTimer) { 
+                clearInterval(autoplayTimer); autoplayTimer = null; 
+            } 
+        };
+
+        const startAutoplay = () => { 
+            if (SLIDE_COUNT <= 1 || isHovered) { return; } 
+            stopAutoplay(); 
+            autoplayTimer = setInterval(() => { 
+                goTo('next'); 
+            }, AUTOPLAY_INTERVAL); 
+        };
+
+        const goTo = (direction) => {
+            if (isAnimating || SLIDE_COUNT <= 1) {
+                return;
+            }
+
+            isAnimating = true;
+
+            if (direction === 'next') {
+                currentIndex = getIndex(currentIndex + 1);
+            } else {
+                currentIndex = getIndex(currentIndex - 1);
+            }
+
+            render();
+
+            setTimeout(() => {
+                isAnimating = false;
+            }, ANIMATION_DURATION);
+        };
+        render();
+        startAutoplay();
+
+        nextButton?.addEventListener('click', () => goTo('next'));
+        prevButton?.addEventListener('click', () => goTo('prev'));
+
+        slideGiveawaySkinsContainer.addEventListener('mouseenter', () => { 
+            isHovered = true; 
+            stopAutoplay(); 
+        });
+
+        slideGiveawaySkinsContainer.addEventListener('mouseleave', () => { 
+            isHovered = false; 
+            startAutoplay(); 
+        });
+
+        let startX = 0;
+        let startY = 0;
+        let isPointerDown = false;
+
+        const SWIPE_THRESHOLD = 50;
+
+        slideGiveawaySkinsContainer.addEventListener('pointerdown', (event) => {
+            startX = event.clientX;
+            startY = event.clientY;
+            isPointerDown = true;
+        });
+
+        slideGiveawaySkinsContainer.addEventListener('pointerup', (event) => {
+            if (!isPointerDown) {
+                return;
+            }
+
+            isPointerDown = false;
+
+            const deltaX = event.clientX - startX;
+            const deltaY = event.clientY - startY;
+
+            if (Math.abs(deltaX) < SWIPE_THRESHOLD) {
+                return;
+            }
+
+            if (Math.abs(deltaX) < Math.abs(deltaY)) {
+                return;
+            }
+
+            if (deltaX < 0) {
+                goTo('next');
+            } else {
+                goTo('prev');
+            }
+        });
+
+        slideGiveawaySkinsContainer.addEventListener('pointercancel', () => {
+            isPointerDown = false;
+        });
+    }
+
+    //END Splide slider
+
+    const tabsList = document.querySelectorAll('.skins-list__tabs-wrap .tab');
+    const tabsListContent = document.querySelectorAll('.splide__track > *');
+
+    tabsList.forEach((tab, i) => {
+        tab.addEventListener('click', () => {
+            tabsListContent.forEach(content => {
+                content.style.display = "none";
+            });
+            tabsListContent[i].style.display = '';
+        });
+    });
+    // Set height for Your Drop
+    const noDropContent = document.querySelector('.js-no-drop-tab-content');
+    const skinsSliderTrack = document.querySelector('.js-skins-slider .splide__track');
+    const skinsSliderArrows = document.querySelector('.js-skins-slider .splide__arrows');
+
+    function setHeightForNoDropContent() {
+        const skinsSlider = document.querySelector('.js-skins-slider .splide__list, .js-skins-slider .splide__list-hidden');
+        const skinsSliderCount = !!skinsSlider && skinsSlider.querySelectorAll('.splide__slide.is-visible').length;
+        const skinsSliderTrackPadding = parseInt(getComputedStyle(skinsSliderTrack).paddingLeft, 10);
+        const skinPadding = getComputedStyle(document.documentElement).getPropertyValue('--skin-drop-padding');
+        const skinHeight = getComputedStyle(document.documentElement).getPropertyValue('--skin-drop-height');
+        const skinImgHeight = getComputedStyle(document.documentElement).getPropertyValue('--skin-img-height');
+
+        const skinImgWidths = 
+            !!skinsSliderTrack && 
+            ((skinsSliderTrack.clientWidth 
+            - (skinsSliderCount - 1)*12
+            - 2*skinsSliderTrackPadding)/skinsSliderCount
+            - 2*skinPadding)*0.8/0.95;
+
+        if(noDropContent && skinsSliderTrack) {
+            noDropContent.style.height = `${skinHeight - skinImgHeight + skinImgWidths + skinsSliderArrows.clientHeight}px`;
+        }
+    }
+
+    !!noDropContent && setHeightForNoDropContent();
+    
+    // END Set height for Your Drop
+
+    const header = document.querySelector('.js-header');
+    const headerNav = document.querySelector('.js-header-nav');
+
+    // Open and close menu
+
+    const menuBurgerBtn = document.querySelector('.js-menu-burger-btn');
+    
+    menuBurgerBtn.addEventListener('click', () => {
+        const isHasOpenClass = header.classList.contains('header--menu-open');
+        return isHasOpenClass ? closeMenu() : openMenu();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && header.classList.contains('header--menu-open')) { 
+            closeMenu();
+        }
+    });
+
+    function closeMenu(){
+        header.classList.remove('header--menu-open');
+    }
+
+    function openMenu(){
+        header.classList.add('header--menu-open');
+    }
+    // End Open and close menu
+
+    // Show and hidden Balance block
+    const balanceBlock = document.querySelector('.js-header-balance');
+
+    function setBalanceBlock() {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const headerHeight = header.offsetHeight;
+        
+        if ((scrollTop >= headerHeight) && !balanceBlock.classList.contains('header__balance--show')) {
+            balanceBlock.classList.add('header__balance--show');
+        } else if ((scrollTop < headerHeight) && balanceBlock.classList.contains('header__balance--show')) {
+            balanceBlock.classList.remove('header__balance--show');
+        }
+    }
+
+    window.addEventListener('scroll', setBalanceBlock);
+    // END Show and hidden Balance block
+
+    // Open and close filters
+
+    const filtersContainer = document.querySelector('.js-cases-filters-container');
+    const filtersBtn = document.querySelector('.js-cases-filters-btn');
+    const filters = document.querySelector('.js-cases-filters');
+    const firstCasesList = document.querySelector('.js-cases-filters-container + .cases-list');
+    const casesBlock = document.querySelector('.js-cases'); 
+
+    filtersBtn && filtersBtn.addEventListener('click', () => {
+        filtersContainer.classList.toggle('cases-filters--open-filters');
+    });
+
+    function setFilterSticky() {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const firstCasesListTop = !!firstCasesList && firstCasesList.getBoundingClientRect().top;
+        const containerBottom = !!casesBlock && (casesBlock.offsetTop + casesBlock.offsetHeight - 200);
+
+        if (
+            !!firstCasesList && 
+            ((firstCasesListTop <= 0) && 
+            (containerBottom >= scrollTop) && 
+            (!filtersContainer.classList.contains('cases-filters--fixed')))
+        ) {
+            filtersContainer.classList.add('cases-filters--fixed');
+            setTimeout(() => {
+                balanceBlock.style.transform = window.innerWidth > 768 ? `translateX(-50%) translateY(${filtersContainer.clientHeight}px)` : `translateX(-50%) translateY(-4px)`
+            }, 300);
+        } else if (
+            (!!firstCasesList && 
+            ((firstCasesListTop > 0) || (containerBottom < scrollTop)) && 
+            (filtersContainer.classList.contains('cases-filters--fixed')))
+        ) {
+            const activeInput = filtersContainer.querySelector('input:focus');
+            if (activeInput) activeInput.blur();
+
+            setTimeout(() => {
+                filtersContainer.classList.remove('cases-filters--fixed');
+                balanceBlock.style.transform = `translateX(-50%) translateY(0)`;
+            }, 300);
+        }
+    }
+
+    window.addEventListener('scroll', setFilterSticky);
+
+    setFilterSticky();
+
+    // END Open and close filters
+
+    // Open and Close notifications
+    const notifications = document.querySelectorAll('.js-notification');
+    const notificationsBtn = document.querySelector('.js-notifications-btn');
+    
+    notificationsBtn.addEventListener('click', () => {
+        notifications.forEach((notification, i) => {
+            if (!notification.classList.contains('notification--open')){
+                setTimeout(() => notification.classList.add('notification--open'), i*300);
+                setTimeout(() => notification.classList.remove('notification--open'), 3000);
+            }
+        })
+    });
+    const notificationsCloseBtns = document.querySelectorAll('.js-notifications-close');
+    notificationsCloseBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const notificationItem = btn.closest('.js-notification')
+            notificationItem.classList.remove('notification--open')
+        })
+    })
+
+    // END Open and Close notifications
+
+    // Modal
+    const modalTriggers = document.querySelectorAll('[data-modal-trigger]');
+    const modalCloseBtns = document.querySelectorAll('.js-modal-close');
+
+    modalTriggers.forEach(trigger => {
+        trigger.addEventListener('click', e => openModal(e));
+    })
+
+    modalCloseBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            closeModal(btn.closest('.js-modal'));
+        })
+    })
+
+    function openModal(e) {
+        const target = e.currentTarget;
+        const modalTarget = document.querySelector(`[data-modal-name=${target.dataset.modalTrigger}]`);
+        modalTarget.classList.add('modal--open');
+        if(target.dataset.modalTrigger !== "upgrade-agreement") {
+            document.body.style.overflow = 'hidden';  
+            toggleTableOverlay();    
+        }
+    }
+
+    function closeModal(modal) {
+        if (modal.classList.contains('modal--open')) {
+            modal.classList.remove('modal--open');
+            document.body.style.overflow = '';
+        }
+    }
+    // END Modal
+
+    // Select
+    const selectTriggers = document.querySelectorAll('.js-select-btn');
+    const selectOptions = document.querySelectorAll('.js-select li');
+
+    selectTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const select = trigger.closest('.js-select');
+            if ( select && !select.classList.contains('select--open')) {
+                openSelectMenu(select);
+            } else if (select && select.classList.contains('select--open')) {
+                closeSelectMenu(select);
+            }
+        })
+    });
+
+    selectOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const select = option.closest('.js-select');
+            const selectOptionHtml = select.querySelector('.js-selected-value');
+            if (selectOptionHtml) {
+                selectOptionHtml.innerHTML = option.querySelector('label').innerHTML;
+            }
+            select && closeSelectMenu(select);
+        })
+    });
+
+    function openSelectMenu(select) {
+        select.classList.add('select--open');     
+    }
+
+    function closeSelectMenu(select) {
+        select.classList.remove('select--open');     
+    }
+    // END Select
+
+    // Open and close chance table
+    const chanceBtns = document.querySelectorAll('.js-chance-btn');
+
+    chanceBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const skin = btn.closest('.js-skin');
+            skin.querySelector('.js-chance-table').classList.toggle('skin__table--open');
+        })
+    });
+    // END Open and close chance table
+
+    // Spin and open/close win block
+    const roulettes = document.querySelectorAll('.js-case-roulette');
+    const winBtn = document.querySelector('.js-win-btn');
+    const winBlock = document.querySelector('.js-win-block');
+    const winSellBtn = document.querySelector('.js-win-sell-btn');
+
+    winBtn && winBtn.addEventListener('click', () => {
+        winBlock.classList.add('win--open');
+    })
+
+    winSellBtn && winSellBtn.addEventListener('click', () => {
+        winBlock.classList.remove('win--open');
+    })
+    // END Spin and open/close win block
+
+    // Mini skin tooltip position
+    setTooltipPosition();
+    // END Mini skin tooltip position
+
+    // Tabs
+    const tabs = document.querySelectorAll('.js-tab');
+    !!tabs && tabs.forEach(tab => {
+        if (tab.checked) {
+            const tabContent = document.querySelector(`[data-tab="${tab.id}"]`);
+            tabContent.classList.add('open');
+        }
+    })
+
+    !!tabs && tabs.forEach(tab => {
+        tab.addEventListener('change', (e) => {
+            const currentChoice = e.target.id;
+            const currentChoiceBlock = document.querySelector(`[data-tab="${currentChoice}"]`);
+
+            if (e.target.checked) {
+                const nameTabs = document.querySelectorAll(`[name="${e.target.name}"]`);
+                nameTabs.forEach(tab => {
+                    const tabContent = document.querySelector(`[data-tab="${tab.id}"]`);
+                    if (tabContent.classList.contains('open')) {
+                        tabContent.classList.remove('open');
+                    }
+                })
+                currentChoiceBlock.classList.add('open');
+            }
+
+            if (e.target.name === "support") {
+                const supportHeader = document.querySelector('.js-support-header');
+                supportHeader.classList.toggle('support__header--chat');
+                scrollToBottom();
+            }
+
+        })
+    })
+    // END Tabs
+
+    // Display/hide support
+    const supportBtns = document.querySelectorAll('.js-support-btn');
+    const supportBody = document.querySelector('.js-support-body');
+    const supportBtnClose = document.querySelector('.js-support-close');
+
+    supportBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            !!supportBody && supportBody.classList.toggle('support__body--open');
+        });
+    })
+
+    !!supportBtnClose && supportBtnClose.addEventListener('click', () => {
+        supportBody.classList.remove('support__body--open');
+    });
+    // END Display/hide support
+
+    // Display/hide support attach loader
+    const supportAttach = document.querySelector('.js-support-attach');
+    let loaderAttach = document.createElement("div");
+    loaderAttach.classList.add('loader');
+    supportAttach && supportAttach.addEventListener('click', () => {
+        supportAttach.classList.add('hide');
+        supportAttach.after(loaderAttach);
+        setTimeout(() => {
+            loaderAttach.remove();
+            supportAttach.classList.remove('hide');
+        }, 2000);
+    });
+    // END Display/hide support attach loader
+
+    // Accordions
+    const accordionBtns = document.querySelectorAll('.js-accordion-btn');
+
+    accordionBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            const content = btn.nextElementSibling;
+
+            if (!expanded) {
+                accordionBtns.forEach(accordion => {
+                    accordion.setAttribute('aria-expanded', false);
+                    accordion.nextElementSibling.style.maxHeight = '0';
+                })
+                btn.setAttribute('aria-expanded', !expanded);
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                btn.setAttribute('aria-expanded', !expanded);
+                content.style.maxHeight = '0';
+            }
+        });
+    });
+    // END Accordions
+
+    // Display/hide provably more text
+    const provablyMoreBtn = document.querySelector('.js-provably-more-btn');
+    const provablyMore = document.querySelector('.js-provably-more');
+    const provablyMoreText = document.querySelector('.js-provably-more-text');
+
+    !!provablyMoreBtn && provablyMoreBtn.addEventListener('click', () => {
+        if (provablyMore.style.maxHeight === '' || provablyMore.style.maxHeight === '0px') {
+            provablyMore.style.maxHeight = provablyMoreText.scrollHeight + 'px';
+            provablyMoreBtn.textContent = "Скрыть подробности";
+        } else {
+            provablyMore.style.maxHeight = '0';
+            provablyMoreBtn.textContent = "Узнать подробнее";
+        }
+    });
+    // END Display/hide provably more text
+
+    // Chat scroll
+    const supportMessages = document.querySelector('.js-support-messages');
+
+    function scrollToBottom() {
+        supportMessages.scrollTop = supportMessages.scrollHeight;
+    }
+
+    const observer = new MutationObserver(() => {
+        scrollToBottom();
+    });
+    !!supportMessages && observer.observe(supportMessages, { childList: true, subtree: true });
+    // END Chat scroll
+
+    // Upgrade
+    const upgradeBlock = document.querySelector('.js-upgrade');
+    const upgradeBtn = document.querySelector('.js-upgrade-btn');
+    const upgradeBtns = document.querySelector('.js-upgrade-btns');
+    const upgradeWinBtns = document.querySelector('.js-upgrade-win-btns');
+    const upgradeFailBtns = document.querySelector('.js-upgrade-fail-btns');
+    const upgradeWin = document.querySelector('.js-upgrade-win');
+    const upgradeSellBtn = document.querySelector('.js-upgrade-sell-btn');
+    const upgradeRepeatBtn = document.querySelector('.js-upgrade-repeat-btn');
+    const upgradeCloseBtn = document.querySelector('.js-upgrade-close-btn');
+    const uprgadeFastCheckbox = document.querySelector('.js-upgrade-fast-checkbox');
+    const upgradeMagicToggle = document.querySelector('.js-upgrade-magic-toggle');
+    const upgradeLootToggle = document.querySelector('.js-upgrade-loot-toggle');
+    
+    upgradeBtn && upgradeBtn.addEventListener('click', () => {
+        if (!upgradeBlock.classList.contains('upgrade--magic')) {
+            const angle = getComputedStyle(upgradeBlock).getPropertyValue('--rotation-arrow-round');
+            const durationAnimation = (6*360 + parseInt(angle))/360;
+            document.documentElement.style.setProperty('--rotation-arrow-duration', `${durationAnimation}s`);
+
+            upgradeBlock.classList.add('upgrade--win');
+            const duration = upgradeBlock.classList.contains('upgrade--fast') ? 750 : durationAnimation*1000;
+            setTimeout(() => {
+                upgradeBtns.classList.add('upgrade__btns--hide');
+                upgradeWinBtns.classList.add('upgrade__btns--show');
+                upgradeBodySpine.state.setAnimation(0, 'win', true);
+                upgradeHandsSpine.state.setAnimation(0, 'win', true);
+                showWinConfetti();
+            }, duration);
+        } else {
+            upgradeBlock.classList.add('upgrade--win');
+            upgradeBlock.classList.add('upgrade--fast-rotate');
+            setTimeout(() => {
+                upgradeBtns.classList.add('upgrade__btns--hide');
+                upgradeWinBtns.classList.add('upgrade__btns--show');
+                upgradeBodySpine.state.setAnimation(0, 'magic_win', true);
+                upgradeHandsSpine.state.setAnimation(0, 'magic_win', true);
+                upgradeBlock.classList.remove('upgrade--fast-rotate');
+            }, 3000);
+        }
+    });
+
+    upgradeSellBtn && upgradeSellBtn.addEventListener('click', () => {
+        if (upgradeBlock.classList.contains('upgrade--win')) {
+            upgradeBlock.classList.remove('upgrade--win');
+        }
+        upgradeBtns.classList.remove('upgrade__btns--hide');
+        upgradeWinBtns.classList.remove('upgrade__btns--show');
+        upgradeBodySpine.state.setAnimation(0, 'idle', true);
+        upgradeHandsSpine.state.setAnimation(0, 'idle', true);
+    });
+
+    upgradeRepeatBtn && upgradeRepeatBtn.addEventListener('click', () => {
+        if (!upgradeBlock.classList.contains('upgrade--magic')) {
+            const angle = getComputedStyle(upgradeBlock).getPropertyValue('--rotation-arrow-round');
+            const durationAnimation = (6*360 + parseInt(angle))/360;
+            document.documentElement.style.setProperty('--rotation-arrow-duration', `${durationAnimation}s`);
+
+            const duration = upgradeBlock.classList.contains('upgrade--fast') ? 750 : durationAnimation*1000;
+            if (upgradeBlock.classList.contains('upgrade--win')) {
+                upgradeBlock.classList.remove('upgrade--win');
+            }
+            if (upgradeBlock.classList.contains('upgrade--fail')) {
+                upgradeBlock.classList.remove('upgrade--fail');
+            }
+            if (upgradeBtns.classList.contains('upgrade__btns--hide')) {
+                upgradeBtns.classList.remove('upgrade__btns--hide');
+                upgradeWinBtns.classList.remove('upgrade__btns--show');
+            }
+            upgradeBodySpine.state.setAnimation(0, 'idle', true);
+            upgradeHandsSpine.state.setAnimation(0, 'idle', true);
+            void upgradeBlock.offsetWidth;
+            upgradeBlock.classList.add('upgrade--fail');
+
+            setTimeout(() => {
+                upgradeBtns.classList.add('upgrade__btns--hide');
+                upgradeFailBtns.classList.add('upgrade__btns--show');
+                upgradeBodySpine.state.setAnimation(0, 'loss', true);
+                upgradeHandsSpine.state.setAnimation(0, 'loss', true);
+            }, duration);
+        } else {
+            upgradeBodySpine.state.setAnimation(0, 'magic_idle', true);
+            upgradeHandsSpine.state.setAnimation(0, 'magic_idle', true);
+            if (upgradeBlock.classList.contains('upgrade--win')) {
+                upgradeBlock.classList.remove('upgrade--win');
+                upgradeBtns.classList.remove('upgrade__btns--hide');
+                upgradeWinBtns.classList.remove('upgrade__btns--show');
+            }
+        }
+    });
+
+    upgradeCloseBtn && upgradeCloseBtn.addEventListener('click', () => {
+        if (upgradeBlock.classList.contains('upgrade--fail')) {
+            upgradeBlock.classList.remove('upgrade--fail');
+            upgradeBodySpine.state.setAnimation(0, 'idle', true);
+            upgradeHandsSpine.state.setAnimation(0, 'idle', true);
+        }
+        upgradeBtns.classList.remove('upgrade__btns--hide');
+        upgradeFailBtns.classList.remove('upgrade__btns--show');
+    });
+
+    !!uprgadeFastCheckbox && uprgadeFastCheckbox.addEventListener('change', () => {
+        if (!!uprgadeFastCheckbox.checked) {
+            upgradeBlock.classList.add('upgrade--fast');
+        } else {
+            upgradeBlock.classList.remove('upgrade--fast');
+        }
+    });
+
+    const upgradeSkinBalance = document.querySelector('.js-upgrade-skin-balance');
+    const upgradeSkinBalanceInput = document.querySelector('.upgrade__range .js-range-slider input');
+    
+    const checkUpgradeBalanceValue = () => {
+        if (upgradeSkinBalanceInput.value > 0 && !upgradeSkinBalance.classList.contains('upgrade__skin-empty--balance')) {
+            upgradeSkinBalance.classList.add('upgrade__skin-empty--balance');
+        } else if (upgradeSkinBalanceInput.value == 0 && upgradeSkinBalance.classList.contains('upgrade__skin-empty--balance')) {
+            upgradeSkinBalance.classList.remove('upgrade__skin-empty--balance');
+        }
+    } 
+
+    !!upgradeSkinBalance && upgradeSkinBalanceInput.addEventListener('input', checkUpgradeBalanceValue);
+    !!upgradeSkinBalance && checkUpgradeBalanceValue();
+
+    const upgradeCoefficientes = document.querySelectorAll(".js-upgrade .js-coefficient");
+    const upgradeRightSkin = document.querySelector('.js-upgrade-skin');
+
+    !!upgradeCoefficientes && upgradeCoefficientes.forEach(coefficient => {
+        coefficient.addEventListener('change', (event) => {
+            upgradeRightSkin.classList.add('upgrade__skin--hidden');
+            setTimeout(() => {
+                    upgradeRightSkin.classList.remove('upgrade__skin--hidden');
+                    upgradeRightSkin.classList.add('upgrade__skin--display');
+            }, 300);
+        });
+    });
+
+    !!upgradeMagicToggle && upgradeMagicToggle.addEventListener('change', (event) => {
+        if (event.target.checked) {
+            if (upgradeBlock.classList.contains('upgrade--loot')) {
+                upgradeBlock.classList.remove('upgrade--loot');
+            }
+
+            upgradeBlock.classList.add('upgrade--magic');
+            upgradeBodySpine.state.setAnimation(0, 'magic_idle', true);
+            upgradeHandsSpine.state.setAnimation(0, 'magic_idle', true);
+        } else {
+            upgradeBlock.classList.remove('upgrade--magic');
+            upgradeBodySpine.state.setAnimation(0, 'idle', true);
+            upgradeHandsSpine.state.setAnimation(0, 'idle', true);
+
+            if (upgradeBlock.classList.contains('upgrade--win')){
+                upgradeBlock.classList.remove('upgrade--win');
+            }
+        }
+    });
+
+    !!upgradeLootToggle && upgradeLootToggle.addEventListener('change', (event) => {
+        if (event.target.checked) {
+            if (upgradeBlock.classList.contains('upgrade--magic')) {
+                upgradeBlock.classList.remove('upgrade--magic')
+                upgradeBodySpine.state.setAnimation(0, 'idle', true);
+                upgradeHandsSpine.state.setAnimation(0, 'idle', true);
+            }
+            upgradeBlock.classList.add('upgrade--loot');
+        } else {
+            upgradeBlock.classList.remove('upgrade--loot');
+        }
+    });
+
+    // END Upgrade
+
+    // Create a contract
+    const contractBtn = document.querySelector('.js-contract-btn');
+    const contractContainer = document.querySelector('.js-contract-container');
+
+    contractBtn && contractBtn.addEventListener('click', () => {
+        contractContainer.classList.add('contract__container--create-anim');
+        const contractModal = document.querySelector("[data-modal-name='contract-skin']");
+        setTimeout(() => {
+            contractModal.classList.add('modal--open');
+            document.body.style.overflow = 'hidden';
+        }, 1100);
+        setTimeout(() => {
+            contractContainer.classList.remove('contract__container--create-anim');
+        }, 1200);
+    });
+    // END Create a contract
+
+    // Click outside
+    document.addEventListener('mousedown', (e) => {
+        const target = e.target;
+        if (!headerNav.contains(target) && !menuBurgerBtn.contains(target)) {
+            closeMenu();
+        }
+
+        if (!target.closest('.js-select')) {
+            const selects = document.querySelectorAll('.js-select.select--open');
+            selects && selects.forEach(select => {
+                closeSelectMenu(select);
+            })
+        }
+        if (!target.closest('.js-skin') || (!target.closest('.js-chance-table') && !target.closest('.js-chance-btn'))) {
+            const tables = document.querySelectorAll('.js-chance-table.skin__table--open');
+            tables && tables.forEach(table => {
+                table.classList.remove('skin__table--open');
+            })
+        }
+
+        if (!target.closest('.js-modal-dialog') && target.closest('.js-modal')) {
+            closeModal(target.closest('.js-modal'));
+        }
+
+        if (filters && !filters.contains(target) && !filtersBtn.contains(target) && filtersContainer.classList.contains('cases-filters--open-filters')) {
+            filtersContainer.classList.remove('cases-filters--open-filters');
+        }
+    });
+    // END Click outside
+
+    // Range slider
+    const rangeSliders = document.querySelectorAll(".js-range-slider");
+    const rangeInputs = document.querySelectorAll(".js-range-slider input");
+
+    const rangeStyle = () => {
+        rangeSliders.forEach(slider => {
+            const range = slider.querySelector(".js-range-track");
+            const rangeVal = slider.querySelector(".js-range-value");
+            const rangeInput = slider.querySelectorAll(".js-range-slider input");
+            const percentage = `${(rangeInput[0].value / rangeInput[0].max) * 100}%`;
+            rangeVal && (rangeVal.style.left = percentage);
+            range.style.width = percentage;
+
+            if(slider.classList.contains('referral__range-slider')) {
+                rangeVal.innerText = `${rangeInput[0].value}%`;
+            }
+        });
+    };
+
+    if (!!rangeInputs.length) {
+        rangeStyle();
+    }
+
+    rangeInputs && rangeInputs.forEach((input) => {
+        input.addEventListener("input", () => {
+            rangeStyle();
+        });
+    });
+
+    // END Range slider
+
+    // Double range slider
+    let dMinRangeValueGap = 1;
+    const dRange = document.querySelector(".js-d-range-track");
+    const dMinval = document.querySelector(".js-d-range-min");
+    const dMaxval = document.querySelector(".js-d-range-max");
+    const dRangeInput = document.querySelectorAll(".js-d-range-slider input");
+
+    let dMinRange, dMaxRange, dMinPercentage, dMaxPercentage;
+
+    const minRangeFill = () => {
+        dRange.style.left = (dRangeInput[0].value / dRangeInput[0].max) * 100 + "%";
+    };
+    const maxRangeFill = () => {
+        dRange.style.right =
+            100 - (dRangeInput[1].value / dRangeInput[1].max) * 100 + "%";
+    };
+    const MinVlaueBubbleStyle = () => {
+        dMinPercentage = (dMinRange / dRangeInput[0].max) * 100;
+        dMinval.style.left = "calc(.3rem + " + dMinPercentage + "%)";
+        dMinval.style.transform = `translate(-50% - ${dMinPercentage / 2}%, -100%)`;
+    };
+    const MaxVlaueBubbleStyle = () => {
+        dMaxPercentage = 100 - (dMaxRange / dRangeInput[1].max) * 100;
+        dMaxval.style.right = "calc(.1rem + " + dMaxPercentage + "%)";
+        dMaxval.style.transform = `translate(50% + ${dMaxPercentage / 2}%, -100%)`;
+    };
+
+    const setMinValueOutput = () => {
+        dMinRange = parseInt(dRangeInput[0].value);
+        dMinval.innerHTML = dRangeInput[0].value;
+    };
+    const setMaxValueOutput = () => {
+        dMaxRange = parseInt(dRangeInput[1].value);
+        dMaxval.innerHTML = dRangeInput[1].value;
+    };
+
+    if (dRangeInput.length) {
+        setMinValueOutput();
+        setMaxValueOutput();
+        minRangeFill();
+        maxRangeFill();
+        MinVlaueBubbleStyle();
+        MaxVlaueBubbleStyle();
+    }
+
+    dRangeInput && dRangeInput.forEach((input) => {
+        input.addEventListener("input", (e) => {
+            setMinValueOutput();
+            setMaxValueOutput();
+
+            minRangeFill();
+            maxRangeFill();
+
+            MinVlaueBubbleStyle();
+            MaxVlaueBubbleStyle();
+
+            if (dMaxRange - dMinRange < dMinRangeValueGap) {
+            if (e.target.className === "min") {
+                dRangeInput[0].value = dMaxRange - dMinRangeValueGap;
+                setMinValueOutput();
+                minRangeFill();
+                MinVlaueBubbleStyle();
+                e.target.style.zIndex = "2";
+            } else {
+                dRangeInput[1].value = dMinRange + dMinRangeValueGap;
+                e.target.style.zIndex = "2";
+                setMaxValueOutput();
+                maxRangeFill();
+                MaxVlaueBubbleStyle();
+            }
+            }
+        });
+    });
+    // END Double range slider
+
+    // Open case
+    const caseContainer = document.querySelector(".js-case-container");
+    const caseContainerMagic = document.querySelector(".js-case-container-magic");
+    const openCaseBtn = document.querySelector(".js-open-case");
+    const caseHero = document.querySelector(".js-case-hero");
+    const caseRoulette = document.querySelector(".js-case-hero-roulette");
+    const caseXrayBtn = document.querySelector(".js-case-hero-xray-btn");
+
+    !!openCaseBtn && openCaseBtn.addEventListener("click", () => {
+        if(!!caseContainer) {
+            if (caseContainer.classList.contains("case-container--xray")) {
+                caseContainer.classList.remove("case-container--xray");
+            }
+            caseContainer.classList.add("open");
+            setTimeout(() => {
+                caseHero.style.display = 'none';
+                caseRoulette.style.display = 'flex';
+            }, 300);
+        } else if (!!caseContainerMagic) {
+            caseContainerMagic.classList.add("open");
+        }
+    });
+    //END Open case
+
+    // Case XRay
+    !!caseXrayBtn && caseXrayBtn.addEventListener("click", () => {
+        if (!caseContainer.classList.contains("case-container--xray")) {
+            caseContainer.classList.add("case-container--xray");
+        }
+    });
+    // END Case XRay
+
+    // Change case decor
+    const caseDecors = document.querySelector(".js-case-decors");
+    !!caseDecors && caseDecors.addEventListener('change', (event) => {
+        if (!event.target.matches('input[type="radio"]')) {
+            return;
+        }
+
+        caseContainer.dataset.decorType = event.target.id;
+    });
+    // END Change case decor
+
+    // Open win cards
+    const openWinRareBtn = document.querySelector(".js-open-win-rare");
+    const winRare = document.querySelector(".js-win-rare");
+    const winRareManyItems = document.querySelectorAll(".js-win-rare.win-rare--many-items .js-win-rare-item");
+    const closeWinRareBtn = document.querySelector(".js-close-win-rare");
+    const winRareVideo = document.querySelector(".js-win-rare-video");
+    const winRareItems = document.querySelectorAll(".js-win-rare-item");
+    
+    !!openWinRareBtn && openWinRareBtn.addEventListener('click', () => {
+        winRare.classList.add('win-rare--open');
+        document.body.style.overflow = 'hidden';
+        if (winRareVideo) {
+            // Фикс для Safari (иногда видео не растягивается)
+            if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                winRareVideo.style.objectFit = 'cover';
+                winRareVideo.setAttribute('playsinline', '');
+                winRareVideo.setAttribute('webkit-playsinline', '');
+            }
+            winRareVideo.volume = 0.5;
+            winRareVideo.play();
+        }
+    });
+
+    !!closeWinRareBtn && closeWinRareBtn.addEventListener('click', () => {
+        winRare.classList.remove('win-rare--open');
+        document.body.style.overflow = '';
+        winRareItems.forEach(item => {
+            if (item.classList.contains('win-rare__item--open')) {
+                item.classList.remove('win-rare__item--open');
+            }
+        });
+    });
+
+    !!winRareItems && winRareItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (!item.classList.contains('win-rare__item--open')) {
+                item.classList.toggle('win-rare__item--open');
+            }
+        });
+    });
+    // END Open win card
+
+    const coefficientes = document.querySelectorAll(".js-coefficient");
+    let previousCheckedId = '';
+
+    !!coefficientes && coefficientes.forEach(coefficient => {
+
+        coefficient.addEventListener('change', (event) => {
+            let currentCheckedId = event.target.checked ? event.target.id : '';
+            
+            if (event.target.checked && (previousCheckedId != currentCheckedId) && !!previousCheckedId) {
+                const checkedInput = document.querySelector(`#${previousCheckedId}.js-coefficient`);
+                checkedInput.checked = false;
+                currentCheckedId = event.target.id;
+            }
+            previousCheckedId = currentCheckedId;
+        });
+    });
+    
+    // Case Accordions
+    const caseAccordionBtns = document.querySelectorAll('.js-case-accordion-btn');
+    
+    !!caseAccordionBtns && caseAccordionBtns.forEach(btn => {
+        updateCaseBlocksMaxHeight(btn);
+        btn.addEventListener('click', () => {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            const content = btn.parentElement.nextElementSibling;
+
+            if (!expanded) {
+                btn.setAttribute('aria-expanded', !expanded);
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                btn.setAttribute('aria-expanded', !expanded);
+                content.style.maxHeight = '0';
+            }
+        })
+    });
+
+    function updateCaseBlocksMaxHeight(btnCase) {
+        const content = btnCase.parentElement.nextElementSibling;
+        const expanded = btnCase.getAttribute('aria-expanded') === 'true';
+        if (expanded) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+    }
+    // END Case Accordions
+
+    // Provably Accordions
+    const provablyAccordionBtn = document.querySelector('.js-provably-accordion-btn');
+    const provablyAccordionTable = document.querySelector('.js-provably-accordion-table');
+
+    !!provablyAccordionBtn && provablyAccordionBtn.addEventListener('click', () => {
+        const expanded = provablyAccordionBtn.getAttribute('aria-expanded') === 'true';
+
+        if (!expanded) {
+            provablyAccordionBtn.setAttribute('aria-expanded', !expanded);
+            provablyAccordionTable.style.maxHeight = provablyAccordionTable.scrollHeight + 'px';
+        } else {
+            provablyAccordionBtn.setAttribute('aria-expanded', !expanded);
+            provablyAccordionTable.style.maxHeight = '0';
+        }
+    });
+    // END Provably Accordions
+
+    // Swap
+    const swapBlock = document.querySelector('.js-swap');
+    const swapBtn = document.querySelector('.js-swap-btn');
+
+    swapBtn && swapBtn.addEventListener('click', () => {
+        swapBlock.classList.add('swap--done');
+    });
+    // END Swap
+
+    // Tickets
+    const ticketsContainer = document.querySelector('.giveaway--completed .js-giveaway-tickets');
+    const tickets = document.querySelectorAll('.js-ticket');
+
+    !!tickets && tickets.forEach(ticket => {
+        ticket.addEventListener('click', () => {
+            if (!ticket.classList.contains('giveaway__ticket--open')) {
+                ticket.classList.add('giveaway__ticket--open');
+
+                if (ticket.classList.contains('giveaway__ticket--success')) {
+                    showWinConfetti();
+                }
+            }
+        });
+    });
+
+    const observerTickets = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                tickets.forEach((ticket, i) => {
+                    setTimeout(() => {
+                        ticket.click();
+                    }, i*75);
+                });
+                showWinConfetti();
+                observerTickets.unobserve(ticketsContainer);
+            }
+        });
+        }, {});
+    !!ticketsContainer && observerTickets.observe(ticketsContainer);  
+    // END Tickets
+
+    //Horizontal scroll for wheel
+    const scrollContainers = document.querySelectorAll('.js-scroll-container');
+    let isDownCursor = false;
+    let startScrollX = 0;
+    let startScrollLeft = 0;
+
+    scrollContainers.forEach(container => {
+        container.addEventListener('mousedown', (e) => {
+            isDownCursor = true;
+            container.classList.add('is-dragging');
+            startScrollX = e.pageX;
+            startScrollLeft = container.scrollLeft;
+            e.preventDefault();
+        });
+
+        container.addEventListener('mouseup', () => {
+            isDownCursor = false;
+            container.classList.remove('is-dragging');
+        });
+
+        container.addEventListener('mousemove', (e) => {
+            if (!isDownCursor) return;
+
+            const walk = e.pageX - startScrollX;
+            container.scrollLeft = startScrollLeft - walk;
+        });
+    })
+
+    !!scrollContainers && scrollContainers.forEach(initHorizontalScroll);
+
+    function initHorizontalScroll(container) {
+        const tolerance = 2;
+        const btnStart = container.querySelector('.js-scroll-btn-start');
+        const btnEnd = container.querySelector('.js-scroll-btn-end');
+
+        const updateButtons = () => {
+            const maxScroll = container.scrollWidth - container.clientWidth;
+
+            btnStart.classList.toggle(
+                'event__scroll-btn--hide',
+                container.scrollLeft <= tolerance
+            );
+
+            btnEnd.classList.toggle(
+                'event__scroll-btn--hide',
+                container.scrollLeft >= maxScroll - tolerance
+            );
+        };
+
+        btnStart.addEventListener('click', () => {
+            container.scrollTo({
+                left: 0,
+                behavior: 'smooth',
+            });
+        });
+
+        btnEnd.addEventListener('click', () => {
+            container.scrollTo({
+                left: container.scrollWidth,
+                behavior: 'smooth',
+            });
+        });
+
+        container.addEventListener('scroll', updateButtons, {
+            passive: true,
+        });
+
+        const resizeObserver = new ResizeObserver(updateButtons);
+
+        resizeObserver.observe(container);
+
+        updateButtons();
+    };
+    //END Horizontal scroll for wheel
+
+    // Calculate event progress
+    const scaleXpArray = [100, 500, 700, 1000, 1100, 1500, 1700, 2000, 2100, 2500];
+    const currentXp = 570; // Текущее количество XP юзера
+    const currentLvl = 2; // Номер последнего полученного уровня 
+    const scaleStep = 100 / (scaleXpArray.length - 0.5); // Расстояние в процентах между уровнями на шкале
+    let progress = 0; // Итоговое значение прогресса
+    if (currentLvl < 1) {
+        progress = 0.5*scaleStep*currentXp/scaleXpArray[currentLvl];
+    } else {
+        const delta = scaleXpArray[currentLvl] - scaleXpArray[currentLvl - 1];
+        const deltaPercent = scaleStep*(currentXp - scaleXpArray[currentLvl - 1])/delta;
+        progress = scaleStep*(currentLvl - 0.5) + deltaPercent;
+    }
+    document.documentElement.style.setProperty('--event-progress', `${progress}%`);
+    // END Calculate event progress
+
+    // Show and hidden Up btn
+    const upBtn = document.querySelector('.js-up-btn');
+
+    !!upBtn && upBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    function displayUpBtn() {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const headerHeight = header.offsetHeight;
+        
+        if ((scrollTop >= headerHeight) && !upBtn.classList.contains('up-btn--show')) {
+            upBtn.classList.add('up-btn--show');
+        } else if ((scrollTop < headerHeight) && upBtn.classList.contains('up-btn--show')) {
+            upBtn.classList.remove('up-btn--show');
+        }
+    }
+
+    !!upBtn && window.addEventListener('scroll', displayUpBtn);
+    // END Show and hidden Up btn
+
+    const caseVideos = document.querySelectorAll('.js-case-video');
+    caseVideos?.forEach(caseItem => {
+        const video = caseItem.querySelector('video');
+        let playPromise = null;
+        video.addEventListener('loadeddata', () => {
+            caseItem.classList.add('case--video-loaded');
+        });
+
+        caseItem.addEventListener('mouseenter', () => {
+            playPromise = video.play();
+        });
+        caseItem.addEventListener('mouseleave', () => {
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    video.pause();
+                }).catch(() => {});
+            }
+        });
+    });
+
+    // VIP club wheel
+    const wheel = document.querySelector('.js-vip-club-wheel');
+    const vipClubBtn = document.querySelector('.js-vip-club-btn');
+    const vipClubMoreBtn = document.querySelector('.js-vip-club-more-btn');
+    const vipClubUseBtn = document.querySelector('.js-vip-club-use-btn');
+    const wheelTrack = document.querySelector('.js-vip-club-wheel-track');
+    const vipClubItems = document.querySelectorAll('.js-vip-club-wheel-item');
+
+    !!vipClubBtn && vipClubBtn.addEventListener('click', () => {
+        const matrix = new DOMMatrix(getComputedStyle(wheelTrack).transform);
+        const currentAngle = Math.atan2(matrix.b, matrix.a) * (180 / Math.PI);
+
+        wheelTrack.getAnimations().forEach(anim => anim.cancel());
+        vipClubItems.forEach(item => item.classList.remove('selected'));
+
+        const winner = getComputedStyle(wheelTrack).getPropertyValue('--vip-wheel-winner');
+        const stepAngle = 360 / getComputedStyle(document.documentElement).getPropertyValue('--vip-wheel-count');
+        const finalAngle = currentAngle  - (currentAngle % 360) - 720 - (stepAngle * winner);
+
+        const anim = wheelTrack.animate(
+            [
+                { transform: `rotate(${currentAngle}deg)` },
+                { transform: `rotate(${finalAngle }deg)` }
+            ],
+            {
+                duration: 6000,
+                easing: 'cubic-bezier(0.2, 0, 0.1, 1)',
+                fill: 'forwards'
+            }
+        );
+
+        anim.addEventListener('finish', () => {
+            vipClubBtn.disabled = false;
+            wheelTrack.style.transform = `rotate(${finalAngle}deg)`;
+            anim.cancel();
+            vipClubItems[winner].classList.add('selected');
+            wheel.classList.add('vip-club__wheel--show-prize');
+        });
+    });
+
+    !!vipClubMoreBtn && vipClubMoreBtn.addEventListener('click', () => {
+        wheel.classList.remove('vip-club__wheel--show-prize');
+    });
+
+    !!vipClubUseBtn && vipClubUseBtn.addEventListener('click', () => {
+        wheel.classList.remove('vip-club__wheel--show-prize');
+        vipClubItems.forEach(item => item.classList.remove('selected'));
+    });
+    // END VIP club wheel
+
+    const revealUpItems = document.querySelectorAll('.js-reveal-up');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0,
+        rootMargin: '0px 0px -15% 0px'
+    });
+
+    !!revealUpItems && revealUpItems.forEach(el => revealObserver.observe(el));
+})
+
+function fix100vh() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+function setTooltipPosition() {
+    const miniSkinTooltip = document.querySelectorAll('.js-mini-skin-tooltip');
+    miniSkinTooltip.forEach(tooltip => {
+        const tooltipRight = tooltip.getBoundingClientRect().right;
+        const tooltipLeft = tooltip.getBoundingClientRect().left;
+        const windowWidth = document.documentElement.clientWidth;
+
+        if ((windowWidth - tooltipRight < 100) && (!tooltip.classList.contains('tooltip--right'))) {
+            tooltip.classList.remove('tooltip--center', 'tooltip--left');
+            tooltip.classList.add('tooltip--right');
+            return;
+        } 
+
+        if ((tooltipLeft < 100) && (!tooltip.classList.contains('tooltip--left'))) {
+            tooltip.classList.remove('tooltip--center', 'tooltip--right');
+            tooltip.classList.add('tooltip--left');
+            return;
+        }
+        
+        if ((windowWidth - tooltipRight >= 100) && (tooltipLeft >= 100) && !tooltip.classList.contains('tooltip--center')) {
+            tooltip.classList.remove('tooltip--left', 'tooltip--right');
+            tooltip.classList.add('tooltip--center');
+        }
+    });
+}
+
+function toggleTableOverlay() {
+    const skinTable = document.querySelector('.js-skin-table');
+    const skinTableWrap = document.querySelector('.js-skin-table-wrap');
+    if (!!skinTableWrap && (skinTableWrap.scrollHeight > skinTable.clientHeight) && !skinTable.classList.contains('skin-table--overlay')) {
+        skinTable.classList.add('skin-table--overlay');
+    } else if (!!skinTableWrap && (skinTableWrap.scrollHeight <= skinTable.clientHeight) && skinTable.classList.contains('skin-table--overlay')) {
+        skinTable.classList.remove('skin-table--overlay');
+    }
+}
+
+function showWinConfetti() {
+    const scale = Math.min(
+        Math.max(window.innerWidth / 1920, 1),
+        1.75
+    );
+
+    const commonOptions = {
+        particleCount: 200 * scale,
+        spread: 100 * scale,
+        colors: ["#FFF500", "#B2FF00", "#FFFFFF"],
+        scalar: scale,
+    };
+    confetti({
+        ...commonOptions,
+        angle: 75,
+        origin: { x: 0, y: 1 },
+    });
+    confetti({
+        ...commonOptions,
+        angle: 120,
+        origin: { x: .98, y: 1 },
+    });
+}

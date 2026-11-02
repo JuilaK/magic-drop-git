@@ -1,0 +1,3745 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Magic Drop | Апгрейды</title>
+    <meta name="description" content="Magic Drop - Открытие кейсов CS:GO с моментальным выводом предметов себе в Steam!">
+    <meta name="keywords" content="Magic Drop, кейсы, CS GO, Steam, Стим, предметы, CS skin">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" type="image/png" sizes="48x48" href="./favicon/favicon-48x48.png">
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg">
+    <link rel="shortcut icon" href="./favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <meta name="apple-mobile-web-app-title" content="Magic Drop">
+    <meta property="og:site_name" content="magicdrop.com">
+    <meta property="og:title" content="Magic Drop | Апгрейды">
+    <meta property="og:description" content="Magic Drop - Открытие кейсов CS:GO с моментальным выводом предметов себе в Steam!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Magic Drop | Апгрейды">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Magic Drop | Апгрейды">
+    <meta name="twitter:description" content="Magic Drop - Открытие кейсов CS:GO с моментальным выводом предметов себе в Steam!">
+    <meta name="twitter:image" content="./images/cover.jpg">
+    <meta property="og:url" content= "https://magicdrop.com">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preload" href="./fonts/Gotham-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Gotham-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Gotham-Black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Gotham-Cond-Black.woff2" as="font" type="font/woff2" crossorigin>    
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    
+        <script src="./libs/spine/spine-webcomponents.min.js"></script>
+    
+    <script defer src="./scripts/script.js"></script>
+</head>
+<body class="halloween">
+    <header class="header js-header">
+	<div class="header__top">
+		<div class="header__top-left">
+			<div class="header__logo-wrap">
+				<a href="/" class="header__logo">
+					Main page
+				</a>
+			</div>
+			<div class="header__nav-wrap js-header-nav">
+				
+					<div class="header__top-btns-wrap tablet">
+						<!-- <a href=".#" class="btn btn--purple btn--font-black">
+							<img src="./images/svg/diamond-purple.svg" alt="" aria-hidden="true">
+							<span>370</span>
+						</a> -->
+						<a href=".#" class="header__coin-btn">
+							<svg aria-hidden="true">
+								<use xlink:href="images/sprite.svg#token-yellow"></use>
+							</svg>
+							<span>370</span>
+						</a>
+						<a href=".#" class="header__pay-btn btn btn--gr-yellow btn--icon">
+							<img src="./images/svg/wallet.svg" alt="" aria-hidden="true">
+							<span>Pay</span>
+							<span class="btn__plus-icon" aria-hidden="true">
+								<svg aria-hidden="true" class="white">
+									<use xlink:href="images/sprite.svg#plus"></use>
+								</svg>
+							</span>
+						</a>
+					</div>
+				
+				<nav class="header__nav">
+					<ul>
+						<li>
+							<a href="#" class="header__nav-link header__nav-link--active">
+								<span class="header__nav-link-svg">
+									<svg aria-hidden="true" class="dark-grey">
+										<use xlink:href="images/sprite.svg#cases"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use xlink:href="images/sprite.svg#cases-yellow"></use>
+									</svg>
+								</span>
+								<picture class="header__nav-link-bg">
+									<source srcset="./images/header/img-cases.webp" type="image/webp">
+									<img 
+										src="./images/header/img-cases.png"  
+										width="89" 
+										height="89" 
+										alt=""
+										aria-hidden="true">
+								</picture>
+								<span>Кейсы</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="header__nav-link">
+								<span class="header__nav-link-svg">
+									<svg aria-hidden="true" class="dark-grey">
+										<use xlink:href="images/sprite.svg#contracts"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use xlink:href="images/sprite.svg#contracts-yellow"></use>
+									</svg>
+								</span>
+								<picture class="header__nav-link-bg">
+									<source srcset="./images/header/img-contracts.webp" type="image/webp">
+									<img 
+										src="./images/header/img-contracts.png"  
+										width="89" 
+										height="89" 
+										alt=""
+										aria-hidden="true">
+								</picture>
+								<span>Контракты</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="header__nav-link">
+								<span class="header__nav-badge">new</span>
+								<span class="header__nav-link-svg">
+									<svg aria-hidden="true">
+										<use xlink:href="images/sprite.svg#upgrade"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use xlink:href="images/sprite.svg#upgrade-yellow"></use>
+									</svg>
+								</span>
+								<picture class="header__nav-link-bg">
+									<source srcset="./images/header/img-upgrades.webp" type="image/webp">
+									<img 
+										src="./images/header/img-upgrades.png"  
+										width="89" 
+										height="89" 
+										alt=""
+										aria-hidden="true">
+								</picture>
+								<span>Апгрейд</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="header__nav-link">
+								<span class="header__nav-link-svg">
+									<svg aria-hidden="true" class="dark-grey">
+										<use xlink:href="images/sprite.svg#present"></use>
+									</svg>
+									<svg aria-hidden="true" class="yellow">
+										<use xlink:href="images/sprite.svg#present"></use>
+									</svg>
+								</span>
+								<picture class="header__nav-link-bg">
+									<source srcset="./images/header/img-giveaways.webp" type="image/webp">
+									<img 
+										src="./images/header/img-giveaways.png"  
+										width="89" 
+										height="89" 
+										alt=""
+										aria-hidden="true">
+								</picture>
+								<span>Раздачи</span>
+							</a>
+						</li>
+						<li class="tablet">
+							<a href="#" class="header__nav-link">
+								<span class="header__nav-link-svg">
+									<svg aria-hidden="true" class="dark-grey">
+										<use xlink:href="images/sprite.svg#live-trades"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use xlink:href="images/sprite.svg#live-trades-yellow"></use>
+									</svg>
+								</span>
+								<picture class="header__nav-link-bg">
+									<source srcset="./images/header/img-trades.webp" type="image/webp">
+									<img 
+										src="./images/header/img-trades.png"  
+										width="89" 
+										height="89" 
+										alt=""
+										aria-hidden="true">
+								</picture>
+								<span>Live трейды</span>
+							</a>
+						</li>
+						<li class="tablet">
+							<a href="#" class="header__nav-link">
+								<span class="header__nav-link-svg">
+									<svg aria-hidden="true" class="dark-grey">
+										<use xlink:href="images/sprite.svg#trophy"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use xlink:href="images/sprite.svg#trophy-yellow"></use>
+									</svg>
+								</span>
+								<picture class="header__nav-link-bg">
+									<source srcset="./images/header/img-players.webp" type="image/webp">
+									<img 
+										src="./images/header/img-players.png"  
+										width="89" 
+										height="89" 
+										alt=""
+										aria-hidden="true">
+								</picture>
+								<span>Топ игроки</span>
+							</a>
+						</li>
+						<li class="tablet">
+							<a href="#" class="header__nav-link">
+								<span class="header__nav-link-svg">
+									<svg aria-hidden="true" class="dark-grey">
+										<use xlink:href="images/sprite.svg#provably-fair"></use>
+									</svg>
+									<svg aria-hidden="true" class="yellow">
+										<use xlink:href="images/sprite.svg#provably-fair"></use>
+									</svg>
+								</span>
+								<picture class="header__nav-link-bg">
+									<source srcset="./images/header/img-provably-fair.webp" type="image/webp">
+									<img 
+										src="./images/header/img-provably-fair.png"  
+										width="89" 
+										height="89" 
+										alt=""
+										aria-hidden="true">
+								</picture>
+								<span>Provably fair</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="header__nav-link">
+								<span class="header__nav-link-svg">
+									<svg aria-hidden="true" class="dark-grey">
+										<use xlink:href="images/sprite.svg#provably-fair"></use>
+									</svg>
+									<svg aria-hidden="true" class="yellow">
+										<use xlink:href="images/sprite.svg#provably-fair"></use>
+									</svg>
+								</span>
+								<picture class="header__nav-link-bg">
+									<source srcset="./images/header/img-vip-club.webp" type="image/webp">
+									<img 
+										src="./images/header/img-vip-club.png"  
+										width="89" 
+										height="89" 
+										alt=""
+										aria-hidden="true">
+								</picture>
+								<span>Vip-клуб</span>
+							</a>
+						</li>
+						<li class="header__nav-promo">
+							<a href="#" class="header__nav-link header__nav-link--halloween-event">
+								<picture class="header__nav-link-img">
+									<source srcset="./images/header/icon-halloween-event.webp" type="image/webp">
+									<img src="./images/header/icon-halloween-event.png" alt="Halloween">
+								</picture>
+								<span>Ивенты</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="header__top-btns">
+			<div class="header__select select js-select">
+				<button
+					class="btn select__button js-select-btn"
+					role="combobox"
+					aria-label="dropdown button"
+					aria-haspopup="listbox"
+					aria-expanded="false"
+					aria-controls="select-dropdown">
+					<span class="select__selected-value js-selected-value">
+						<span class="header__select-item-img">
+							<picture>
+								<source srcset="./images/icon-uk-lang.webp" type="image/webp">
+								<img src="./images/icon-uk-lang.png" alt="" aria-hidden="true">
+							</picture>
+						</span>
+						Eng
+					</span>
+				</button>
+				<div class="select__dropdown">
+					<ul role="listbox" class="select__dropdown-wrap">
+						<li role="option">
+							<input type="radio" id="rus-lang" name="lang"/>
+							<label for="rus-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-ru-lang.webp" type="image/webp">
+										<img src="./images/icon-ru-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								Русский
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="eng-lang" name="lang" checked/>
+							<label for="eng-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-uk-lang.webp" type="image/webp">
+										<img src="./images/icon-uk-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								English
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="ukr-lang" name="lang"/>
+							<label for="ukr-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-ua-lang.webp" type="image/webp">
+										<img src="./images/icon-ua-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								Українська
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="by-lang" name="lang"/>
+							<label for="by-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-by-lang.webp" type="image/webp">
+										<img src="./images/icon-by-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								Беларускі
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="de-lang" name="lang"/>
+							<label for="de-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-de-lang.webp" type="image/webp">
+										<img src="./images/icon-de-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								Deutsch
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="fr-lang" name="lang"/>
+							<label for="fr-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-fr-lang.webp" type="image/webp">
+										<img src="./images/icon-fr-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								Français
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="es-lang" name="lang"/>
+							<label for="es-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-es-lang.webp" type="image/webp">
+										<img src="./images/icon-es-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								Español
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="pt-lang" name="lang"/>
+							<label for="pt-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-pt-lang.webp" type="image/webp">
+										<img src="./images/icon-pt-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								Portuguese
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="pr-lang" name="lang"/>
+							<label for="pr-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-pr-lang.webp" type="image/webp">
+										<img src="./images/icon-pr-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								Portuguese BR
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="pl-lang" name="lang"/>
+							<label for="pl-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-pl-lang.webp" type="image/webp">
+										<img src="./images/icon-pl-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								Polski
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="it-lang" name="lang"/>
+							<label for="it-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-it-lang.webp" type="image/webp">
+										<img src="./images/icon-it-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								Italiano
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="tr-lang" name="lang"/>
+							<label for="tr-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-tr-lang.webp" type="image/webp">
+										<img src="./images/icon-tr-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								Türkçe
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="sv-lang" name="lang"/>
+							<label for="sv-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-sv-lang.webp" type="image/webp">
+										<img src="./images/icon-sv-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								Svenska
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="cz-lang" name="lang"/>
+							<label for="cz-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-cz-lang.webp" type="image/webp">
+										<img src="./images/icon-cz-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								čeština
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="cn-lang" name="lang"/>
+							<label for="cn-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-cn-lang.webp" type="image/webp">
+										<img src="./images/icon-cn-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								中文
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="th-lang" name="lang"/>
+							<label for="th-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-th-lang.webp" type="image/webp">
+										<img src="./images/icon-th-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								ภาษาไทย
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="jp-lang" name="lang"/>
+							<label for="jp-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-jp-lang.webp" type="image/webp">
+										<img src="./images/icon-jp-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								日本語
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="kr-lang" name="lang"/>
+							<label for="kr-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-kr-lang.webp" type="image/webp">
+										<img src="./images/icon-kr-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								한국어
+							</label>
+						</li>
+						<li role="option">
+							<input type="radio" id="kz-lang" name="lang"/>
+							<label for="kz-lang">
+								<span class="header__select-item-img">
+									<picture>
+										<source srcset="./images/icon-kz-lang.webp" type="image/webp">
+										<img src="./images/icon-kz-lang.png" alt="" aria-hidden="true">
+									</picture>
+								</span>
+								Қазақша
+							</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="header__top-btns-wrap">
+				
+					<!-- <a href=".#" class="btn btn--purple btn--font-black">
+						<img src="./images/svg/diamond-purple.svg" alt="" aria-hidden="true">
+						370
+					</a> -->
+					<a href=".#" class="header__coin-btn desktop-lg">
+						<svg aria-hidden="true">
+							<use xlink:href="images/sprite.svg#token-yellow"></use>
+						</svg>
+						<span>370</span>
+					</a>
+					<a href=".#" class="header__pay-btn btn btn--gr-yellow btn--icon desktop-lg">
+						<img src="./images/svg/wallet.svg" alt="" aria-hidden="true">
+						Pay
+						<span class="btn__plus-icon" aria-hidden="true">
+							<svg aria-hidden="true" class="white">
+								<use xlink:href="images/sprite.svg#plus"></use>
+							</svg>
+						</span>
+					</a>
+					<div class="header__profile">
+						<div>
+							<span class="header__profile-name">Aleksandr</span>
+							<span class="header__profile-money">
+								<span>123 456,78</span>
+								<svg aria-hidden="true">
+									<use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+								</svg>
+							</span>
+						</div>
+						<button type="button" class="header__profile-img-btn">
+							<picture class="header__profile-img">
+								<source srcset="./images/avatar.webp" type="image/webp">
+								<img src="./images/avatar.jpg" class="image" alt="Avatar">
+							</picture>
+							<span class="header__profile-vip">VIP</span>
+						</button>
+					</div>
+				
+			</div>
+			<button class="btn header__burger js-menu-burger-btn" aria-label="Открыть меню" aria-expanded="false">
+				<span class="header__burger-line"></span>
+			</button>
+		</div>
+	</div>
+	<div class="header__live">
+		<div class="header__live-users">
+			<svg aria-hidden="true" class="dark-grey">
+				<use xlink:href="images/sprite.svg#users-green"></use>
+			</svg>
+			<div class="header__live-users-count loading">
+				<div class="header__live-loader-wrap">
+					<div class="header__live-loader"></div>
+				</div>
+				<span>1.740</span>
+			</div>
+			<span class="header__live-users-status">online</span>
+		</div>
+		<div class="header__live-btns">
+			<button type="button" class="header__live-btn btn btn--icon">
+				<span class="btn__svg-wrap">
+					<svg aria-hidden="true" class="dark-grey">
+						<use xlink:href="images/sprite.svg#crown"></use>
+					</svg>
+					<svg aria-hidden="true">
+						<use xlink:href="images/sprite.svg#crown-yellow"></use>
+					</svg>
+				</span>
+				Top
+			</button>
+			<button type="button" class="header__live-btn btn btn--icon btn--active">
+				<span class="btn__svg-wrap">
+					<svg aria-hidden="true" class="dark-grey">
+						<use xlink:href="images/sprite.svg#lightning"></use>
+					</svg>
+					<svg aria-hidden="true">
+						<use xlink:href="images/sprite.svg#lightning-yellow"></use>
+					</svg>
+				</span>
+				Live
+			</button>
+		</div>
+		<div class="header__live-list">
+			<div class="header__live-pause">
+				<svg aria-hidden="true" class="green">
+					<use xlink:href="images/sprite.svg#pause"></use>
+				</svg>
+				<span>Пауза</span>
+			</div>
+			<div class="live-item live-item--common live-item--retro-case active-feed-item">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+        
+        
+        
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/360fx360f 2x"
+            alt="Caramel"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Caramel</span>
+        <span class="live-item__subtitle">UMP-45</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/cases/case-9.png" 
+            srcset="./images/cases/case-9.png 2x"
+            alt="Caramel"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div><div class="live-item live-item--covert live-item--retro-case ">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+        
+            <span class="live-item__magic">
+                <svg aria-hidden="true" class="white">
+                    <use xlink:href="images/sprite.svg#magic"></use>
+                </svg>
+                <span>x2</span>
+            </span>
+        
+        
+        <span class="live-item__badge"><span>x1.1</span></span>
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/360fx360f 2x"
+            alt="Syd Mead"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Syd Mead</span>
+        <span class="live-item__subtitle">AUG</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/cases/case-10.png" 
+            srcset="./images/cases/case-10.png 2x"
+            alt="Syd Mead"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div><div class="live-item live-item--milspec live-item--retro-case ">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+        
+        
+            <span class="live-item__magic">
+                <svg aria-hidden="true" class="white">
+                    <use xlink:href="images/sprite.svg#magic"></use>
+                </svg>
+                <span>x3</span>
+            </span>
+        
+        
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf0Ob3fDxBvYyJhoWPn_jgDLbUkmJE5Ysi3u-Y84_w2gXs_xFlYGHxJtWcJlM8aQ3R-VLox-rpg568upqfwXNmpGB8slz_mxD0/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf0Ob3fDxBvYyJhoWPn_jgDLbUkmJE5Ysi3u-Y84_w2gXs_xFlYGHxJtWcJlM8aQ3R-VLox-rpg568upqfwXNmpGB8slz_mxD0/360fx360f 2x"
+            alt="Heat"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Heat</span>
+        <span class="live-item__subtitle">MAC-10</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/cases/case-7.png" 
+            srcset="./images/cases/case-7.png 2x"
+            alt="Heat"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div><div class="live-item live-item--classified  ">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+            <span class="live-item__magic">
+                <svg aria-hidden="true" class="white">
+                    <use xlink:href="images/sprite.svg#magic"></use>
+                </svg>
+            </span>
+        
+        
+        
+        <span class="live-item__badge"><span>x1.1</span></span>
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf0Ob3fDxBvYyJhoWPn_jgDLbUkmJE5Ysi3u-Y84_w2gXs_xFlYGHxJtWcJlM8aQ3R-VLox-rpg568upqfwXNmpGB8slz_mxD0/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf0Ob3fDxBvYyJhoWPn_jgDLbUkmJE5Ysi3u-Y84_w2gXs_xFlYGHxJtWcJlM8aQ3R-VLox-rpg568upqfwXNmpGB8slz_mxD0/360fx360f 2x"
+            alt="Cassette"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Cassette</span>
+        <span class="live-item__subtitle">P250</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/live-items/live-item-hover.png" 
+            srcset="./images/live-items/live-item-hover@2x.png 2x"
+            alt="Cassette"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div><div class="live-item live-item--restricted  ">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+        
+        
+        
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/360fx360f 2x"
+            alt="Tacticat"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Tacticat</span>
+        <span class="live-item__subtitle">CZ75-Auto</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/live-items/live-item-hover.png" 
+            srcset="./images/live-items/live-item-hover@2x.png 2x"
+            alt="Tacticat"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div><div class="live-item live-item--common  ">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+        
+        
+        
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ09ulq5WYh8jiPLfFl2xU18h0juDU-MKj2VXhrkA_MmnwJIGRdVA4Ml3XrAPvw-q9g5O8vc_Iy3cw7CVw5y3cgVXp1sQwp5E7/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ09ulq5WYh8jiPLfFl2xU18h0juDU-MKj2VXhrkA_MmnwJIGRdVA4Ml3XrAPvw-q9g5O8vc_Iy3cw7CVw5y3cgVXp1sQwp5E7/360fx360f 2x"
+            alt="Lead Collector"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Lead Collector</span>
+        <span class="live-item__subtitle">USP-S</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/live-items/live-item-hover.png" 
+            srcset="./images/live-items/live-item-hover@2x.png 2x"
+            alt="Lead Collector"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div><div class="live-item live-item--gloves  ">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+        
+        
+        <span class="live-item__badge"><span>x1.1</span></span>
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/360fx360f 2x"
+            alt="Tiger Strike"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Tiger Strike</span>
+        <span class="live-item__subtitle">Specialist 100000</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/live-items/live-item-hover.png" 
+            srcset="./images/live-items/live-item-hover@2x.png 2x"
+            alt="Tiger Strike"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div><div class="live-item live-item--milspec  ">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+        
+        
+        <span class="live-item__badge"><span>x1.1</span></span>
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7uifDhh3szFcDoV09G3mIaEhfrLP7LWnn8fu5QmiLvFoNz32wLl_xJuYmz2INSUdw4_MArV-ALvwey-g8DvuZuYymwj5HdAX4w01A/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7uifDhh3szFcDoV09G3mIaEhfrLP7LWnn8fu5QmiLvFoNz32wLl_xJuYmz2INSUdw4_MArV-ALvwey-g8DvuZuYymwj5HdAX4w01A/360fx360f 2x"
+            alt="Sonar"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Sonar</span>
+        <span class="live-item__subtitle">MAG-7</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/live-items/live-item-hover.png" 
+            srcset="./images/live-items/live-item-hover@2x.png 2x"
+            alt="Sonar"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div><div class="live-item live-item--uncommon  ">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+        
+        
+        
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldfwPz3YShQ_NCzq42Ok_7hPvXUwjMFvJBy27HFpNWm0Fe2_BA5ZmD0I9edclNqaV6B_wK_ybq6hcC0ot2XnkAiK1X5/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldfwPz3YShQ_NCzq42Ok_7hPvXUwjMFvJBy27HFpNWm0Fe2_BA5ZmD0I9edclNqaV6B_wK_ybq6hcC0ot2XnkAiK1X5/360fx360f 2x"
+            alt="Ultraviolet"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Ultraviolet</span>
+        <span class="live-item__subtitle">MAC-10</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/live-items/live-item-hover.png" 
+            srcset="./images/live-items/live-item-hover@2x.png 2x"
+            alt="Ultraviolet"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div><div class="live-item live-item--rare  active-feed-item">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+        
+        
+        <span class="live-item__badge"><span>x1.1</span></span>
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/360fx360f 2x"
+            alt="Tiger Strike"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Tiger Strike</span>
+        <span class="live-item__subtitle">Specialist 100000</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/live-items/live-item-hover.png" 
+            srcset="./images/live-items/live-item-hover@2x.png 2x"
+            alt="Tiger Strike"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div><div class="live-item live-item--classified  ">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+        
+        
+        
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/360fx360f 2x"
+            alt="Momentum"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Momentum</span>
+        <span class="live-item__subtitle">AUG</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/live-items/live-item-hover.png" 
+            srcset="./images/live-items/live-item-hover@2x.png 2x"
+            alt="Momentum"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div><div class="live-item live-item--common  ">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+        
+        
+        
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/360fx360f 2x"
+            alt="Caramel"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Caramel</span>
+        <span class="live-item__subtitle">UMP-45</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/live-items/live-item-hover.png" 
+            srcset="./images/live-items/live-item-hover@2x.png 2x"
+            alt="Caramel"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div><div class="live-item live-item--covert  ">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+        
+        
+        
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/360fx360f 2x"
+            alt="Syd Mead"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Syd Mead</span>
+        <span class="live-item__subtitle">AUG</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/live-items/live-item-hover.png" 
+            srcset="./images/live-items/live-item-hover@2x.png 2x"
+            alt="Syd Mead"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div><div class="live-item live-item--milspec  ">
+    <div class="live-item__content">
+        <div class="live-item__border"></div>
+        
+        
+        
+        
+        <img 
+            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf0Ob3fDxBvYyJhoWPn_jgDLbUkmJE5Ysi3u-Y84_w2gXs_xFlYGHxJtWcJlM8aQ3R-VLox-rpg568upqfwXNmpGB8slz_mxD0/180fx180f" 
+            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf0Ob3fDxBvYyJhoWPn_jgDLbUkmJE5Ysi3u-Y84_w2gXs_xFlYGHxJtWcJlM8aQ3R-VLox-rpg568upqfwXNmpGB8slz_mxD0/360fx360f 2x"
+            alt="Heat"
+            class="live-item__img"
+            width="78"
+            height="58">   
+        <span class="live-item__title">Heat</span>
+        <span class="live-item__subtitle">MAC-10</span>
+    </div>
+    <div class="live-item__hover">
+        <img 
+            src="./images/live-items/live-item-hover.png" 
+            srcset="./images/live-items/live-item-hover@2x.png 2x"
+            alt="Heat"
+            class="live-item__hover-img"> 
+        <div class="live-item__hover-info">
+            <span class="live-item__title">Moon Knight</span>   
+            <span class="live-item__subtitle">Aleksandr</span> 
+        </div>    
+    </div>
+</div>
+		</div>
+	</div>
+	<div class="header__promo header__promo--with-input">
+		<div class="header__promo-wrap">
+			<ul class="header__promo-nav">
+				<li>
+					<a href=".#" class="header__promo-link">
+						<svg aria-hidden="true" class="header__promo-link-icon">
+							<use xlink:href="images/sprite.svg#live-trades"></use>
+						</svg>
+						<span class="header__promo-link-title">Live трейды</span>
+					</a>
+				</li>
+				<li>
+					<a href=".#" class="header__promo-link">
+						<svg aria-hidden="true" class="header__promo-link-icon">
+							<use xlink:href="images/sprite.svg#trophy"></use>
+						</svg>
+						<span class="header__promo-link-title">Топ игроки</span>
+					</a>
+				</li>
+				<li>
+					<a href=".#" class="header__promo-link">
+						<svg aria-hidden="true" class="header__promo-link-icon">
+							<use xlink:href="images/sprite.svg#provably-fair"></use>
+						</svg>
+						<span class="header__promo-link-title">Provably fair</span>
+					</a>
+				</li>
+			</ul>
+			<div class="header__promo-controls">
+				<div>
+					<a href=".#" class="header__promo-social-link btn btn--icon">
+						<svg aria-hidden="true" class="dark-grey">
+							<use xlink:href="images/sprite.svg#youtube"></use>
+						</svg>
+						Youtube
+					</a>
+					<a href=".#" class="header__promo-social-link btn btn--icon">
+						<svg aria-hidden="true" class="dark-grey">
+							<use xlink:href="images/sprite.svg#tiktok"></use>
+						</svg>
+						TikTok
+					</a>
+					<a href=".#" class="header__promo-social-link btn btn--icon">
+						<svg aria-hidden="true" class="dark-grey">
+							<use xlink:href="images/sprite.svg#instagram"></use>
+						</svg>
+						Instagram
+					</a>
+					<a href=".#" class="header__promo-social-link btn btn--icon">
+						<svg aria-hidden="true" class="dark-grey">
+							<use xlink:href="images/sprite.svg#vk"></use>
+						</svg>
+						Вконтакте
+					</a>
+					<button type="button" class="header__promo-social-link btn btn--icon" data-modal-trigger="telegram-subscribe">
+						<svg aria-hidden="true" class="dark-grey">
+							<use xlink:href="images/sprite.svg#telegram-2"></use>
+						</svg>
+						Telegram
+					</button>
+				</div>
+				<div>
+					<button type="button" class="header__promo-btn btn btn--icon js-notifications-btn">
+						<svg aria-hidden="true" class="dark-grey">
+							<use xlink:href="images/sprite.svg#bell"></use>
+						</svg>
+						Уведомления
+						<span class="btn__info btn__info--red">2</span>
+					</button>
+					<button type="button" class="header__promo-btn btn js-support-btn">
+						<svg aria-hidden="true">
+							<use xlink:href="images/sprite.svg#support-green"></use>
+						</svg>
+						Поддержка
+						<span class="btn__info btn__info--green">4</span>
+					</button>
+					<div class="header__volume">
+						<button type="button" class="header__promo-btn btn btn--icon">
+							<svg aria-hidden="true" class="dark-grey">
+								<use xlink:href="images/sprite.svg#sound"></use>
+							</svg>
+							Звук
+						</button>
+						<div class="header__volume-container">
+							<div class="header__volume-body">
+								<div class="header__volume-header">
+									<span>Громкость:</span>
+									<span class="header__volume-value js-range-value">60</span>
+								</div>
+								<div class="header__range-slider range-slider js-range-slider">
+									<span class="range-slider__track js-range-track"></span>
+									<input type="range" min="0" max="100" value="60" step="0">
+									<div class="range-slider__min-value">0</div>
+									<div class="range-slider__max-value">100</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn btn--icon">
+                        <svg aria-hidden="true" class="dark-grey">
+                            <use xlink:href="images/sprite.svg#snowflake"></use>
+                        </svg>
+                        Снег
+                    </button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header__balance js-header-balance">
+		<div class="header__balance-wrap">
+			<a href=".#" class="header__coin-btn">
+				<svg aria-hidden="true">
+					<use xlink:href="images/sprite.svg#token-yellow"></use>
+				</svg>
+				<span>370</span>
+			</a>
+			<a href=".#" class="header__pay-btn btn btn--sm btn--gr-yellow btn--icon">
+				<svg aria-hidden="true" class="black">
+					<use xlink:href="images/sprite.svg#plus"></use>
+				</svg>
+				Pay
+			</a>
+			<div class="header__profile">
+				<div>
+					<span class="header__profile-name">Aleksandr</span>
+					<span class="header__profile-money">
+						<span>123 456,78</span>
+						<svg aria-hidden="true">
+							<use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+						</svg>
+					</span>
+				</div>
+				<a href="#" class="header__profile-img-btn">
+					Перейти в профиль
+					<picture class="header__profile-img">
+						<source srcset="./images/avatar.webp" type="image/webp">
+						<img src="./images/avatar.jpg" class="image" alt="Avatar">
+					</picture>
+				</a>
+			</div>
+		</div>
+	</div>
+</header>
+    <main>
+        <div class="upgrade js-upgrade" style="--rotation-arrow-round: 25deg">
+    <div class="container">
+        <h1 class="upgrade__title page-title page-title--upgrade">
+            <img src="./images/svg/upgrade-yellow-arrow.svg" alt="" aria-hidden="true">
+            Апгрейд
+        </h1>
+        <div class="upgrade__spine-body js-spine-animation">
+            <spine-skeleton
+                identifier="upgrade-body"
+                class="upgrade__spine-skel"
+                overlay-id="body"
+                atlas="./spine/body/character_body.atlas"
+                skeleton="./spine/body/character_body.json"
+                fit="contain"
+                animation="idle"
+                animation-bounds="magic_idle">
+            </spine-skeleton>
+            <spine-skeleton
+                identifier="upgrade-body"
+                class="upgrade__spine-skel"
+                overlay-id="body"
+                atlas="./spine/body-loot/character_body.atlas"
+                skeleton="./spine/body-loot/character_body.json"
+                fit="contain"
+                animation="idle">
+            </spine-skeleton>
+            <spine-overlay overlay-id="body"></spine-overlay>
+        </div>
+        <div class="upgrade__body">
+            <a href="./event-halloween.html" class="upgrade__event-link">Ссылка на ивент</a>
+            <div class="upgrade__part-left">
+                <div class="upgrade__skin-container">
+                    <div class="upgrade__skin upgrade__skin--uncommon">
+                        
+                        
+                            <div class="upgrade__skin-content">
+                                <button type="button" class="upgrade__remove-btn">
+                                    Удалить скин
+                                    <span class="upgrade__remove-btn-icon"></span>
+                                </button>
+                                <div class="upgrade__skin-desc">Ваш предмет + баланс</div>
+                                <div class="upgrade__skin-balance">
+                                    <span>32000</span>
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                                    </svg>
+                                </div>
+                                <div class="upgrade__skin-img">
+                                    <div class="upgrade__skin-img-wrap">
+                                        <img 
+                                            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/368fx276f" 
+                                            alt="Водительские перчатки | Пиксельный камуфляж «Розовый»"
+                                            width="368"
+                                            height="276">
+                                    </div>
+                                </div>
+                                <div class="upgrade__skin-info">
+                                    <h3 class="upgrade__skin-title">SCAR-20 I Jungle Whirlwind SCAR-20 I Jungle Whirlwind</h3>
+                                    <div class="upgrade__skin-price">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                                        </svg>
+                                        <span>100 000.24</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="upgrade__skins-grid">
+                                <div class="upgrade__skins-item upgrade__skins-item--covert">
+                                    <!-- <div class="upgrade__skins-empty-item">1</div> -->
+                                    <div class="upgrade__skins-item-content">
+                                        <div class="upgrade__skins-item-img">
+                                            <img 
+                                                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/368fx276f" 
+                                                alt="Водительские перчатки | Пиксельный камуфляж «Розовый»"
+                                                width="368"
+                                                height="276">
+                                        </div>
+                                        <div class="upgrade__skins-item-info">
+                                            <span class="upgrade__skins-item-subtitle">SCAR-20</span>
+                                            <h3 class="upgrade__skins-item-title">Jungle Whirlwind</h3>
+                                            <div class="upgrade__skin-item-price">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                                                </svg>
+                                                <span>100 000.24</span>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="upgrade__skin-remove-btn btn btn--icon">
+                                            <svg aria-hidden="true" class="black">
+                                                <use xlink:href="images/sprite.svg#minus-circle"></use>
+                                            </svg>
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="upgrade__skins-item upgrade__skins-item--uncommon">
+                                    <!-- <div class="upgrade__skins-empty-item">2</div> -->
+                                    <div class="upgrade__skins-item-content">
+                                        <div class="upgrade__skins-item-params">
+                                            <span class="upgrade__skins-item-phase">blackpearl</span>
+                                            <span class="upgrade__skins-item-quality">WM</span>
+                                        </div>
+                                        <div class="upgrade__skins-item-img">
+                                            <img 
+                                                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/368fx276f" 
+                                                alt="Водительские перчатки | Пиксельный камуфляж «Розовый»"
+                                                width="368"
+                                                height="276">
+                                        </div>
+                                        <div class="upgrade__skins-item-info">
+                                            <span class="upgrade__skins-item-subtitle">SCAR-20</span>
+                                            <h3 class="upgrade__skins-item-title">Jungle Whirlwind</h3>
+                                            <div class="upgrade__skin-item-price">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                                                </svg>
+                                                <span>100 000.24</span>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="upgrade__skin-remove-btn btn btn--icon">
+                                            <svg aria-hidden="true" class="black">
+                                                <use xlink:href="images/sprite.svg#minus-circle"></use>
+                                            </svg>
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="upgrade__skins-item upgrade__skins-item--milspec">
+                                    <!-- <div class="upgrade__skins-empty-item">3</div> -->
+                                    <div class="upgrade__skins-item-content">
+                                        <div class="upgrade__skins-item-params">
+                                            <span class="upgrade__skins-item-phase">blackpearl</span>
+                                            <span class="upgrade__skins-item-quality">WM</span>
+                                        </div>
+                                        <div class="upgrade__skins-item-img">
+                                            <img 
+                                                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/368fx276f" 
+                                                alt="Водительские перчатки | Пиксельный камуфляж «Розовый»"
+                                                width="368"
+                                                height="276">
+                                        </div>
+                                        <div class="upgrade__skins-item-info">
+                                            <span class="upgrade__skins-item-subtitle">SCAR-20</span>
+                                            <h3 class="upgrade__skins-item-title">Jungle Whirlwind</h3>
+                                            <div class="upgrade__skin-item-price">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                                                </svg>
+                                                <span>100 000.24</span>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="upgrade__skin-remove-btn btn btn--icon">
+                                            <svg aria-hidden="true" class="black">
+                                                <use xlink:href="images/sprite.svg#minus-circle"></use>
+                                            </svg>
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="upgrade__skins-item upgrade__skins-item--classified">
+                                    <div class="upgrade__skins-empty-item">4</div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div class="upgrade__skin-footer">
+                        <div class="upgrade__skin-footer-circle"></div>
+                        <div class="upgrade__range">
+                            <div class="upgrade__range-input upgrade__range-input--rub">
+                                <label for="upgrade-balance-input">Добавить баланс</label>
+                                <input type="number" id="upgrade-balance-input" placeholder="0">
+                            </div>
+                            <div class="upgrade__range-slider range-slider js-range-slider">
+                                <span class="range-slider__track js-range-track"></span>
+                                <input type="range" min="0" max="121325.87" value="29511.7">
+                                <div class="range-slider__min-value">0</div>
+                                <div class="range-slider__max-value">121325.87</div>
+                            </div>
+                        </div>
+                        <div class="upgrade__skin-footer-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="upgrade__part-center">
+                <div class="upgrade__provability">
+                    <div class="upgrade__provability-wrap" 
+                        style="--provability-zone:.4">
+                        <div class="upgrade__provability-progress">
+                            <div class="upgrade__smoke"></div>
+                        </div>
+                        <div class="upgrade__provability-body">
+                            <div class="upgrade__provability-info">
+                                <div class="upgrade__provability-chance">
+                                    <div class="upgrade__provability-dots"></div>
+                                    <div class="upgrade__provability-dots"></div>
+                                </div>
+                                <div class="upgrade__provability-text">
+                                    <span class="upgrade__provability-title">Шанс:</span>
+                                    <span class="upgrade__provability-numb">40.00%</span>
+                                </div>
+                                <div class="upgrade__fail-msg">
+                                    <img src="./images/img-loose.svg" alt="Loose">
+                                    <span class="upgrade__fail-provably">Вы можете проверить честность через <a href="#">Provably Fair</a></span>   
+                                </div>
+                            </div>
+                            <div class="upgrade__provability-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                  
+                
+                    <div class="upgrade__btns-wrap js-upgrade-btns">
+                        <div class="upgrade__clear-btn tooltip tooltip--left">
+                            <div class="tooltip__body" role="tooltip">
+                                <p>Очистить</p>
+                            </div>
+                            <button type="button" class="btn btn--icon tooltip__toggle">
+                                <svg aria-hidden="true" class="dark-grey">
+                                    <use xlink:href="images/sprite.svg#brush"></use>
+                                </svg>
+                                Clear items
+                            </button>
+                        </div>
+                        <button type="button" class="upgrade__btn btn btn--bg-grey btn--upper"  data-modal-trigger="upgrade-agreement">
+                            upgrade
+                            <span class="btn__svg-wrap">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#arrow-upgrade-up-yellow"></use>
+                                </svg>
+                                <svg aria-hidden="true" class="dark-grey">
+                                    <use xlink:href="images/sprite.svg#arrow-upgrade-up"></use>
+                                </svg>
+                            </span>
+                        </button>
+                        <label class="upgrade__fast-checkbox tooltip tooltip--right js-upgrade-fast">
+                            <div class="tooltip__body" role="tooltip">
+                                <p>Быстрый апгрейд</p>
+                            </div>
+                            <input type="checkbox" class="js-upgrade-fast-checkbox">
+                            <span class="upgrade__fast-svg tooltip__toggle">
+                                <svg aria-hidden="true" class="dark-grey">
+                                    <use xlink:href="images/sprite.svg#lightning"></use>
+                                </svg>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#lightning-yellow"></use>
+                                </svg>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="upgrade__btns js-upgrade-win-btns">
+                        <button type="button" class="btn btn--bg-grey btn--upper js-upgrade-repeat-btn">
+                            Повторить
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#repeat-yellow"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="case-hero__btn btn btn--bg-grey js-upgrade-sell-btn">
+                            Продать за 
+                            <span class="case-hero__btn-text">
+                                <span>100 000.25</span>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="upgrade__btns js-upgrade-fail-btns">
+                        <button type="button" class="btn btn--bg-grey btn--upper js-upgrade-repeat-btn">
+                            Повторить
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#repeat-yellow"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="btn btn--upper js-upgrade-close-btn">
+                            <svg aria-hidden="true" class="dark-grey">
+                                <use xlink:href="images/sprite.svg#close-circle"></use>
+                            </svg>
+                            Закрыть
+                        </button>
+                    </div>
+                
+            </div>
+            <div class="upgrade__part-right">
+                <div class="upgrade__skin-container">
+                    <div class="upgrade__skin upgrade__skin--gloves js-upgrade-skin">
+                        
+                        
+                            <div class="upgrade__skin-content">
+                                <div class="upgrade__magic-rings">
+                                    <div class="upgrade__magic-ring"></div>
+                                    <div class="upgrade__magic-ring"></div>
+                                    <div class="upgrade__magic-ring"></div>
+                                </div>
+                                <button type="button" class="upgrade__remove-btn">
+                                    Удалить скин
+                                    <span class="upgrade__remove-btn-icon"></span>
+                                </button>
+                                <div class="upgrade__skin-desc">Предмет апгрейда:</div>
+                                <span class="upgrade__skin-quality">WM</span>
+                                <div class="upgrade__skin-img upgrade__skin-img--8">
+                                    <div class="upgrade__magic-logo"></div>
+                                    <div class="upgrade__win-arrow">
+                                        <svg class="upgrade__win-arrow-border" viewBox="0 0 299 301" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M240.216 290.117L240.615 290.343C257.415 299.666 278.138 287.698 278.462 268.488L278.466 268.033V197.597C278.466 196.358 278.372 195.132 278.197 193.927C286.055 189.861 291.817 181.801 291.996 171.753L292 171.273V100.836C292 92.0104 287.438 83.8331 279.98 79.1894L279.25 78.7519L160.866 10.4032C157.377 8.03342 153.17 6.8147 148.897 7.02336L148.688 7.03312C148.647 7.03563 148.604 7.03815 148.562 7.04093L147.902 7.09367C144.609 7.41309 141.436 8.56541 138.702 10.4345L19.75 79.1122L19.0195 79.5497C11.564 84.1921 7.00084 92.367 7 101.193V171.635C7.0013 181.905 12.8209 190.156 20.8027 194.287C20.6276 195.492 20.5342 196.718 20.5342 197.957V268.394C20.5357 287.868 41.4531 300.099 58.3848 290.703L58.7842 290.477L149.812 237.922L240.216 290.117ZM299 171.273C298.999 182.546 293.463 191.927 285.466 197.659V268.033C285.465 292.857 258.805 308.442 237.219 296.463L237.195 296.45L236.773 296.212L236.744 296.195L236.716 296.179L149.812 246.004L62.2842 296.539C40.617 309.048 13.5357 293.41 13.5342 268.394V198.019C5.68242 192.391 0.203357 183.247 0.00585938 172.247L0 171.635V101.192C0.00110483 89.5799 6.19852 78.8535 16.25 73.0497L134.995 4.49211C138.888 1.89332 143.415 0.355152 148.1 0.0565592C148.167 0.0520617 148.231 0.0472444 148.271 0.0448404H148.283L148.295 0.0438639C148.387 0.0386658 148.506 0.0342871 148.556 0.0321451C148.56 0.031929 148.565 0.0313824 148.569 0.0311686C148.575 0.030912 148.579 0.030192 148.579 0.030192C154.29 -0.243661 159.883 1.35473 164.549 4.44718L282.75 72.6894C292.805 78.4949 299 89.2248 299 100.836V171.273Z" />
+                                        </svg>
+                                        <svg class="upgrade__win-arrow-top" viewBox="0 0 246 152" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M123.461 0.0915833C123.472 0.111715 123.489 0.128433 123.509 0.140041L243 69.1276C244.856 70.1994 246 72.1801 246 74.3237V144.76C246 149.379 241 152.266 237 149.956L126.312 86.0507C124.455 84.9789 122.168 84.9789 120.312 86.0507L9.00001 150.317C5.00001 152.626 0 149.739 0 145.121V74.6841C0 72.5405 1.14359 70.5597 3 69.4879L123.114 0.139952C123.134 0.128399 123.151 0.111807 123.162 0.0918276L123.198 0.0303825C123.215 0.00130585 123.252 -0.00862767 123.281 0.00816772C123.3 0.0189897 123.323 0.0189925 123.342 0.00826535C123.371 -0.00853007 123.409 0.00158369 123.426 0.0310035L123.461 0.0915833Z" />
+                                        </svg>
+                                        <svg class="upgrade__win-arrow-bottom" viewBox="0 0 219 144" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M109.927 0.0915832C109.938 0.111715 109.955 0.128433 109.975 0.140041L215.932 61.3131C217.788 62.3849 218.932 64.3657 218.932 66.5093V136.946C218.932 141.565 213.932 144.451 209.932 142.142L112.777 86.0506C110.921 84.9789 108.634 84.9789 106.777 86.0507L8.99999 142.502C4.99999 144.812 0 141.925 0 137.306V66.8696C0 64.726 1.1436 62.7453 3.00001 61.6735L109.58 0.139949C109.6 0.128396 109.616 0.111807 109.628 0.0918274L109.664 0.0303825C109.681 0.00130585 109.718 -0.00862767 109.747 0.00816772C109.766 0.0189897 109.789 0.0189925 109.808 0.00826535C109.837 -0.00853007 109.875 0.00158369 109.892 0.0310035L109.927 0.0915832Z" />
+                                        </svg>
+                                    </div>
+                                    <div class="upgrade__skin-img-wrap">
+                                        <img 
+                                            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/368fx276f" 
+                                            alt="SCAR-20 | Jungle Whirlwind"
+                                            width="368"
+                                            height="276">
+                                        <img 
+                                            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/368fx276f" 
+                                            alt="SCAR-20 | Jungle Whirlwind"
+                                            width="368"
+                                            height="276">   
+                                        <img 
+                                            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/368fx276f" 
+                                            alt="SCAR-20 | Jungle Whirlwind"
+                                            width="368"
+                                            height="276"> 
+                                        <img 
+                                            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/368fx276f" 
+                                            alt="SCAR-20 | Jungle Whirlwind"
+                                            width="368"
+                                            height="276">
+                                        <img 
+                                            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/368fx276f" 
+                                            alt="SCAR-20 | Jungle Whirlwind"
+                                            width="368"
+                                            height="276">
+                                        <img 
+                                            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/368fx276f" 
+                                            alt="SCAR-20 | Jungle Whirlwind"
+                                            width="368"
+                                            height="276">   
+                                        <img 
+                                            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/368fx276f" 
+                                            alt="SCAR-20 | Jungle Whirlwind"
+                                            width="368"
+                                            height="276"> 
+                                        <img 
+                                            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/368fx276f" 
+                                            alt="SCAR-20 | Jungle Whirlwind"
+                                            width="368"
+                                            height="276">           
+                                    </div>
+                                </div>
+                                <div class="upgrade__skin-info">
+                                    <span class="upgrade__skin-phase">blackpearl</span>
+                                    <h3 class="upgrade__skin-title">SCAR-20 | Jungle Whirlwind</h3>
+                                    <div class="upgrade__skin-price">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                                        </svg>
+                                        <span>100 000.24</span>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div class="upgrade__skin-footer">
+                        <div class="upgrade__skin-footer-circle"></div>
+                        <div class="upgrade__coefficientes">
+                            <input 
+                                type="checkbox" 
+                                name="upgrade-mode" 
+                                id="upgrade-loot"
+                                class="js-coefficient js-upgrade-loot-toggle">
+                            <label for="upgrade-loot" class="loot">
+                                <span class="sr-only">Режим ограбления</span>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#safe"></use>
+                                </svg>
+                            </label>
+                            <input 
+                                type="checkbox" 
+                                name="upgrade-mode" 
+                                id="upgrade-magic"
+                                class="js-coefficient js-upgrade-magic-toggle">
+                            <label for="upgrade-magic" class="magic">
+                                <span class="sr-only">Магический режим</span>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#magic"></use>
+                                </svg>
+                            </label>
+                            <input 
+                                type="checkbox" 
+                                name="upgrade-coefficientes" 
+                                id="upgrade-coefficientes-2"
+                                class="js-coefficient">
+                            <label for="upgrade-coefficientes-2">x2</label>
+                            <input 
+                                type="checkbox" 
+                                name="upgrade-coefficientes" 
+                                id="upgrade-coefficientes-3"
+                                class="js-coefficient">
+                            <label for="upgrade-coefficientes-3">x3</label>
+                            <input 
+                                type="checkbox" 
+                                name="upgrade-coefficientes" 
+                                id="upgrade-coefficientes-5"
+                                class="js-coefficient">
+                            <label for="upgrade-coefficientes-5">x5</label>
+                            <input 
+                                type="checkbox" 
+                                name="upgrade-coefficientes" 
+                                id="upgrade-coefficientes-random"
+                                class="js-coefficient">
+                            <label for="upgrade-coefficientes-random">
+                                <span class="sr-only">Случайный</span>
+                                <svg aria-hidden="true" class="grey">
+                                    <use xlink:href="images/sprite.svg#cude"></use>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="upgrade__skin-footer-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="upgrade__note">
+                <button class="upgrade__note-header js-accordion-btn" aria-expanded="false">
+                    <div class="upgrade__note-header-wrap">
+                        <svg aria-hidden="true" class="light-grey">
+                            <use xlink:href="images/sprite.svg#question"></use>
+                        </svg>
+                        <h2 class="upgrade__note-title">Магический режим</h2>
+                    </div> 
+                </button>
+                <div class="upgrade__note-content">
+                    <div class="upgrade__note-text">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="upgrade__modal js-modal" data-modal-name="upgrade-agreement">
+                <div class="upgrade__modal-dialog js-modal-dialog" role="dialog" aria-modal="true">
+                    <button type="button" class="modal__close-btn js-modal-close">
+                        Закрыть модальное окно
+                        <span class="modal__close-btn-icon"></span>
+                    </button>
+                    <p class="upgrade__modal-text">Вы собираетесь использовать
+                        <span class="upgrade__modal-sum">
+                            <span>10 000</span>
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#coin-usd-yellow"></use>
+                            </svg>
+                        </span>
+                        в этом апгрейде, что составляет более 50% вашего баланса.
+                    </p>
+                    <p class="upgrade__modal-text">Вы уверены, что хотите продолжить?</p>
+                    <label class="upgrade__modal-checkbox checkbox">
+                        <input type="checkbox">
+                        <span>Больше не показывать это предупреждение</span>
+                    </label>
+                    <button type="button" class="upgrade__modal-btn btn btn--gr-yellow js-upgrade-btn js-modal-close">
+                        <span>Продолжить</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="upgrade__spine-hands js-spine-animation">
+            <spine-skeleton
+                identifier="upgrade-hands"
+                class="upgrade__spine-skel"
+                overlay-id="hands"
+                atlas="./spine/hands/character_hands.atlas"
+                skeleton="./spine/hands/character_hands.json"
+                fit="contain"
+                animation-bounds="magic_idle">
+            </spine-skeleton>
+            <spine-skeleton
+                identifier="upgrade-hands"
+                class="upgrade__spine-skel"
+                overlay-id="hands"
+                atlas="./spine/hands-loot/character_hands.atlas"
+                skeleton="./spine/hands-loot/character_hands.json"
+                fit="contain"
+                animation="idle">
+            </spine-skeleton>
+            <spine-overlay overlay-id="hands"></spine-overlay>
+        </div>
+    </div>
+</div>
+        <div class="upgrade-items container-sm">
+    <div class="upgrade-items__tabs tabs">
+        <div class="upgrade-items__tab tab">
+            <input 
+                type="radio" 
+                name="upgrade-items" 
+                id="upgrade-items-inventory"
+                class="js-tab"
+                checked>
+            <label for="upgrade-items-inventory">
+                <div class="tab__svg">
+                    <svg aria-hidden="true" class="dark-grey">
+                        <use xlink:href="images/sprite.svg#inventory-2"></use>
+                    </svg>
+                    <svg aria-hidden="true" class="white">
+                        <use xlink:href="images/sprite.svg#inventory-2"></use>
+                    </svg>
+                </div>
+                Инвентарь
+            </label>
+        </div>
+        <div class="upgrade-items__tab tab">
+            <input 
+                type="radio" 
+                name="upgrade-items" 
+                id="upgrade-items-skins"
+                class="js-tab">
+            <label for="upgrade-items-skins">
+                <div class="tab__svg">
+                    <svg aria-hidden="true" class="dark-grey">
+                        <use xlink:href="images/sprite.svg#gun"></use>
+                    </svg>
+                    <svg aria-hidden="true" class="white">
+                        <use xlink:href="images/sprite.svg#gun"></use>
+                    </svg>
+                </div>
+                Скины на апгрейд
+            </label>
+        </div>
+    </div>
+    <div class="upgrade-items__block upgrade-items__inventory" data-tab="upgrade-items-inventory">
+        <h2 class="upgrade-items__title">
+            <svg aria-hidden="true" class="dark-grey">
+                <use xlink:href="images/sprite.svg#inventory-2"></use>
+            </svg>
+            Инвентарь
+        </h2>
+        <div class="upgrade-items__body">
+            <div class="upgrade-items__filters">
+                <div class="upgrade-items__search search">
+                    <label>
+                        Название
+                        <input type="text" placeholder="Название">
+                    </label>
+                    <button type="button" class="search__btn btn btn--icon">
+                        <svg aria-hidden="true" class="white">
+                            <use xlink:href="images/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                </div>
+                <label class="sort-checkbox">
+                    <input type="checkbox" checked>
+                    <svg aria-hidden="true" class="dark-grey">
+                        <use xlink:href="images/sprite.svg#sort"></use>
+                    </svg>
+                    <span>Цена</span>
+                </label>
+            </div>
+            
+            
+                <div class="upgrade-items__skins">
+                    <div class="upgrade-items__skins-list">
+                        <article class="skin skin--gloves skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        <span class="skin__quality">WM</span>
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/180fx180f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/360fx360f 2x"
+                alt="Tiger Strike"> 
+                
+
+        </div>
+        
+            <div class="skin__params">
+                <div class="skin__params-wrap">
+                    <span class="skin__phase">sapphire</span>
+                    
+                </div>
+            </div>
+        
+        <h3 class="skin__title">
+            Tiger Strike
+        </h3>
+        <div class="skin__subtitle">
+            Specialist 100000
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--rare skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/180fx180f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/360fx360f 2x"
+                alt="Tiger Strike"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Tiger Strike
+        </h3>
+        <div class="skin__subtitle">
+            Specialist 100000
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--uncommon skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/400fx400f 2x"
+                alt="Пиксельный камуфляж «Розовый»"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Пиксельный камуфляж «Розовый»
+        </h3>
+        <div class="skin__subtitle">
+            Водительские перчатки
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--covert skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/400fx400f 2x"
+                alt="Syd Mead"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Syd Mead
+        </h3>
+        <div class="skin__subtitle">
+            AUG
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--milspec skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/400fx400f 2x"
+                alt="Syd Mead"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Syd Mead
+        </h3>
+        <div class="skin__subtitle">
+            AUG
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--uncommon skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/400fx400f 2x"
+                alt="Facility Nega"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Facility Nega
+        </h3>
+        <div class="skin__subtitle">
+            P90
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--common skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/400fx400f 2x"
+                alt="Caramel"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Caramel
+        </h3>
+        <div class="skin__subtitle">
+            UMP-45
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--uncommon skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/400fx400f 2x"
+                alt="Magnesium"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Magnesium
+        </h3>
+        <div class="skin__subtitle">
+            M4A4
+        </div>
+        
+            <span class="skin__price">
+                <span>1 000 000</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--restricted skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/400fx400f 2x"
+                alt="Nitro"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Nitro
+        </h3>
+        <div class="skin__subtitle">
+            M4A1-S
+        </div>
+        
+            <span class="skin__price">
+                <span>12 345</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--classified skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/400fx400f 2x"
+                alt="Пиксельный камуфляж «Розовый»"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Пиксельный камуфляж «Розовый»
+        </h3>
+        <div class="skin__subtitle">
+            Водительские перчатки
+        </div>
+        
+            <span class="skin__price">
+                <span>12 345</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--gloves skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/180fx180f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/360fx360f 2x"
+                alt="Tiger Strike"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Tiger Strike
+        </h3>
+        <div class="skin__subtitle">
+            Specialist 100000
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--rare skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/180fx180f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/360fx360f 2x"
+                alt="Tiger Strike"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Tiger Strike
+        </h3>
+        <div class="skin__subtitle">
+            Specialist 100000
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--uncommon skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/400fx400f 2x"
+                alt="Пиксельный камуфляж «Розовый»"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Пиксельный камуфляж «Розовый»
+        </h3>
+        <div class="skin__subtitle">
+            Водительские перчатки
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--covert skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/400fx400f 2x"
+                alt="Syd Mead"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Syd Mead
+        </h3>
+        <div class="skin__subtitle">
+            AUG
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--milspec skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/400fx400f 2x"
+                alt="Syd Mead"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Syd Mead
+        </h3>
+        <div class="skin__subtitle">
+            AUG
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--uncommon skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/400fx400f 2x"
+                alt="Facility Nega"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Facility Nega
+        </h3>
+        <div class="skin__subtitle">
+            P90
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--common skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/400fx400f 2x"
+                alt="Caramel"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Caramel
+        </h3>
+        <div class="skin__subtitle">
+            UMP-45
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--uncommon skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/400fx400f 2x"
+                alt="Magnesium"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Magnesium
+        </h3>
+        <div class="skin__subtitle">
+            M4A4
+        </div>
+        
+            <span class="skin__price">
+                <span>1 000 000</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--restricted skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/400fx400f 2x"
+                alt="Nitro"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Nitro
+        </h3>
+        <div class="skin__subtitle">
+            M4A1-S
+        </div>
+        
+            <span class="skin__price">
+                <span>12 345</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--classified skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/400fx400f 2x"
+                alt="Пиксельный камуфляж «Розовый»"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Пиксельный камуфляж «Розовый»
+        </h3>
+        <div class="skin__subtitle">
+            Водительские перчатки
+        </div>
+        
+            <span class="skin__price">
+                <span>12 345</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    <div class="upgrade-items__block upgrade-items__skins" data-tab="upgrade-items-skins">
+        <h2 class="upgrade-items__title">
+            <svg aria-hidden="true" class="dark-grey">
+                <use xlink:href="images/sprite.svg#gun"></use>
+            </svg>
+            Скины на апгрейд
+        </h2>
+        <div class="upgrade-items__body">
+            <div class="upgrade-items__filters">
+                <div class="upgrade-items__search search">
+                    <label>
+                        Название
+                        <input type="text" placeholder="Название">
+                    </label>
+                    <button type="button" class="search__btn btn btn--icon">
+                        <svg aria-hidden="true" class="white">
+                            <use xlink:href="images/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="range-inputs range-inputs--rub">
+                    <label class="range-inputs__min">
+                        Минимальная цена
+                        <input type="text" placeholder="0">
+                    </label>
+                    <span class="range-inputs__line" aria-hidden="true">-</span>
+                    <label class="range-inputs__max">
+                        Максимальная цена
+                        <input type="text" placeholder="1000">
+                    </label>
+                </div>
+                <div class="upgrade-items__filters-wrap">
+                    <div class="upgrade-items__coefficientes">
+                        <input 
+                            type="checkbox" 
+                            name="coefficientes" 
+                            id="coefficientes-2"
+                            class="js-coefficient">
+                        <label for="coefficientes-2">x2</label>
+                        <input 
+                            type="checkbox" 
+                            name="coefficientes" 
+                            id="coefficientes-3"
+                            class="js-coefficient">
+                        <label for="coefficientes-3">x3</label>
+                        <input 
+                            type="checkbox" 
+                            name="coefficientes" 
+                            id="coefficientes-5"
+                            class="js-coefficient">
+                        <label for="coefficientes-5">x5</label>
+                    </div>
+                    <label class="sort-checkbox">
+                        <input type="checkbox" checked>
+                        <svg aria-hidden="true" class="dark-grey">
+                            <use xlink:href="images/sprite.svg#sort"></use>
+                        </svg>
+                        <span>Цена</span>
+                    </label>
+                </div>
+            </div>
+            <div class="upgrade-items__skins">
+                <div class="upgrade-items__skins-list">
+                    <article class="skin skin--gloves skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/180fx180f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/360fx360f 2x"
+                alt="Tiger Strike"> 
+                
+
+        </div>
+        
+            <div class="skin__params">
+                <div class="skin__params-wrap">
+                    <span class="skin__phase">sapphire</span>
+                    
+                </div>
+            </div>
+        
+        <h3 class="skin__title">
+            Tiger Strike
+        </h3>
+        <div class="skin__subtitle">
+            Specialist 100000
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--rare skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        <span class="skin__quality">WM</span>
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/180fx180f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/360fx360f 2x"
+                alt="Tiger Strike"> 
+                
+
+        </div>
+        
+            <div class="skin__params">
+                <div class="skin__params-wrap">
+                    
+                    
+                </div>
+            </div>
+        
+        <h3 class="skin__title">
+            Tiger Strike
+        </h3>
+        <div class="skin__subtitle">
+            Specialist 100000
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--uncommon skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/400fx400f 2x"
+                alt="Пиксельный камуфляж «Розовый»"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Пиксельный камуфляж «Розовый»
+        </h3>
+        <div class="skin__subtitle">
+            Водительские перчатки
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--covert skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/400fx400f 2x"
+                alt="Syd Mead"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Syd Mead
+        </h3>
+        <div class="skin__subtitle">
+            AUG
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--milspec skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/400fx400f 2x"
+                alt="Syd Mead"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Syd Mead
+        </h3>
+        <div class="skin__subtitle">
+            AUG
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--uncommon skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/400fx400f 2x"
+                alt="Facility Nega"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Facility Nega
+        </h3>
+        <div class="skin__subtitle">
+            P90
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--common skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/400fx400f 2x"
+                alt="Caramel"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Caramel
+        </h3>
+        <div class="skin__subtitle">
+            UMP-45
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--uncommon skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/400fx400f 2x"
+                alt="Magnesium"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Magnesium
+        </h3>
+        <div class="skin__subtitle">
+            M4A4
+        </div>
+        
+            <span class="skin__price">
+                <span>1 000 000</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--restricted skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/400fx400f 2x"
+                alt="Nitro"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Nitro
+        </h3>
+        <div class="skin__subtitle">
+            M4A1-S
+        </div>
+        
+            <span class="skin__price">
+                <span>12 345</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--classified skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/400fx400f 2x"
+                alt="Пиксельный камуфляж «Розовый»"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Пиксельный камуфляж «Розовый»
+        </h3>
+        <div class="skin__subtitle">
+            Водительские перчатки
+        </div>
+        
+            <span class="skin__price">
+                <span>12 345</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--gloves skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/180fx180f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/360fx360f 2x"
+                alt="Tiger Strike"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Tiger Strike
+        </h3>
+        <div class="skin__subtitle">
+            Specialist 100000
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--rare skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/180fx180f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP4jVC9vh5yN2ild4XAJwRraAyF8wLrx-buhMDt7pvLynI16SN25HuPzhewhxhFbfsv26KGW3ZMYA/360fx360f 2x"
+                alt="Tiger Strike"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Tiger Strike
+        </h3>
+        <div class="skin__subtitle">
+            Specialist 100000
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--uncommon skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/400fx400f 2x"
+                alt="Пиксельный камуфляж «Розовый»"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Пиксельный камуфляж «Розовый»
+        </h3>
+        <div class="skin__subtitle">
+            Водительские перчатки
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--covert skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/400fx400f 2x"
+                alt="Syd Mead"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Syd Mead
+        </h3>
+        <div class="skin__subtitle">
+            AUG
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--milspec skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/400fx400f 2x"
+                alt="Syd Mead"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Syd Mead
+        </h3>
+        <div class="skin__subtitle">
+            AUG
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--uncommon skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/400fx400f 2x"
+                alt="Facility Nega"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Facility Nega
+        </h3>
+        <div class="skin__subtitle">
+            P90
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--common skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/400fx400f 2x"
+                alt="Caramel"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Caramel
+        </h3>
+        <div class="skin__subtitle">
+            UMP-45
+        </div>
+        
+            <span class="skin__price">
+                <span>100 000.24</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--uncommon skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/400fx400f 2x"
+                alt="Magnesium"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Magnesium
+        </h3>
+        <div class="skin__subtitle">
+            M4A4
+        </div>
+        
+            <span class="skin__price">
+                <span>1 000 000</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--restricted skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf1OD3cicVueOilYOfnvT1J4Tck29Y_cg_2bDDoIqk2VXk_kdtMWvwdY_GI1VtYg7T_1Tskry-hpS8uZ7OznIw6z5iuyhhvQy0nA/400fx400f 2x"
+                alt="Nitro"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Nitro
+        </h3>
+        <div class="skin__subtitle">
+            M4A1-S
+        </div>
+        
+            <span class="skin__price">
+                <span>12 345</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article><article class="skin skin--classified skin--small skin--add   js-skin">
+    <div class="skin__content">
+        <div class="skin__logo"></div>
+        <div class="skin__border"></div>
+        
+        
+        
+        <div class="skin__img">
+            <img 
+                src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/200fx200f" 
+                srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJP49GzmpSemsj4OrzZgiVQ7Z0m2bmY8Yj03VW1qUE5ZGr1LdKVJwJtM1nSr1TrwOa9jJO47smf1zI97bfHT4k6/400fx400f 2x"
+                alt="Пиксельный камуфляж «Розовый»"> 
+                
+
+        </div>
+        
+        <h3 class="skin__title">
+            Пиксельный камуфляж «Розовый»
+        </h3>
+        <div class="skin__subtitle">
+            Водительские перчатки
+        </div>
+        
+            <span class="skin__price">
+                <span>12 345</span>
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
+                </svg>
+            </span>
+        
+        
+        
+        
+            <button type="button" class="skin__add-btn btn btn--icon">
+                <svg aria-hidden="true" class="black">
+                    <use xlink:href="images/sprite.svg#plus-circle"></use>
+                </svg>
+                Добавить
+            </button>
+        
+        
+    </div>
+    
+    
+</article>
+                    <div class="upgrade-items__more-btn">
+                        <button type="button" class="btn">
+                            <svg aria-hidden="true" class="dark-grey">
+                                <use xlink:href="images/sprite.svg#chevron-down-circle"></use>
+                            </svg>
+                            Load more
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+    <footer class="footer">
+    <div class="footer__container">
+        <div class="footer__statistics">
+            <div class="footer__statistics-item">
+                <svg>
+                    <use xlink:href="images/sprite.svg#flag-yellow"></use>
+                </svg>
+                <div>
+                    <span class="footer__statistics-numb">6 122 540</span>
+                    <span class="footer__statistics-title">Registrations</span>
+                </div>
+            </div>
+            <div class="footer__statistics-item">
+                <svg>
+                    <use xlink:href="images/sprite.svg#users-yellow"></use>
+                </svg>
+                <div>
+                    <span class="footer__statistics-numb">1 882</span>
+                    <span class="footer__statistics-title">Players online</span>
+                </div>
+            </div>
+            <div class="footer__statistics-item">
+                <svg>
+                    <use xlink:href="images/sprite.svg#cases-yellow"></use>
+                </svg>
+                <div>
+                    <span class="footer__statistics-numb">10 542 170</span>
+                    <span class="footer__statistics-title">Cases opened</span>
+                </div>
+            </div>
+            <div class="footer__statistics-item">
+                <svg>
+                    <use xlink:href="images/sprite.svg#contracts-yellow"></use>
+                </svg>
+                <div>
+                    <span class="footer__statistics-numb">2 770 896</span>
+                    <span class="footer__statistics-title">Contracts completed</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer__nav">
+            <div>
+                <a href=".#" class="footer__link">Кейсы</a>
+            </div>
+            <div class="footer__nav-dot"></div>
+            <div>
+                <a href=".#" class="footer__link">Карточки</a>
+            </div>
+            <div class="footer__nav-dot"></div>
+            <div>
+                <a href=".#" class="footer__link">Контракты</a>
+            </div>
+            <div class="footer__nav-dot"></div>
+            <div>
+                <a href=".#" class="footer__link">Апгрейд</a>
+            </div>
+            <div class="footer__nav-dot"></div>
+            <div>
+                <a href=".#" class="footer__link">Live трейды</a>
+            </div>
+            <div class="footer__nav-dot"></div>
+            <div>
+                <a href=".#" class="footer__link">Партнерская программа</a>
+            </div>
+        </div>
+        <div class="footer__content">
+            <div class="footer__content-wrap">
+                <div class="footer__info-text-wrap">
+                    <a href="/" class="footer__logo">
+                        Main page
+                    </a>
+                    <p class="footer__info-text">
+                        TRUEGAME LIMITED PARTNERSHIP, юридическое лицо, зарегистрированное по адресу 23 Honey Lane, Buntingford, United Kingdom, SG9 9BQ
+                    </p>
+                </div>
+                <div class="footer__info-links">
+                    <h3 class="footer__nav-title">Важная информация</h3>
+                    <ul class="footer__nav-links">
+                        <li><a href=".#" class="footer__nav-link">User Agreement</a></li>
+                        <li><a href=".#" class="footer__nav-link">Privacy policy</a></li>
+                        <li><a href=".#" class="footer__nav-link">Cookie policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer__partnership">
+                    <h3 class="footer__nav-title">Сотрудничество:</h3>
+                    <ul class="footer__partnership-links">
+                        <li>
+                            <a href="#" class="footer__partnership-link">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#twitch"></use>
+                                </svg>
+                                Twitch
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__partnership-link">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#youtube"></use>
+                                </svg>
+                                YouTube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__contacts">
+                <a href="mailto:support@magic.com" class="footer__contacts-mail">support@magic.com</a>
+                <div class="footer__contacts-social">
+                    <a href=".#" class="footer__contacts-social-link">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#youtube"></use>
+                        </svg>
+                        Youtube
+                    </a>
+                    <a href=".#" class="footer__contacts-social-link">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#tiktok"></use>
+                        </svg>
+                        TikTok
+                    </a>
+                    <a href=".#" class="footer__contacts-social-link">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#twitter"></use>
+                        </svg>
+                        Twitter
+                    </a>
+                    <a href=".#" class="footer__contacts-social-link">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#instagram"></use>
+                        </svg>
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__logo-list">
+            <img src="./images/logos/logo-crypto.svg" alt="Logo Crypto">
+            <img src="./images/logos/logo-steam-skins.svg" alt="Logo Steam Skins">
+            <img src="./images/logos/logo-skinpay.svg" alt="Logo Skinpay">
+            <img src="./images/logos/logo-webmoney.svg" alt="Logo Webmoney">
+            <img src="./images/logos/logo-master-card.svg" alt="Logo Master Card">
+            <img src="./images/logos/logo-visa.svg" alt="Logo Visa">
+        </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
