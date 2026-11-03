@@ -22719,6 +22719,15 @@ main:has(.profile-header--vip-bg) {
     content: none;
   }
 }
+.contract--craft {
+  overflow-x: clip;
+}
+.contract--craft::after {
+  right: 0;
+  width: 120%;
+  aspect-ratio: 5.53;
+  background-image: url("../images/contracts/hero-hands-craft-bg.png");
+}
 
 .contract__tabs {
   display: -ms-grid;
@@ -52854,4 +52863,140 @@ label.case-decors__item picture {
     -ms-grid-columns: 100%;
     grid-template-columns: 100%;
   }
+}
+
+.secret-how__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.6rem;
+  margin-top: 2.4rem;
+  counter-reset: item;
+}
+
+.secret-how__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc((100% - 3.2rem) / 3);
+          flex: 0 0 calc((100% - 3.2rem) / 3);
+  height: 16rem;
+  padding: 0 2.4rem 2.4rem;
+  background-image: radial-gradient(70.31% 70.31% at 57.17% 29.69%, #232335 0%, #171724 100%);
+  border-radius: 1.2rem;
+  color: #8484A7;
+  font-size: 1.4rem;
+}
+@media (max-width: 768px) {
+  .secret-how__item {
+    -ms-flex-preferred-size: calc(50% - 1.6rem);
+        flex-basis: calc(50% - 1.6rem);
+  }
+}
+@media (max-width: 480px) {
+  .secret-how__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    height: auto;
+  }
+}
+.secret-how__item::before {
+  counter-increment: item;
+  content: "#" counter(item);
+  margin-bottom: 3.2rem;
+  font-weight: 900;
+  font-size: 8.8rem;
+  text-transform: uppercase;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(50, 50, 67, 0.4)), color-stop(110%, rgba(126, 126, 169, 0)));
+  background-image: linear-gradient(180deg, rgba(50, 50, 67, 0.4) 0, rgba(126, 126, 169, 0) 110%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.secret-how__note {
+  margin-top: 1.6rem;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#161622), to(#111120));
+  background-image: linear-gradient(180deg, #161622 0%, #111120 100%);
+  border-radius: 0.8rem;
+}
+
+button.secret-how__note-header {
+  width: 100%;
+  height: 4.8rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 0.8rem;
+     -moz-column-gap: 0.8rem;
+          column-gap: 0.8rem;
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+button.secret-how__note-header[aria-expanded=true]::after {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+button.secret-how__note-header::after {
+  width: 1.6rem;
+  height: 1.6rem;
+  content: "";
+  display: block;
+  background: center/cover no-repeat url("../images/sprite.svg#chevron-down");
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.secret-how__note-title {
+  color: #8484A7;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.secret-how__note-content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease;
+}
+
+.secret-how__note-text {
+  padding: 0 1.6rem 1.2rem;
+  text-align: left;
+}
+.secret-how__note-text p {
+  margin-top: 0.2rem;
+  color: #8484A7;
+  font-size: 1.4rem;
+  line-height: 120%;
 }
