@@ -1168,6 +1168,17 @@
 </header>
     <main>
         <section class="vip-club__hero">
+    <div class="vip-club__spine">
+        <spine-skeleton
+            class="vip-club__spine-skel"
+            overlay-id="vip-banner"
+            atlas="./spine/vip-banner/vip-club.atlas"
+            skeleton="./spine/vip-banner/vip-club.json"
+            fit="cover"
+            animation="idle_action">
+        </spine-skeleton>
+        <spine-overlay overlay-id="vip-banner"></spine-overlay>
+    </div>
     <div class="container">
         <h2 class="vip-club__hero-subtitle">Вступай в наш</h2>
         <h1 class="vip-club__hero-title" data-text="Vip клуб">Vip клуб</h1>
@@ -1178,21 +1189,8 @@
 </section>
         <section class="vip-club__cases container">
     <h2 class="sr-only">Vip Cases</h2>
-    <div class="vip-club__cases-title js-reveal-up">
-        <div class="vip-club__cases-title-wrap">
-            <span class="vip-club__cases-title-spark"></span>
-            <span class="vip-club__cases-title-spark"></span>
-            <span class="vip-club__cases-title-spark"></span>
-            <span class="vip-club__cases-title-spark"></span>
-            <span class="vip-club__cases-title-spark"></span>
-            <picture>
-                <source srcset="./images/cases/title-vip-cases.webp" type="image/webp">
-                <img src="./images/cases/title-vip-cases.png" class="image" width="1193" height="903">
-            </picture>
-        </div>
-    </div>
     <div class="vip-club__cases-list js-reveal-up">
-        <article class="case case--silver     js-case-magic">
+        <article class="case case--silver    ">
     
     <div class="case__body">
         <span class="case__count-coins">1</span>
@@ -1203,6 +1201,7 @@
                 <source srcset="./images/cases/silver-case.webp" type="image/webp">
                 <img src="./images/cases/silver-case.png" alt="OPERATION BROKEN FANG CASE">
             </picture>
+        
         
         
         
@@ -1236,7 +1235,7 @@
         </div>
     
     
-</article><article class="case case--gold     js-case-magic">
+</article><article class="case case--gold    ">
     
     <div class="case__body">
         <span class="case__count-coins">2</span>
@@ -1247,6 +1246,7 @@
                 <source srcset="./images/cases/gold-case.webp" type="image/webp">
                 <img src="./images/cases/gold-case.jpg" alt="Moon Knight Moon Knight Moon">
             </picture>
+        
         
         
         
@@ -1287,7 +1287,7 @@
         </div>
     
     
-</article><article class="case case--platinum     js-case-magic">
+</article><article class="case case--platinum    ">
     
     <div class="case__body">
         <span class="case__count-coins">5</span>
@@ -1298,6 +1298,7 @@
                 <source srcset="./images/cases/platinum-case.webp" type="image/webp">
                 <img src="./images/cases/platinum-case.jpg" alt="Moon Knight">
             </picture>
+        
         
         
         
@@ -1357,7 +1358,7 @@
         </div>
     
     
-</article><article class="case case--elite     js-case-magic">
+</article><article class="case case--elite    ">
     
     <div class="case__body">
         <span class="case__count-coins">10</span>
@@ -1368,6 +1369,7 @@
                 <source srcset="./images/cases/elite-case.webp" type="image/webp">
                 <img src="./images/cases/elite-case.jpg" alt="Moon Knight">
             </picture>
+        
         
         
         
@@ -1468,18 +1470,32 @@
             Еще КЕЙСЫ
         </h2>
     </div>
-    <div class="cases-list js-reveal-up">
-        <article class="case      js-case-magic">
+    <div class="vip-club__cases-list js-reveal-up">
+        <article class="case case--with-anim    ">
     
     <div class="case__body">
         
         
         <span class="case__badge case__badge--new">new</span>
         
-            <picture class="case__img">
-                <source srcset="./images/cases/case-1.webp" type="image/webp">
-                <img src="./images/cases/case-1.jpg" alt="Moon Knight">
-            </picture>
+        
+            <div>
+                <picture class="case__img">
+                    <source srcset="./images/vip-club/case-vip-1.webp" type="image/webp">
+                    <img src="./images/vip-club/case-vip-1.jpg" alt="Moon Knight">
+                </picture>
+                <div class="case__spine">
+                    <spine-skeleton
+                        class="case__spine-skel"
+                        overlay-id="case-vip-1"
+                        atlas="./spine/cases/case-vip-1.atlas"
+                        skeleton="./spine/cases/case-vip-1.json"
+                        fit="contain"
+                        animation="idle_action">
+                    </spine-skeleton>
+                    <spine-overlay overlay-id="case-vip-1"></spine-overlay>
+                </div>
+            </div>
         
         
         
@@ -1501,17 +1517,31 @@
     
     
     
-</article><article class="case      js-case-magic">
+</article><article class="case case--with-anim    ">
     
     <div class="case__body">
         
         
         
         
-            <picture class="case__img">
-                <source srcset="./images/cases/case-2.webp" type="image/webp">
-                <img src="./images/cases/case-2.jpg" alt="Moon Knight">
-            </picture>
+        
+            <div>
+                <picture class="case__img">
+                    <source srcset="./images/vip-club/case-vip-2.webp" type="image/webp">
+                    <img src="./images/vip-club/case-vip-2.jpg" alt="Moon Knight">
+                </picture>
+                <div class="case__spine">
+                    <spine-skeleton
+                        class="case__spine-skel"
+                        overlay-id="case-vip-2"
+                        atlas="./spine/cases/case-vip-2.atlas"
+                        skeleton="./spine/cases/case-vip-2.json"
+                        fit="contain"
+                        animation="idle_action">
+                    </spine-skeleton>
+                    <spine-overlay overlay-id="case-vip-2"></spine-overlay>
+                </div>
+            </div>
         
         
         
@@ -1533,17 +1563,31 @@
     
     
     
-</article><article class="case      js-case-magic">
+</article><article class="case case--with-anim    ">
     
     <div class="case__body">
         
         
         
         
-            <picture class="case__img">
-                <source srcset="./images/cases/case-3.webp" type="image/webp">
-                <img src="./images/cases/case-3.jpg" alt="Moon Knight">
-            </picture>
+        
+            <div>
+                <picture class="case__img">
+                    <source srcset="./images/vip-club/case-vip-3.webp" type="image/webp">
+                    <img src="./images/vip-club/case-vip-3.jpg" alt="Moon Knight">
+                </picture>
+                <div class="case__spine">
+                    <spine-skeleton
+                        class="case__spine-skel"
+                        overlay-id="case-vip-3"
+                        atlas="./spine/cases/case-vip-3.atlas"
+                        skeleton="./spine/cases/case-vip-3.json"
+                        fit="contain"
+                        animation="idle_action">
+                    </spine-skeleton>
+                    <spine-overlay overlay-id="case-vip-3"></spine-overlay>
+                </div>
+            </div>
         
         
         
@@ -1565,17 +1609,31 @@
     
     
     
-</article><article class="case      js-case-magic">
+</article><article class="case case--with-anim    ">
     
     <div class="case__body">
         
         
         <span class="case__badge case__badge--hot">hot</span>
         
-            <picture class="case__img">
-                <source srcset="./images/cases/case-4.webp" type="image/webp">
-                <img src="./images/cases/case-4.jpg" alt="Moon Knight">
-            </picture>
+        
+            <div>
+                <picture class="case__img">
+                    <source srcset="./images/vip-club/case-vip-4.webp" type="image/webp">
+                    <img src="./images/vip-club/case-vip-4.jpg" alt="Moon Knight">
+                </picture>
+                <div class="case__spine">
+                    <spine-skeleton
+                        class="case__spine-skel"
+                        overlay-id="case-vip-4"
+                        atlas="./spine/cases/case-vip-4.atlas"
+                        skeleton="./spine/cases/case-vip-4.json"
+                        fit="contain"
+                        animation="idle">
+                    </spine-skeleton>
+                    <spine-overlay overlay-id="case-vip-4"></spine-overlay>
+                </div>
+            </div>
         
         
         
@@ -1590,38 +1648,6 @@
         <a href="./case.html" class="case__btn btn">
             
             <span>45</span>
-            <svg aria-hidden="true">
-                <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
-            </svg>
-        </a>
-    
-    
-    
-</article><article class="case      js-case-magic">
-    
-    <div class="case__body">
-        
-        
-        <span class="case__badge case__badge--new">new</span>
-        
-            <picture class="case__img">
-                <source srcset="./images/cases/case-3.webp" type="image/webp">
-                <img src="./images/cases/case-3.jpg" alt="Moon Knight">
-            </picture>
-        
-        
-        
-        <div class="case__header ">
-            <div>
-                
-                <h2 class="case__title">Moon Knight</h2>
-            </div>
-        </div>
-    </div>
-    
-        <a href="./case.html" class="case__btn btn">
-            
-            <span>67</span>
             <svg aria-hidden="true">
                 <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
             </svg>
