@@ -7874,6 +7874,10 @@ span.header__volume-value {
     display: block;
   }
 }
+.case--with-anim .case__spine {
+  position: relative;
+  z-index: 1;
+}
 @media (max-width: 768px) {
   .case--with-anim .case__spine {
     display: none;
@@ -48786,7 +48790,9 @@ span.event__banner-xp-currency {
 }
 
 .vip-club__cases {
+  position: relative;
   margin-top: -6.4rem;
+  z-index: 1;
 }
 @media (max-width: 768px) {
   .vip-club__cases {
@@ -48837,9 +48843,8 @@ span.event__banner-xp-currency {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.vip-club__cases-list .case__body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#161622), to(#0c0c1b));
-  background: linear-gradient(180deg, #161622 0%, #0c0c1b 100%);
+.vip-club__cases-list .case .case__img {
+  margin-top: -1.6rem;
 }
 
 .cases-header + .vip-club__cases-list {
@@ -51003,6 +51008,10 @@ span.vip-club__wheel-btn-price img {
   }
 }
 
+.choose-skin__skins-more {
+  text-align: center;
+}
+
 .balloons-container {
   position: fixed;
   inset: 0;
@@ -52928,21 +52937,6 @@ label.case-decors__item picture {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0.4;
-}
-.secret-how__item::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 130%;
-  content: "";
-  background-color: #CA7D31;
-  border-radius: 50%;
-  -webkit-filter: blur(10rem);
-          filter: blur(10rem);
-  -webkit-transform: translate(20%, 40%);
-      -ms-transform: translate(20%, 40%);
-          transform: translate(20%, 40%);
 }
 
 .secret-how__img {
