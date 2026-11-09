@@ -6921,19 +6921,23 @@ span.header__volume-value {
   margin-top: -15%;
   padding: 0 2.4rem;
   min-width: 18rem;
-  background-image: linear-gradient(120.94deg, #ffa353 0%, #ff8215 100%);
-  border: thin solid #FF963B;
-  -webkit-box-shadow: 0 0.6rem 1.2rem 0 rgba(0, 0, 0, 0.06), 0 0 4.2rem 0 rgba(255, 153, 0, 0.24);
-          box-shadow: 0 0.6rem 1.2rem 0 rgba(0, 0, 0, 0.06), 0 0 4.2rem 0 rgba(255, 153, 0, 0.24);
-  color: #161119;
-  font-weight: 600;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #FFFFFF;
   text-transform: uppercase;
+  -webkit-transition: color 0.2s ease-out, background-color 0.2s ease-out;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
 }
 @media (any-hover: hover) {
   .cases__secret-btn:hover {
-    background: #ffa353;
     -webkit-box-shadow: none;
             box-shadow: none;
+    background: rgba(255, 255, 255, 0.7);
+    color: #0C0C1B;
   }
 }
 
