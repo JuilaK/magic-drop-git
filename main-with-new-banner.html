@@ -3305,19 +3305,21 @@
         </div>
     </div>
     <div class="cases__secret-block">
-        <h2 class="sr-only">Секретный кейс</h2>
-        <div class="cases__secret-title">
-            <spine-overlay overlay-id="secret-text"></spine-overlay>
-            <spine-skeleton
-                class="cases__secret-title-img"
-                overlay-id="secret-text"
-                atlas="./spine/secret-text/board.atlas"
-                skeleton="./spine/secret-text/board.json"
-                fit="contain"
-                animation="idle">
-            </spine-skeleton>
+        <div class="cases__secret-block-wrap">
+            <h2 class="sr-only">Секретный кейс</h2>
+            <div class="cases__secret-title">
+                <spine-overlay overlay-id="secret-text"></spine-overlay>
+                <spine-skeleton
+                    class="cases__secret-title-img"
+                    overlay-id="secret-text"
+                    atlas="./spine/secret-text/board.atlas"
+                    skeleton="./spine/secret-text/board.json"
+                    fit="contain"
+                    animation="idle">
+                </spine-skeleton>
+            </div>
+            <a href=".#" class="cases__secret-btn btn">Открыть</a>
         </div>
-        <a href=".#" class="cases__secret-btn btn">Открыть</a>
     </div>
     <div class="cases__bloggers-block">
         <div class="cases-header">

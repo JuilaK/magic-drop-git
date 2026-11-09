@@ -6858,8 +6858,8 @@ span.header__volume-value {
 
 .cases__secret-block {
   position: relative;
-  margin-top: 2.4rem;
-  padding: 1% min(20rem, 10vw) 0;
+  margin-top: 4rem;
+  padding: 1% min(20rem, 10vw) 8%;
   aspect-ratio: 3.2;
   border-radius: 1.6rem;
   -webkit-box-shadow: 0 -0.2rem 0 0 #191927 inset, 0 0.2rem 0 0 #202032 inset, 0 0.6rem 1.2rem 0 rgba(0, 0, 0, 0.06);
@@ -6874,16 +6874,6 @@ span.header__volume-value {
     aspect-ratio: auto;
   }
 }
-.cases__secret-block::before {
-  position: absolute;
-  inset: 0;
-  content: "";
-  background: radial-gradient(100% 8rem at top, rgba(73, 149, 181, 0.7), transparent 70%), radial-gradient(100% 8rem at bottom, rgba(73, 149, 181, 0.7), transparent 70%);
-  pointer-events: none;
-  z-index: -1;
-  -webkit-filter: blur(1.6rem);
-  filter: blur(1.6rem);
-}
 .cases__secret-block::after {
   position: absolute;
   inset: 0;
@@ -6891,6 +6881,20 @@ span.header__volume-value {
   background: center/cover no-repeat url("../images/cases/cases-secret-border-bg.png");
   pointer-events: none;
   z-index: 2;
+}
+
+.cases__secret-block-wrap {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
 }
 
 .cases__secret-title {
@@ -6914,9 +6918,7 @@ span.header__volume-value {
 }
 
 .cases__secret-btn {
-  position: absolute;
-  right: 16%;
-  bottom: 26%;
+  margin-top: -15%;
   padding: 0 2.4rem;
   min-width: 18rem;
   background-image: linear-gradient(120.94deg, #ffa353 0%, #ff8215 100%);
@@ -6926,14 +6928,6 @@ span.header__volume-value {
   color: #161119;
   font-weight: 600;
   text-transform: uppercase;
-}
-@media (max-width: 768px) {
-  .cases__secret-btn {
-    bottom: 25%;
-    left: 3vw;
-    right: auto;
-    min-width: 16;
-  }
 }
 @media (any-hover: hover) {
   .cases__secret-btn:hover {
@@ -11346,6 +11340,11 @@ span.draw-item__start-price svg {
     margin-top: 8rem;
   }
 }
+.case-container.blackout .case-hero__bg {
+  opacity: 0.2;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
 .case-container--magic-1.open .case-hero__rock, .case-container--magic-2.open .case-hero__rock, .case-container--magic-3.open .case-hero__rock {
   -webkit-transition: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.4s, visibility 0s linear 1.9s, -webkit-transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.4s;
   transition: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.4s, visibility 0s linear 1.9s, -webkit-transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.4s;
@@ -11481,11 +11480,6 @@ span.draw-item__start-price svg {
   .case-container--secret.case-container {
     max-width: 192rem;
   }
-}
-.case-container--secret.case-container.open .case-hero__bg {
-  opacity: 0.2;
-  -webkit-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
 }
 .case-container--secret.case-container.open ~ .skins-slider {
   margin-top: 0;
