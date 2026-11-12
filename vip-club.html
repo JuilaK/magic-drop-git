@@ -1482,18 +1482,31 @@
         </h2>
     </div>
     <div class="vip-club__cases-list js-reveal-up">
-        <article class="case      ">
+        <article class="case case--with-anim     ">
     
     <div class="case__body">
         
         
         <span class="case__badge case__badge--new-animation ">new-animation</span>
         
-            <picture class="case__img">
-                <source srcset="./images/vip-club/case-vip-1.webp" type="image/webp">
-                <img src="./images/vip-club/case-vip-1.png" alt="Moon Knight">
-            </picture>
         
+            <div>
+                <picture class="case__img">
+                    <source srcset="./images/vip-club/case-vip-1.webp" type="image/webp">
+                    <img src="./images/vip-club/case-vip-1.png" alt="Moon Knight">
+                </picture>
+                <div class="case__spine">
+                    <spine-skeleton
+                        class="case__spine-skel"
+                        overlay-id="case-vip-1"
+                        atlas="./spine/cases/case-vip-1.atlas"
+                        skeleton="./spine/cases/case-vip-1.json"
+                        fit="contain"
+                        animation="idle_action">
+                    </spine-skeleton>
+                    <spine-overlay overlay-id="case-vip-1"></spine-overlay>
+                </div>
+            </div>
         
         
         
@@ -1732,15 +1745,14 @@
         </div>
     </div>
 </section>
-        <div class="vip-club__wheel js-reveal-up js-vip-club-wheel">
-    <section class="container-md">
-        <h2 class="vip-club__wheel-main-title">Колесо бонусов</h2>
-        <div class="vip-club__wheel-wrap">
-            <div class="vip-club__wheel-container">
-                <div class="vip-club__wheel-track">
-                    <div class="vip-club__wheel-track-wrap js-vip-club-wheel-track" style="--vip-wheel-winner: 0">
-                        <ul>
-                            <li class="vip-club__wheel-item vip-club__wheel-item--orange js-vip-club-wheel-item">
+        <div class="vip-club__wheel container-lg js-reveal-up js-vip-club-wheel">
+    <h2 class="vip-club__wheel-main-title">Колесо бонусов</h2>
+    <div class="vip-club__wheel-wrap">
+        <div class="vip-club__wheel-container">
+            <div class="vip-club__wheel-track">
+                <div class="vip-club__wheel-track-wrap js-vip-club-wheel-track" style="--vip-wheel-winner: 0">
+                    <ul>
+                        <li class="vip-club__wheel-item vip-club__wheel-item--orange js-vip-club-wheel-item">
     <div class="vip-club__wheel-item-bg">
         <img 
             src="./images/vip-club/bg-wheel-item-orange.svg" 
@@ -2104,61 +2116,60 @@
     </div>
     <span class="vip-club__wheel-item-title">+30% к депозиту</span>
 </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="vip-club__wheel-info">
-                <div class="vip-club__wheel-info-wrap">
-                    <h2 class="vip-club__wheel-title">Колесо<br>Бонусов</h2>
-                    <p class="vip-club__wheel-text">Открывай VIP кейсы, копи монеты и крути колесо бонусов</p>
-                    <div class="vip-club__wheel-balance">
-                        Баланс 
-                        <div class="vip-club__wheel-balance-count">
-                            <span>15</span>
-                            <picture>
-                                <source srcset="./images/magic-coin-2.webp" type="image/webp">
-                                <img src="./images/magic-coin-2.png" width="48" height="48" alt="Монета">
-                            </picture>
-                        </div>
-                    </div>
-                    <button type="button" class="vip-club__wheel-btn btn js-vip-club-btn">
-                        <span class="vip-club__wheel-btn-title">Открыть за</span>
-                        <span class="vip-club__wheel-btn-price">
-                            <span>25</span>
-                            <picture>
-                                <source srcset="./images/magic-coin-2.webp" type="image/webp">
-                                <img src="./images/magic-coin-2.png" width="48" height="48" alt="Монета">
-                            </picture>
-                        </span>
-                    </button>
-                </div>
-                <div class="vip-club__wheel-prize">
-                    <h2 class="vip-club__wheel-prize-title">Поздравляем!</h2>
-                    <p class="vip-club__wheel-prize-subtitle">Ваш выигрыш</p>
-                    <div class="vip-club__wheel-prize-img">
-                        <img 
-                            src="./images/vip-club/prize-4.png" 
-                            srcset="./images/vip-club/prize-4@2x.png 2x"
-                            alt="Бонус к пополнению 15%"
-                            width="240"
-                            height="240">
-                        <img 
-                            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/160fx160f" 
-                            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/240fx240f"
-                            alt="" aria-hidden="true"
-                            width="280"
-                            height="280">
-                    </div>
-                    <p class="vip-club__wheel-prize-desc">Бонус к пополнению 15%</p>
-                    <div class="vip-club__wheel-prize-btns">
-                        <button type="button" class="btn btn--gr-yellow js-vip-club-use-btn"><span>Использовать</span></button>
-                        <button type="button" class="btn btn--bg-grey js-vip-club-more-btn"><span>Крутить еще</span></button>
-                    </div>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="vip-club__wheel-info">
+            <div class="vip-club__wheel-info-wrap">
+                <h2 class="vip-club__wheel-title">Колесо<br>Бонусов</h2>
+                <p class="vip-club__wheel-text">Открывай VIP кейсы, копи монеты и крути колесо бонусов</p>
+                <div class="vip-club__wheel-balance">
+                    Баланс 
+                    <div class="vip-club__wheel-balance-count">
+                        <span>15</span>
+                        <picture>
+                            <source srcset="./images/magic-coin-2.webp" type="image/webp">
+                            <img src="./images/magic-coin-2.png" width="48" height="48" alt="Монета">
+                        </picture>
+                    </div>
+                </div>
+                <button type="button" class="vip-club__wheel-btn btn js-vip-club-btn">
+                    <span class="vip-club__wheel-btn-title">Открыть за</span>
+                    <span class="vip-club__wheel-btn-price">
+                        <span>25</span>
+                        <picture>
+                            <source srcset="./images/magic-coin-2.webp" type="image/webp">
+                            <img src="./images/magic-coin-2.png" width="48" height="48" alt="Монета">
+                        </picture>
+                    </span>
+                </button>
+            </div>
+            <div class="vip-club__wheel-prize">
+                <h2 class="vip-club__wheel-prize-title">Поздравляем!</h2>
+                <p class="vip-club__wheel-prize-subtitle">Ваш выигрыш</p>
+                <div class="vip-club__wheel-prize-img">
+                    <img 
+                        src="./images/vip-club/prize-4.png" 
+                        srcset="./images/vip-club/prize-4@2x.png 2x"
+                        alt="Бонус к пополнению 15%"
+                        width="240"
+                        height="240">
+                    <img 
+                        src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/160fx160f" 
+                        srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-HnvD8J_WIzmkJ68B32rDH84r3iwDlqRZkMWj2dtTEdwVoN1_ZqwPrkuu61MK8ot2Xnglxl-Ds/240fx240f"
+                        alt="" aria-hidden="true"
+                        width="280"
+                        height="280">
+                </div>
+                <p class="vip-club__wheel-prize-desc">Бонус к пополнению 15%</p>
+                <div class="vip-club__wheel-prize-btns">
+                    <button type="button" class="btn btn--gr-yellow js-vip-club-use-btn"><span>Использовать</span></button>
+                    <button type="button" class="btn btn--bg-grey js-vip-club-more-btn"><span>Крутить еще</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="vip-club__win">
     <div class="container">
         <div class="vip-club__win-wrap">

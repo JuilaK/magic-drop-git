@@ -48930,7 +48930,14 @@ span.event__banner-xp-currency {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 2.4rem;
+  gap: 2.4rem 5.6rem;
+}
+@media (max-width: 1280px) {
+  .vip-club__shop-content {
+    -webkit-column-gap: 4rem;
+       -moz-column-gap: 4rem;
+            column-gap: 4rem;
+  }
 }
 @media (max-width: 1024px) {
   .vip-club__shop-content {
@@ -48943,8 +48950,8 @@ span.event__banner-xp-currency {
 
 .vip-club__shop-person {
   position: relative;
-  -ms-flex-preferred-size: 48%;
-      flex-basis: 48%;
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
   aspect-ratio: 1.2;
   overflow: hidden;
 }
