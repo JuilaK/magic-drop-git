@@ -22967,11 +22967,20 @@ main:has(.profile-header--vip-bg) {
     content: none;
   }
 }
+.contract--low .contract__content::before {
+  background-color: #8DD38D;
+}
+.contract--medium .contract__content::before {
+  background-color: #D3B28D;
+}
+.contract--high .contract__content::before {
+  background-color: #C24343;
+}
 .contract--craft {
   overflow-x: clip;
 }
 .contract--craft::after {
-  right: 10%;
+  left: -14%;
   aspect-ratio: 5.53;
   background-image: url("../images/contracts/hero-hands-craft-bg.png");
 }
@@ -22983,14 +22992,86 @@ main:has(.profile-header--vip-bg) {
 .contract--craft .contract__screen {
   -ms-flex-preferred-size: 65%;
       flex-basis: 65%;
-  padding: 5.4rem 4.7% 17.8rem 4.7%;
+  padding: 5.4rem 4.1% 18.6rem 4.3%;
 }
 .contract--craft .contract__screen::after {
   background-image: url("../images/contracts/monitor-craft.png");
 }
+.contract--craft .contract__screen--common .contract-card__content-empty {
+  -webkit-box-shadow: inset 0 0 5.8rem 0 rgba(90, 90, 101, 0.3);
+          box-shadow: inset 0 0 5.8rem 0 rgba(90, 90, 101, 0.3);
+  color: #5a5a65;
+}
+.contract--craft .contract__screen--covert .contract-card__content-empty {
+  -webkit-box-shadow: inset 0 0 5.8rem 0 rgba(255, 96, 96, 0.3);
+          box-shadow: inset 0 0 5.8rem 0 rgba(255, 96, 96, 0.3);
+  color: #FF6060;
+}
+.contract--craft .contract__screen--milspec .contract-card__content-empty {
+  -webkit-box-shadow: inset 0 0 5.8rem 0 rgba(81, 105, 247, 0.3);
+          box-shadow: inset 0 0 5.8rem 0 rgba(81, 105, 247, 0.3);
+  color: #5169f7;
+}
+.contract--craft .contract__screen--restricted .contract-card__content-empty {
+  -webkit-box-shadow: inset 0 0 5.8rem 0 rgba(145, 71, 246, 0.3);
+          box-shadow: inset 0 0 5.8rem 0 rgba(145, 71, 246, 0.3);
+  color: #9147F6;
+}
+.contract--craft .contract__screen--uncommon .contract-card__content-empty {
+  -webkit-box-shadow: inset 0 0 5.8rem 0 rgba(54, 162, 195, 0.3);
+          box-shadow: inset 0 0 5.8rem 0 rgba(54, 162, 195, 0.3);
+  color: #36a2c3;
+}
+.contract--craft .contract__screen--rare .contract-card__content-empty {
+  -webkit-box-shadow: inset 0 0 5.8rem 0 rgba(255, 174, 80, 0.3);
+          box-shadow: inset 0 0 5.8rem 0 rgba(255, 174, 80, 0.3);
+  color: #FFAE50;
+}
+.contract--craft .contract__screen--classified .contract-card__content-empty {
+  -webkit-box-shadow: inset 0 0 5.8rem 0 rgba(221, 44, 222, 0.3);
+          box-shadow: inset 0 0 5.8rem 0 rgba(221, 44, 222, 0.3);
+  color: #DD2CDE;
+}
+.contract--craft .contract__screen--gloves .contract-card__content-empty {
+  -webkit-box-shadow: inset 0 0 5.8rem 0 rgba(172, 207, 91, 0.3);
+          box-shadow: inset 0 0 5.8rem 0 rgba(172, 207, 91, 0.3);
+  color: #accf5b;
+}
+.contract--craft .contract__screen-wrap {
+  height: 52rem;
+}
 .contract--craft .contract__screen-container {
   -ms-grid-columns: (33.3333333333%)[3];
   grid-template-columns: repeat(3, 33.3333333333%);
+  -ms-grid-rows: (50%)[2];
+  grid-template-rows: repeat(2, 50%);
+}
+.contract--craft .contract__screen-container > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.contract--craft .contract__screen-container > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+.contract--craft .contract__screen-container > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.contract--craft .contract__screen-container > *:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+.contract--craft .contract__screen-container > *:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+.contract--craft .contract__screen-container > *:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+.contract--craft .contract-card:nth-child(n+4) {
+  border-bottom: none;
 }
 .contract--craft .contract-card:nth-child(3) {
   border-right: none;
@@ -23000,6 +23081,23 @@ main:has(.profile-header--vip-bg) {
   grid-column: auto;
   grid-row: auto;
   max-width: none;
+  padding: 2.4rem 1.4rem;
+}
+.contract--craft .contract__info-price {
+  -webkit-column-gap: 0.2rem;
+     -moz-column-gap: 0.2rem;
+          column-gap: 0.2rem;
+  font-size: 1.8rem;
+}
+.contract--craft .contract__info-price svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.contract--craft .contract__info-desc {
+  font-size: 1.2rem;
+}
+.contract--craft .contract__btn-wrap {
+  margin-top: auto;
 }
 
 .contract__tabs {
@@ -23159,12 +23257,32 @@ span.contract__tab-coming svg {
 }
 
 .contract__content {
+  position: relative;
   margin-top: 3.2rem;
+}
+.contract__content::before {
+  position: absolute;
+  top: 7rem;
+  width: 100%;
+  height: 49rem;
+  content: "";
+  display: block;
+  border-radius: 13rem;
+  -webkit-filter: blur(5rem);
+          filter: blur(5rem);
+  opacity: 0.6;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+@media (max-width: 1280px) {
+  .contract__content::before {
+    content: none;
+  }
 }
 
 .contract__screen {
   position: relative;
-  padding: 6.6rem 5.1% 17.8rem 5.2%;
+  padding: 7rem 5.1% 18.8rem 5.2%;
 }
 @media (max-width: 1280px) {
   .contract__screen {
@@ -23213,7 +23331,7 @@ span.contract__tab-coming svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-height: 50rem;
+  height: 49rem;
   background-color: #070712;
   border: thin solid #323243;
   border-radius: 1.2rem;
@@ -23227,7 +23345,7 @@ span.contract__tab-coming svg {
     -webkit-box-align: normal;
         -ms-flex-align: normal;
             align-items: normal;
-    max-height: none;
+    height: auto;
   }
 }
 
@@ -23350,6 +23468,10 @@ span.contract__tab-coming svg {
   color: #8484A7;
   font-size: 5.6rem;
   font-weight: 900;
+  -webkit-transition: color 0.2s ease-out, -webkit-box-shadow 0.2s ease-out;
+  transition: color 0.2s ease-out, -webkit-box-shadow 0.2s ease-out;
+  transition: color 0.2s ease-out, box-shadow 0.2s ease-out;
+  transition: color 0.2s ease-out, box-shadow 0.2s ease-out, -webkit-box-shadow 0.2s ease-out;
 }
 @media (max-width: 768px) {
   .contract-card__content-empty {
@@ -23757,6 +23879,8 @@ span.contract__tab-coming svg {
   -webkit-column-gap: 0.4rem;
      -moz-column-gap: 0.4rem;
           column-gap: 0.4rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 0.4rem;
   font-size: 2.4rem;
   font-weight: 700;
@@ -23779,6 +23903,7 @@ span.contract__tab-coming svg {
 .contract__info-price span {
   font-size: inherit;
   font-weight: inherit;
+  white-space: nowrap;
 }
 .contract__info-price svg {
   width: 2.6rem;
