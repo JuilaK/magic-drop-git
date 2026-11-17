@@ -828,17 +828,17 @@ window.addEventListener('DOMContentLoaded', () => {
     const contractBtn = document.querySelector('.js-contract-btn');
     const contractContainer = document.querySelector('.js-contract-container');
 
-    contractBtn && contractBtn.addEventListener('click', () => {
-        contractContainer.classList.add('contract__container--create-anim');
-        const contractModal = document.querySelector("[data-modal-name='contract-skin']");
-        setTimeout(() => {
-            contractModal.classList.add('modal--open');
-            document.body.style.overflow = 'hidden';
-        }, 1100);
-        setTimeout(() => {
-            contractContainer.classList.remove('contract__container--create-anim');
-        }, 1200);
-    });
+    // contractBtn && contractBtn.addEventListener('click', () => {
+    //     contractContainer.classList.add('contract__container--create-anim');
+    //     const contractModal = document.querySelector("[data-modal-name='contract-skin']");
+    //     setTimeout(() => {
+    //         contractModal.classList.add('modal--open');
+    //         document.body.style.overflow = 'hidden';
+    //     }, 1100);
+    //     setTimeout(() => {
+    //         contractContainer.classList.remove('contract__container--create-anim');
+    //     }, 1200);
+    // });
     // END Create a contract
 
     // Click outside

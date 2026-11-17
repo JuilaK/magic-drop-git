@@ -1172,14 +1172,23 @@
             <li><button type="button" class="contract__tab contract__tab--low"><span>Low</span></button></li>
             <li><button type="button" class="contract__tab contract__tab--medium"><span>Medium</span></button></li>
             <li><button type="button" class="contract__tab contract__tab--high"><span>High</span></button></li>
-            <li><button type="button" class="contract__tab contract__tab--craft"><span>Craft</span></button></li>
+            <li><button type="button" class="contract__tab contract__tab--craft contract__tab--locked">
+                <span>Craft</span>
+                <span class="contract__tab-coming">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#lock-white"></use>
+                    </svg>
+                    Coming soon
+                </span>
+            </button></li>
         </ul>
         <div class="contract__content">
-            <div class="contract__content-wrap">
-                <div class="contract__container">
-                    
-                    
-                        <div class="contract-card">
+            <div class="contract__screen">
+                <div class="contract__screen-wrap">
+                    <div class="contract__screen-container">
+                        
+                        
+                            <div class="contract-card">
     
     
         <div class="contract-card__content contract-card__content--gloves">
@@ -1299,9 +1308,9 @@
         </div>
     
 </div>
-                     
-                     
-                        <div class="contract-card">
+                         
+                         
+                            <div class="contract-card">
     <div class="contract-card__content-empty">5</div>
     
 </div><div class="contract-card">
@@ -1320,72 +1329,74 @@
     <div class="contract-card__content-empty">10</div>
     
 </div> 
-                    
-                     
-                    <div class="contract__info">
-                        <div>
-                            <div class="contract__info-item">
-                                <span class="contract__info-price">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
-                                    </svg>
-                                    <span>1 100 000.24</span>
-                                </span>
-                                <span class="contract__info-desc">The cost of your skins</span>
-                            </div>
-                            <div class="contract__info-item">
-                                <span class="contract__info-price contract__info-price--receive">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
-                                    </svg>
-                                    <span>100 000</span> - <span>1 100 000.24</span>
-                                </span>
-                                <span class="contract__info-desc">You will receive skins worth</span>
-                            </div>
-                        </div>
-                        <div class="contract__info-sign">
-                            <span class="contract__info-desc">Your sign</span>
-                            <div class="contract__info-sign-field">
-                                <canvas></canvas>
-                                <div class="contract__info-sign-btns">
-                                    <button type="button" class="btn btn--icon">
-                                        <svg aria-hidden="true" class="dark-grey">
-                                            <use xlink:href="images/sprite.svg#palette"></use>
+                        
+                         
+                        <div class="contract__info">
+                            <div>
+                                <div class="contract__info-item">
+                                    <span class="contract__info-price">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
                                         </svg>
-                                        Select color
-                                    </button>
-                                    <button type="button" class="btn btn--icon">
-                                        <svg aria-hidden="true" class="dark-grey">
-                                            <use xlink:href="images/sprite.svg#brush"></use>
+                                        <span>1 100 000.24</span>
+                                    </span>
+                                    <span class="contract__info-desc">The cost of your skins</span>
+                                </div>
+                                <div class="contract__info-item">
+                                    <span class="contract__info-price contract__info-price--receive">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#coin-rub-yellow"></use>
                                         </svg>
-                                        Delete sign
-                                    </button>
+                                        <span>100 000</span> - <span>1 100 000.24</span>
+                                    </span>
+                                    <span class="contract__info-desc">You will receive skins worth</span>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <button 
-                                type="button" 
-                                class="contract__btn btn  btn--bg-blue js-contract-btn" 
-                                >
-                                <span class="btn__svg-wrap">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#contracts-blue"></use>
-                                    </svg>
-                                    <svg aria-hidden="true" class="grey">
-                                        <use xlink:href="images/sprite.svg#contracts"></use>
-                                    </svg>
-                                </span>
-                                
-                                Create a Contract
-                            </button>
-                            <div class="contract__info-question">
-                                <svg aria-hidden="true" class="light-grey">
-                                    <use xlink:href="images/sprite.svg#question"></use>
-                                </svg>
-                                <span class="contract__info-desc">Exchange 3 to 10 skins for one better one!</span>
+                            <div class="contract__info-sign">
+                                <span class="contract__info-desc">Your sign</span>
+                                <div class="contract__info-sign-field">
+                                    <canvas></canvas>
+                                    <div class="contract__info-sign-btns">
+                                        <button type="button" class="btn btn--icon">
+                                            <svg aria-hidden="true" class="dark-grey">
+                                                <use xlink:href="images/sprite.svg#palette"></use>
+                                            </svg>
+                                            Select color
+                                        </button>
+                                        <button type="button" class="btn btn--icon">
+                                            <svg aria-hidden="true" class="dark-grey">
+                                                <use xlink:href="images/sprite.svg#brush"></use>
+                                            </svg>
+                                            Delete sign
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            
+                            <div>
+                                <button 
+                                    type="button" 
+                                    class="contract__btn btn  btn--bg-blue"
+                                    data-modal-trigger="contract-skin" 
+                                    >
+                                    <span class="btn__svg-wrap">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#contracts-blue"></use>
+                                        </svg>
+                                        <svg aria-hidden="true" class="grey">
+                                            <use xlink:href="images/sprite.svg#contracts"></use>
+                                        </svg>
+                                    </span>
+                                    
+                                    Create a Contract
+                                </button>
+                                <div class="contract__info-question">
+                                    <svg aria-hidden="true" class="light-grey">
+                                        <use xlink:href="images/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="contract__info-desc">Exchange 3 to 10 skins for one better one!</span>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2448,20 +2459,19 @@
                 <span class="modal__close-btn-icon"></span>
             </button>
             <div class="modal__content">
-                <h2 class="modal__title">You got the skin!</h2>
-                <div class="modal__skin modal__skin--covert">
+                <div class="modal__contracts-skin">
                     <div class="modal__skin-img">
                         <img 
-                            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/200fx200f" 
-                            srcset="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/400fx400f 2x"
+                            src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j4OrzZgiUHsMEj07zDod332wfk_EJkMGqidYHAdQE9Zw6F8gW3k-vpg8S57cnM1zI97WffW7KT/570fx428f" 
+                            width="285"
+                            height="214"
                             alt="Syd Mead AUG">
                     </div>
                     <span class="modal__skin-title">Syd Mead</span>  
                     <span class="modal__skin-subtitle">AUG</span>  
                 </div>
-                <p class="modal__text">Choose what you want to do with your item.</p>
                 <div class="modal__btns">
-                    <button type="button" class="modal__sell-btn btn btn--bg-yellow">
+                    <button type="button" class="modal__sell-btn btn">
                         Sell skin for:
                         <span class="modal__btn-price">
                             <svg aria-hidden="true">
@@ -2471,15 +2481,9 @@
                         </span>
                     </button>
                     <button type="button" class="btn js-modal-close">
-                        <svg aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#upgrade"></use>
-                        </svg>
                         Upgrade
                     </button>
                     <button type="button" class="btn js-modal-close">
-                        <svg aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#repeat-yellow"></use>
-                        </svg>
                         Repeat
                     </button>
                 </div>

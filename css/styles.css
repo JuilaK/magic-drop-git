@@ -22975,6 +22975,32 @@ main:has(.profile-header--vip-bg) {
   aspect-ratio: 5.53;
   background-image: url("../images/contracts/hero-hands-craft-bg.png");
 }
+.contract--craft .contract__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contract--craft .contract__screen {
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+  padding: 5.4rem 4.7% 17.8rem 4.7%;
+}
+.contract--craft .contract__screen::after {
+  background-image: url("../images/contracts/monitor-craft.png");
+}
+.contract--craft .contract__screen-container {
+  -ms-grid-columns: (33.3333333333%)[3];
+  grid-template-columns: repeat(3, 33.3333333333%);
+}
+.contract--craft .contract-card:nth-child(3) {
+  border-right: none;
+  border-top-right-radius: 1.2rem;
+}
+.contract--craft .contract__info {
+  grid-column: auto;
+  grid-row: auto;
+  max-width: none;
+}
 
 .contract__tabs {
   display: -ms-grid;
@@ -23098,19 +23124,55 @@ main:has(.profile-header--vip-bg) {
   background: right center/cover no-repeat -webkit-image-set(url("../images/contracts/tab-craft.webp") type("image/webp"), url("../images/contracts/tab-craft.png") type("image/png"));
   background: right center/cover no-repeat image-set(url("../images/contracts/tab-craft.webp") type("image/webp"), url("../images/contracts/tab-craft.png") type("image/png"));
 }
+.contract__tab--locked {
+  pointer-events: none;
+}
+
+span.contract__tab-coming {
+  position: absolute;
+  inset: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 0.4rem;
+     -moz-column-gap: 0.4rem;
+          column-gap: 0.4rem;
+  background-color: rgba(12, 12, 27, 0.2);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  border-radius: 1.4rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: left;
+}
+span.contract__tab-coming svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  opacity: 0.6;
+}
 
 .contract__content {
-  position: relative;
   margin-top: 3.2rem;
+}
+
+.contract__screen {
+  position: relative;
   padding: 6.6rem 5.1% 17.8rem 5.2%;
 }
 @media (max-width: 1280px) {
-  .contract__content {
+  .contract__screen {
     margin-top: 1.6rem;
     padding: 0;
   }
 }
-.contract__content::before {
+.contract__screen::before {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -23123,11 +23185,11 @@ main:has(.profile-header--vip-bg) {
   background-color: #070712;
 }
 @media (max-width: 1280px) {
-  .contract__content::before {
+  .contract__screen::before {
     content: none;
   }
 }
-.contract__content::after {
+.contract__screen::after {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -23141,12 +23203,12 @@ main:has(.profile-header--vip-bg) {
   background: center/100% 100% no-repeat url("../images/contracts/monitor.png");
 }
 @media (max-width: 1280px) {
-  .contract__content::after {
+  .contract__screen::after {
     content: none;
   }
 }
 
-.contract__content-wrap {
+.contract__screen-wrap {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23157,7 +23219,7 @@ main:has(.profile-header--vip-bg) {
   border-radius: 1.2rem;
 }
 @media (max-width: 1280px) {
-  .contract__content-wrap {
+  .contract__screen-wrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -23169,7 +23231,7 @@ main:has(.profile-header--vip-bg) {
   }
 }
 
-.contract__container {
+.contract__screen-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(0, 1fr))[5];
@@ -23183,59 +23245,54 @@ main:has(.profile-header--vip-bg) {
   height: 100%;
 }
 
-.contract__container > *:nth-child(1) {
+.contract__screen-container > *:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
 }
 
-.contract__container > *:nth-child(2) {
+.contract__screen-container > *:nth-child(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
 }
 
-.contract__container > *:nth-child(3) {
+.contract__screen-container > *:nth-child(3) {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
 }
 
-.contract__container > *:nth-child(4) {
+.contract__screen-container > *:nth-child(4) {
   -ms-grid-row: 1;
   -ms-grid-column: 4;
 }
 
-.contract__container > *:nth-child(5) {
+.contract__screen-container > *:nth-child(5) {
   -ms-grid-row: 1;
   -ms-grid-column: 5;
 }
 
-.contract__container > *:nth-child(6) {
+.contract__screen-container > *:nth-child(6) {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
 }
 
-.contract__container > *:nth-child(7) {
+.contract__screen-container > *:nth-child(7) {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
 }
 
-.contract__container > *:nth-child(8) {
+.contract__screen-container > *:nth-child(8) {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
 }
 
-.contract__container > *:nth-child(9) {
+.contract__screen-container > *:nth-child(9) {
   -ms-grid-row: 2;
   -ms-grid-column: 4;
 }
 
-.contract__container > *:nth-child(10) {
+.contract__screen-container > *:nth-child(10) {
   -ms-grid-row: 2;
   -ms-grid-column: 5;
-}
-@media (max-width: 1280px) {
-  .contract__container {
-    border-bottom: thin solid #323243;
-  }
 }
 
 .contract-card {
@@ -23648,6 +23705,9 @@ main:has(.profile-header--vip-bg) {
 }
 @media (max-width: 1280px) {
   .contract__info {
+    grid-column: 1/-1;
+    -ms-grid-row: 3;
+    grid-row: 3;
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
     -webkit-box-orient: horizontal;
@@ -23655,6 +23715,8 @@ main:has(.profile-header--vip-bg) {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 1.6rem;
+    max-width: 100%;
+    border-top: thin solid #323243;
   }
 }
 @media (max-width: 768px) {
@@ -28454,18 +28516,85 @@ main:has(.profile-header--vip-bg) {
 .modal--sell-all .modal__btns .btn, .modal--sell .modal__btns .btn {
   min-width: 0;
 }
-.modal--contract-skin .modal__text {
-  margin-top: 3.2rem;
+.modal--contract-skin::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  display: block;
+  width: 64rem;
+  max-width: 100%;
+  min-width: 50rem;
+  aspect-ratio: 0.835;
+  background: left top/contain no-repeat url("../images/contracts/contract-modal-bg.png");
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media (max-width: 480px) {
+  .modal--contract-skin::before {
+    min-width: 48rem;
+  }
+}
+.modal--contract-skin .modal__dialog {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.modal--contract-skin .modal__skin-img {
+  width: 100%;
+  height: auto;
+  max-width: 30rem;
+  aspect-ratio: 1.33;
+}
+.modal--contract-skin .modal__skin-title {
+  margin-top: 0;
+  font-size: 2.8rem;
+}
+@media (max-width: 768px) {
+  .modal--contract-skin .modal__skin-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 370px) {
+  .modal--contract-skin .modal__skin-title {
+    margin-top: -1.2rem;
+  }
+}
+.modal--contract-skin .modal__skin-subtitle {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 2.1rem;
+}
+@media (max-width: 768px) {
+  .modal--contract-skin .modal__skin-subtitle {
+    font-size: 1.8rem;
+  }
 }
 .modal--contract-skin .modal__btns {
+  max-width: 26rem;
+  margin: 0 auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 1.4rem;
+  gap: 0.4rem;
+  padding-bottom: 0;
+  padding-top: 4rem;
+}
+@media (max-width: 768px) {
+  .modal--contract-skin .modal__btns {
+    padding-top: 2.4rem;
+  }
+}
+@media (max-width: 370px) {
+  .modal--contract-skin .modal__btns {
+    padding-top: 1.6rem;
+  }
 }
 .modal--contract-skin .modal__btns .btn {
+  min-width: auto;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(50% - 0.7rem);
-          flex: 0 0 calc(50% - 0.7rem);
+      -ms-flex: 0 0 calc(50% - 0.2rem);
+          flex: 0 0 calc(50% - 0.2rem);
+  font-size: 1.2rem;
 }
 @media (max-width: 480px) {
   .modal--contract-skin .modal__btns .btn {
@@ -28481,6 +28610,33 @@ main:has(.profile-header--vip-bg) {
   .modal--contract-skin .modal__btns .modal__sell-btn {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
+  }
+}
+.modal--contract-skin .modal__btns .modal__btn-price {
+  -webkit-column-gap: 0.2rem;
+     -moz-column-gap: 0.2rem;
+          column-gap: 0.2rem;
+}
+.modal--contract-skin .modal__btns .modal__btn-price > svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .modal--contract-skin .modal__btns .modal__btn-price > svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+.modal--contract-skin .modal__btns .modal__btn-price > span {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .modal--contract-skin .modal__btns .modal__btn-price > span {
+    font-size: 1.6rem;
   }
 }
 .modal--change-skin .modal__wrap {
@@ -30153,6 +30309,10 @@ main:has(.profile-header--vip-bg) {
   color: rgba(255, 255, 255, 0.3);
   font-size: 1.2rem;
   line-height: 150%;
+}
+
+.modal__contracts-skin {
+  text-align: center;
 }
 
 .modal__skin-table {
@@ -52121,49 +52281,61 @@ label.case-decors__item picture {
 .promo__hero--completed .promo__count-wrap::before {
   opacity: 0;
 }
+.promo__hero--completed .promo__count-wrap::after {
+  opacity: 1;
+}
 .promo__hero--completed .promo__count-title,
 .promo__hero--completed .promo__count-numb,
 .promo__hero--completed .promo__count-chance {
   opacity: 0;
   visibility: hidden;
 }
-.promo__hero--completed .promo__user {
+.promo__hero--completed .promo__user-title,
+.promo__hero--completed .promo__user-avatar::before,
+.promo__hero--completed .promo__user-avatar::after,
+.promo__hero--completed .promo__user-avatar img {
   opacity: 1;
   visibility: visible;
 }
+.promo__hero--completed .promo__user {
+  pointer-events: all;
+}
 .promo__hero--animation .case-hero__timer {
-  -webkit-animation: hide 0.4s ease-out 0.3s forwards;
-          animation: hide 0.4s ease-out 0.3s forwards;
+  -webkit-animation: hide 0.4s ease-out forwards;
+          animation: hide 0.4s ease-out forwards;
 }
 .promo__hero--animation .promo__count-wrap {
-  animation: fadePromoShadow 1.8s ease-out 0.3s, fadePromoShadow 0.6s ease-out 2.1s reverse;
+  animation: fadePromoShadow 1.8s ease-out, fadePromoShadow 0.6s ease-out 1.8s reverse;
 }
 .promo__hero--animation .promo__count-wrap::before {
-  -webkit-animation: rotatePromoCircle 0.6s linear 0.3s 3, hide 0.2s linear 2s both;
-          animation: rotatePromoCircle 0.6s linear 0.3s 3, hide 0.2s linear 2s both;
+  -webkit-animation: rotatePromoCircle2 0.6s linear 3, hide 0.2s linear 1.7s both;
+          animation: rotatePromoCircle2 0.6s linear 3, hide 0.2s linear 1.7s both;
 }
 .promo__hero--animation .promo__count-wrap::after {
-  -webkit-animation: fade 2s linear 0.3s both;
-          animation: fade 2s linear 0.3s both;
+  -webkit-animation: fade 2s linear both;
+          animation: fade 2s linear both;
 }
 .promo__hero--animation .promo__count-border::before {
-  animation: rotatePromoCircle 0.9s linear 0.3s 2 reverse;
+  animation: rotatePromoCircle2 0.9s linear 2 reverse;
 }
 .promo__hero--animation .promo__count-title,
 .promo__hero--animation .promo__count-numb,
 .promo__hero--animation .promo__count-chance {
-  -webkit-animation: hidePromoElem 0.3s ease-out 2s both;
-          animation: hidePromoElem 0.3s ease-out 2s both;
+  -webkit-animation: hidePromoElem 0.3s ease-out 1.7s both;
+          animation: hidePromoElem 0.3s ease-out 1.7s both;
+}
+.promo__hero--animation .promo__user {
+  pointer-events: all;
 }
 .promo__hero--animation .promo__user-title,
 .promo__hero--animation .promo__user-avatar::before,
 .promo__hero--animation .promo__user-avatar::after {
-  -webkit-animation: fadePromoElem 0.5s cubic-bezier(0.47, 1.8, 0.4, 0.8) 2.2s both;
-          animation: fadePromoElem 0.5s cubic-bezier(0.47, 1.8, 0.4, 0.8) 2.2s both;
+  -webkit-animation: fadePromoElem 0.5s cubic-bezier(0.47, 1.8, 0.4, 0.8) 1.9s both;
+          animation: fadePromoElem 0.5s cubic-bezier(0.47, 1.8, 0.4, 0.8) 1.9s both;
 }
 .promo__hero--animation .promo__user-avatar img {
-  -webkit-animation: fadePromoElem 0.5s cubic-bezier(0.47, 1.8, 0.4, 0.8) 2.2s both, scalePromoElem 0.5s cubic-bezier(0.47, 1.8, 0.4, 0.8) 2.2s both;
-          animation: fadePromoElem 0.5s cubic-bezier(0.47, 1.8, 0.4, 0.8) 2.2s both, scalePromoElem 0.5s cubic-bezier(0.47, 1.8, 0.4, 0.8) 2.2s both;
+  -webkit-animation: fadePromoElem 0.5s cubic-bezier(0.47, 1.8, 0.4, 0.8) 1.9s both, scalePromoElem 0.5s cubic-bezier(0.47, 1.8, 0.4, 0.8) 1.9s both;
+          animation: fadePromoElem 0.5s cubic-bezier(0.47, 1.8, 0.4, 0.8) 1.9s both, scalePromoElem 0.5s cubic-bezier(0.47, 1.8, 0.4, 0.8) 1.9s both;
 }
 
 .promo__hero-subtitle {
@@ -52404,6 +52576,26 @@ label.case-decors__item picture {
             transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+@-webkit-keyframes rotatePromoCircle2 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes rotatePromoCircle2 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 .promo__count {
   position: relative;
   margin-top: -0.6rem;
@@ -52616,8 +52808,7 @@ label.case-decors__item picture {
           flex-direction: column;
   row-gap: 0.8rem;
   width: 100%;
-  opacity: 0;
-  visibility: hidden;
+  pointer-events: none;
 }
 @media (max-width: 480px) {
   .promo__user {
@@ -52636,8 +52827,10 @@ label.case-decors__item picture {
   width: 80%;
   color: #FFFFFF;
   white-space: nowrap;
+  opacity: 0;
   overflow: hidden;
   text-overflow: ellipsis;
+  visibility: hidden;
 }
 @media (max-width: 480px) {
   .promo__user-title {
@@ -52665,6 +52858,8 @@ label.case-decors__item picture {
   height: 70%;
   aspect-ratio: 0.48;
   background: center/cover no-repeat url("../images/sprite.svg#stick");
+  opacity: 0;
+  visibility: hidden;
 }
 .promo__user-avatar::before {
   left: -10%;
@@ -52688,6 +52883,8 @@ label.case-decors__item picture {
   transition: -webkit-transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .promo__partner {
