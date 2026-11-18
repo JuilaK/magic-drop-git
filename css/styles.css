@@ -24184,6 +24184,27 @@ span.contract__tab-coming svg {
   line-height: 100%;
 }
 
+@-webkit-keyframes zoomContractSkin {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoomContractSkin {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 .contract__skin-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24202,25 +24223,6 @@ span.contract__tab-coming svg {
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: center;
-}
-.contract__skin-container::after {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  content: "";
-  display: block;
-  width: 35.9rem;
-  aspect-ratio: 0.74;
-  background: center/contain no-repeat -webkit-image-set(url("../images/contracts/chicken.webp") type("image/webp"), url("../images/contracts/chicken.png") type("image/png"));
-  background: center/contain no-repeat image-set(url("../images/contracts/chicken.webp") type("image/webp"), url("../images/contracts/chicken.png") type("image/png"));
-  -webkit-transform: translate(70%, 15%);
-      -ms-transform: translate(70%, 15%);
-          transform: translate(70%, 15%);
-}
-@media (max-width: 1280px) {
-  .contract__skin-container::after {
-    content: none;
-  }
 }
 .contract__skin-container--common .contract__skin-img::before {
   background-color: #45454f;
@@ -24287,17 +24289,23 @@ span.contract__tab-coming svg {
           filter: drop-shadow(0 0 0.2rem var(--line-color)) drop-shadow(0 0 0.7rem var(--line-color));
 }
 .contract__skin-container--show .contract__skin-card {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: opacity 0.2s ease-out, visibility 0s ease-out;
-  transition: opacity 0.2s ease-out, visibility 0s ease-out;
+  display: block;
+  -webkit-animation: fade 0.2s ease-out both, zoomContractSkin 0.4s cubic-bezier(0.47, 1.8, 0.4, 0.8) both;
+          animation: fade 0.2s ease-out both, zoomContractSkin 0.4s cubic-bezier(0.47, 1.8, 0.4, 0.8) both;
+}
+.contract__skin-container--show .contract__skin-img {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
 
 .contract__skin-card {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.2s ease-out, visibility 0s ease-out 0.2s;
-  transition: opacity 0.2s ease-out, visibility 0s ease-out 0.2s;
+  display: none;
+  z-index: 1;
 }
 
 .contract__skin-img {
@@ -24305,6 +24313,9 @@ span.contract__tab-coming svg {
   max-width: 42.2rem;
   width: 100%;
   aspect-ratio: 1.33;
+  -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+          transform: rotate(10deg);
 }
 @media (max-width: 480px) {
   .contract__skin-img {

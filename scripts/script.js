@@ -827,6 +827,14 @@ window.addEventListener('DOMContentLoaded', () => {
     // Create a contract
     const contractBtn = document.querySelector('.js-contract-btn');
     const contractContainer = document.querySelector('.js-contract-container');
+    const contractCraftBtn = document.querySelector('.js-contract-craft-btn');
+    const contractCraftSkin = document.querySelector('.js-contract-skin');
+    
+    contractCraftBtn && contractCraftBtn.addEventListener('click', () => {
+        if(!contractCraftSkin.classList.contains('contract__skin-container--show')){
+            contractCraftSkin.classList.add('contract__skin-container--show');
+        }
+    });
 
     // contractBtn && contractBtn.addEventListener('click', () => {
     //     contractContainer.classList.add('contract__container--create-anim');
