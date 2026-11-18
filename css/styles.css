@@ -30444,6 +30444,9 @@ span.contract__tab-coming svg {
 .modal--promo .modal__select .btn {
   width: 100%;
 }
+.modal--promo .modal__select label:hover {
+  color: #c4c4d0;
+}
 .modal--case-decor .modal__dialog {
   background: -webkit-gradient(linear, left top, right top, from(rgba(12, 12, 27, 0)), color-stop(27.88%, #0c0c1b), color-stop(50%, rgba(12, 12, 27, 0))) #0c0c1b;
   background: linear-gradient(90deg, rgba(12, 12, 27, 0) 0%, #0c0c1b 27.88%, rgba(12, 12, 27, 0) 50%) #0c0c1b;
@@ -52849,6 +52852,10 @@ label.case-decors__item picture {
 }
 .promo__hero--completed .promo__count-wrap::after {
   opacity: 1;
+}
+.promo__hero--completed .promo__count-border::before {
+  -webkit-animation: none;
+          animation: none;
 }
 .promo__hero--completed .promo__count-title,
 .promo__hero--completed .promo__count-numb,
