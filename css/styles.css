@@ -8217,33 +8217,6 @@ span.header__volume-value {
   z-index: 0;
 }
 
-.new-year .case .case__body::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60%;
-  aspect-ratio: 1;
-  content: "";
-  display: block;
-  opacity: 0.5;
-  -webkit-transform: translate(48%, -30%) rotate(20deg);
-      -ms-transform: translate(48%, -30%) rotate(20deg);
-          transform: translate(48%, -30%) rotate(20deg);
-  pointer-events: none;
-}
-.new-year .case:nth-child(4n+1) .case__body:before {
-  background: center/contain no-repeat url("../images/new-year/snowflake-1.png");
-}
-.new-year .case:nth-child(4n+2) .case__body:before {
-  background: center/contain no-repeat url("../images/new-year/snowflake-2.png");
-}
-.new-year .case:nth-child(4n+3) .case__body:before {
-  background: center/contain no-repeat url("../images/new-year/snowflake-3.png");
-}
-.new-year .case:nth-child(4n+4) .case__body:before {
-  background: center/contain no-repeat url("../images/new-year/snowflake-4.png");
-}
-
 .case__badge,
 .case__count-coins {
   position: absolute;
