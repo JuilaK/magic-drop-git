@@ -3461,6 +3461,52 @@ td.table__chance > span {
   }
 }
 
+.new-year .header__top {
+  position: relative;
+}
+.new-year .header__top::before, .new-year .header__top::after {
+  position: absolute;
+  top: 0;
+  content: "";
+  display: block;
+  pointer-events: none;
+  z-index: 1;
+}
+.new-year .header__top::before {
+  left: 0;
+  width: 16.7rem;
+  aspect-ratio: 1.43;
+  background: left top/contain no-repeat -webkit-image-set(url("../images/header/new-year-branch-1.webp") type("image/webp"), url("../images/header/new-year-branch-1.png") type("image/png"));
+  background: left top/contain no-repeat image-set(url("../images/header/new-year-branch-1.webp") type("image/webp"), url("../images/header/new-year-branch-1.png") type("image/png"));
+}
+@media (max-width: 1024px) {
+  .new-year .header__top::before {
+    width: 12rem;
+  }
+}
+@media (max-width: 768px) {
+  .new-year .header__top::before {
+    width: 9rem;
+  }
+}
+.new-year .header__top::after {
+  right: 0;
+  width: 10.5rem;
+  aspect-ratio: 1.12;
+  background: right top/contain no-repeat -webkit-image-set(url("../images/header/new-year-branch-2.webp") type("image/webp"), url("../images/header/new-year-branch-2.png") type("image/png"));
+  background: right top/contain no-repeat image-set(url("../images/header/new-year-branch-2.webp") type("image/webp"), url("../images/header/new-year-branch-2.png") type("image/png"));
+}
+@media (max-width: 1024px) {
+  .new-year .header__top::after {
+    width: 7.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .new-year .header__top::after {
+    width: 5.6rem;
+  }
+}
+
 .header__top-left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3501,6 +3547,10 @@ td.table__chance > span {
   }
 }
 
+.new-year .header__logo-wrap {
+  background: none;
+}
+
 .header__logo {
   width: 12.6rem;
   height: 3.8rem;
@@ -3526,15 +3576,13 @@ td.table__chance > span {
   }
 }
 
-.new-year .header__logo::before {
-  position: absolute;
-  top: -1.2rem;
-  left: 0.8rem;
-  width: 3.6rem;
-  height: 2.8rem;
-  content: "";
-  display: block;
-  background: center/contain no-repeat url("../images/new-year/new-year-hat.png");
+.new-year .header__logo {
+  background-image: url("../images/logos/logo-new-year.png");
+}
+@media (max-width: 768px) {
+  .new-year .header__logo {
+    background-image: url("../images/logos/logo-short-new-year.png");
+  }
 }
 
 @media (max-width: 1024px) {
@@ -5461,6 +5509,20 @@ span.header__volume-value {
   }
 }
 
+.new-year .footer__container::after, .new-year .footer__container::before {
+  height: 79.8rem;
+}
+.new-year .footer__container::before {
+  aspect-ratio: 0.76;
+  background-image: -webkit-image-set(url("../images/bg/footer-person-1-new-year-bg.webp") type("image/webp"), url("../images/bg/footer-person-1-new-year-bg.png") type("image/png"));
+  background-image: image-set(url("../images/bg/footer-person-1-new-year-bg.webp") type("image/webp"), url("../images/bg/footer-person-1-new-year-bg.png") type("image/png"));
+}
+.new-year .footer__container::after {
+  aspect-ratio: 0.75;
+  background-image: -webkit-image-set(url("../images/bg/footer-person-2-new-year-bg.webp") type("image/webp"), url("../images/bg/footer-person-2-new-year-bg.png") type("image/png"));
+  background-image: image-set(url("../images/bg/footer-person-2-new-year-bg.webp") type("image/webp"), url("../images/bg/footer-person-2-new-year-bg.png") type("image/png"));
+}
+
 .footer__statistics {
   position: relative;
   display: -ms-grid;
@@ -7083,10 +7145,16 @@ span.header__volume-value {
 @media (max-width: 768px) {
   .cases__maps-block .cases-header {
     margin-top: 4.8rem;
+    text-align: center;
   }
 }
 .cases__maps-block .cases-header img {
   height: auto;
+}
+@media (max-width: 768px) {
+  .cases__maps-block .cases-header img {
+    max-width: 70%;
+  }
 }
 .cases__maps-block .cases-header .btn {
   bottom: 50%;
@@ -17565,6 +17633,19 @@ main:has(.profile-header--vip-bg) {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(12, 12, 27, 0)), to(#0c0c1b)), -webkit-gradient(linear, left top, right top, from(#0c0c1b), color-stop(90%, rgba(12, 12, 27, 0))), center top/cover no-repeat image-set(url("../images/bg/bg-trades-hero.webp") type("image/webp"), url("../images/bg/bg-trades-hero.jpg") type("image/jpeg"));
     background: linear-gradient(180deg, rgba(12, 12, 27, 0) 90%, #0c0c1b 100%), linear-gradient(90deg, #0c0c1b 0%, rgba(12, 12, 27, 0) 90%), center top/cover no-repeat -webkit-image-set(url("../images/bg/bg-trades-hero.webp") type("image/webp"), url("../images/bg/bg-trades-hero.jpg") type("image/jpeg"));
     background: linear-gradient(180deg, rgba(12, 12, 27, 0) 90%, #0c0c1b 100%), linear-gradient(90deg, #0c0c1b 0%, rgba(12, 12, 27, 0) 90%), center top/cover no-repeat image-set(url("../images/bg/bg-trades-hero.webp") type("image/webp"), url("../images/bg/bg-trades-hero.jpg") type("image/jpeg"));
+  }
+}
+
+.new-year .trades-hero {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(12, 12, 27, 0)), to(#0c0c1b)), -webkit-gradient(linear, left top, right top, from(#0c0c1b), color-stop(59.14%, rgba(12, 12, 27, 0))), -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(12, 12, 27, 0)), to(#0c0c1b)), center top/cover no-repeat image-set(url("../images/bg/bg-trades-hero-new-year.webp") type("image/webp"), url("../images/bg/bg-trades-hero-new-year.jpg") type("image/jpeg"));
+  background: linear-gradient(180deg, rgba(12, 12, 27, 0) 90%, #0c0c1b 100%), linear-gradient(90deg, #0c0c1b 0%, rgba(12, 12, 27, 0) 59.14%), linear-gradient(90deg, rgba(12, 12, 27, 0) 70%, #0c0c1b 100%), center top/cover no-repeat -webkit-image-set(url("../images/bg/bg-trades-hero-new-year.webp") type("image/webp"), url("../images/bg/bg-trades-hero-new-year.jpg") type("image/jpeg"));
+  background: linear-gradient(180deg, rgba(12, 12, 27, 0) 90%, #0c0c1b 100%), linear-gradient(90deg, #0c0c1b 0%, rgba(12, 12, 27, 0) 59.14%), linear-gradient(90deg, rgba(12, 12, 27, 0) 70%, #0c0c1b 100%), center top/cover no-repeat image-set(url("../images/bg/bg-trades-hero-new-year.webp") type("image/webp"), url("../images/bg/bg-trades-hero-new-year.jpg") type("image/jpeg"));
+}
+@media (max-width: 768px) {
+  .new-year .trades-hero {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(12, 12, 27, 0)), to(#0c0c1b)), -webkit-gradient(linear, left top, right top, from(#0c0c1b), color-stop(90%, rgba(12, 12, 27, 0))), center top/cover no-repeat image-set(url("../images/bg/bg-trades-hero-new-year.webp") type("image/webp"), url("../images/bg/bg-trades-hero-new-year.jpg") type("image/jpeg"));
+    background: linear-gradient(180deg, rgba(12, 12, 27, 0) 90%, #0c0c1b 100%), linear-gradient(90deg, #0c0c1b 0%, rgba(12, 12, 27, 0) 90%), center top/cover no-repeat -webkit-image-set(url("../images/bg/bg-trades-hero-new-year.webp") type("image/webp"), url("../images/bg/bg-trades-hero-new-year.jpg") type("image/jpeg"));
+    background: linear-gradient(180deg, rgba(12, 12, 27, 0) 90%, #0c0c1b 100%), linear-gradient(90deg, #0c0c1b 0%, rgba(12, 12, 27, 0) 90%), center top/cover no-repeat image-set(url("../images/bg/bg-trades-hero-new-year.webp") type("image/webp"), url("../images/bg/bg-trades-hero-new-year.jpg") type("image/jpeg"));
   }
 }
 
@@ -38440,7 +38521,165 @@ span.contract__tab-coming svg {
   transition: transform 0.8s ease-out 20.7s;
   transition: transform 0.8s ease-out 20.7s, -webkit-transform 0.8s ease-out 20.7s;
 }
-.win-rare--top-skin .win-rare__item--open .win-rare__item-wrapper, .win-rare--premium .win-rare__item--open .win-rare__item-wrapper, .win-rare--birthday .win-rare__item--open .win-rare__item-wrapper, .win-rare--school .win-rare__item--open .win-rare__item-wrapper, .win-rare--universal .win-rare__item--open .win-rare__item-wrapper, .win-rare--vip .win-rare__item--open .win-rare__item-wrapper, .win-rare--clown .win-rare__item--open .win-rare__item-wrapper, .win-rare--halloween .win-rare__item--open .win-rare__item-wrapper, .win-rare--black .win-rare__item--open .win-rare__item-wrapper, .win-rare--color .win-rare__item--open .win-rare__item-wrapper, .win-rare--urus .win-rare__item--open .win-rare__item-wrapper, .win-rare--valve .win-rare__item--open .win-rare__item-wrapper, .win-rare--dust .win-rare__item--open .win-rare__item-wrapper {
+.win-rare--open.win-rare--harward .win-rare__content {
+  -webkit-transition-delay: 20s, 20s;
+          transition-delay: 20s, 20s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(1) {
+  -webkit-transition: opacity 0.2s ease-out 20.2s, -webkit-transform 0.2s ease-out 20.2s;
+  transition: opacity 0.2s ease-out 20.2s, -webkit-transform 0.2s ease-out 20.2s;
+  transition: opacity 0.2s ease-out 20.2s, transform 0.2s ease-out 20.2s;
+  transition: opacity 0.2s ease-out 20.2s, transform 0.2s ease-out 20.2s, -webkit-transform 0.2s ease-out 20.2s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(1) .win-rare__item-wrapper {
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+          transform: scale(1) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.8s ease-out 20.2s;
+  transition: -webkit-transform 0.8s ease-out 20.2s;
+  transition: transform 0.8s ease-out 20.2s;
+  transition: transform 0.8s ease-out 20.2s, -webkit-transform 0.8s ease-out 20.2s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(2) {
+  -webkit-transition: opacity 0.2s ease-out 20.4s, -webkit-transform 0.2s ease-out 20.4s;
+  transition: opacity 0.2s ease-out 20.4s, -webkit-transform 0.2s ease-out 20.4s;
+  transition: opacity 0.2s ease-out 20.4s, transform 0.2s ease-out 20.4s;
+  transition: opacity 0.2s ease-out 20.4s, transform 0.2s ease-out 20.4s, -webkit-transform 0.2s ease-out 20.4s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(2) .win-rare__item-wrapper {
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+          transform: scale(1) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.8s ease-out 20.4s;
+  transition: -webkit-transform 0.8s ease-out 20.4s;
+  transition: transform 0.8s ease-out 20.4s;
+  transition: transform 0.8s ease-out 20.4s, -webkit-transform 0.8s ease-out 20.4s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(3) {
+  -webkit-transition: opacity 0.2s ease-out 20.6s, -webkit-transform 0.2s ease-out 20.6s;
+  transition: opacity 0.2s ease-out 20.6s, -webkit-transform 0.2s ease-out 20.6s;
+  transition: opacity 0.2s ease-out 20.6s, transform 0.2s ease-out 20.6s;
+  transition: opacity 0.2s ease-out 20.6s, transform 0.2s ease-out 20.6s, -webkit-transform 0.2s ease-out 20.6s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(3) .win-rare__item-wrapper {
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+          transform: scale(1) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.8s ease-out 20.6s;
+  transition: -webkit-transform 0.8s ease-out 20.6s;
+  transition: transform 0.8s ease-out 20.6s;
+  transition: transform 0.8s ease-out 20.6s, -webkit-transform 0.8s ease-out 20.6s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(4) {
+  -webkit-transition: opacity 0.2s ease-out 20.8s, -webkit-transform 0.2s ease-out 20.8s;
+  transition: opacity 0.2s ease-out 20.8s, -webkit-transform 0.2s ease-out 20.8s;
+  transition: opacity 0.2s ease-out 20.8s, transform 0.2s ease-out 20.8s;
+  transition: opacity 0.2s ease-out 20.8s, transform 0.2s ease-out 20.8s, -webkit-transform 0.2s ease-out 20.8s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(4) .win-rare__item-wrapper {
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+          transform: scale(1) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.8s ease-out 20.8s;
+  transition: -webkit-transform 0.8s ease-out 20.8s;
+  transition: transform 0.8s ease-out 20.8s;
+  transition: transform 0.8s ease-out 20.8s, -webkit-transform 0.8s ease-out 20.8s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(5) {
+  -webkit-transition: opacity 0.2s ease-out 21s, -webkit-transform 0.2s ease-out 21s;
+  transition: opacity 0.2s ease-out 21s, -webkit-transform 0.2s ease-out 21s;
+  transition: opacity 0.2s ease-out 21s, transform 0.2s ease-out 21s;
+  transition: opacity 0.2s ease-out 21s, transform 0.2s ease-out 21s, -webkit-transform 0.2s ease-out 21s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(5) .win-rare__item-wrapper {
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+          transform: scale(1) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.8s ease-out 21s;
+  transition: -webkit-transform 0.8s ease-out 21s;
+  transition: transform 0.8s ease-out 21s;
+  transition: transform 0.8s ease-out 21s, -webkit-transform 0.8s ease-out 21s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(6) {
+  -webkit-transition: opacity 0.2s ease-out 21.2s, -webkit-transform 0.2s ease-out 21.2s;
+  transition: opacity 0.2s ease-out 21.2s, -webkit-transform 0.2s ease-out 21.2s;
+  transition: opacity 0.2s ease-out 21.2s, transform 0.2s ease-out 21.2s;
+  transition: opacity 0.2s ease-out 21.2s, transform 0.2s ease-out 21.2s, -webkit-transform 0.2s ease-out 21.2s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(6) .win-rare__item-wrapper {
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+          transform: scale(1) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.8s ease-out 21.2s;
+  transition: -webkit-transform 0.8s ease-out 21.2s;
+  transition: transform 0.8s ease-out 21.2s;
+  transition: transform 0.8s ease-out 21.2s, -webkit-transform 0.8s ease-out 21.2s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(7) {
+  -webkit-transition: opacity 0.2s ease-out 21.4s, -webkit-transform 0.2s ease-out 21.4s;
+  transition: opacity 0.2s ease-out 21.4s, -webkit-transform 0.2s ease-out 21.4s;
+  transition: opacity 0.2s ease-out 21.4s, transform 0.2s ease-out 21.4s;
+  transition: opacity 0.2s ease-out 21.4s, transform 0.2s ease-out 21.4s, -webkit-transform 0.2s ease-out 21.4s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(7) .win-rare__item-wrapper {
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+          transform: scale(1) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.8s ease-out 21.4s;
+  transition: -webkit-transform 0.8s ease-out 21.4s;
+  transition: transform 0.8s ease-out 21.4s;
+  transition: transform 0.8s ease-out 21.4s, -webkit-transform 0.8s ease-out 21.4s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(8) {
+  -webkit-transition: opacity 0.2s ease-out 21.6s, -webkit-transform 0.2s ease-out 21.6s;
+  transition: opacity 0.2s ease-out 21.6s, -webkit-transform 0.2s ease-out 21.6s;
+  transition: opacity 0.2s ease-out 21.6s, transform 0.2s ease-out 21.6s;
+  transition: opacity 0.2s ease-out 21.6s, transform 0.2s ease-out 21.6s, -webkit-transform 0.2s ease-out 21.6s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(8) .win-rare__item-wrapper {
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+          transform: scale(1) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.8s ease-out 21.6s;
+  transition: -webkit-transform 0.8s ease-out 21.6s;
+  transition: transform 0.8s ease-out 21.6s;
+  transition: transform 0.8s ease-out 21.6s, -webkit-transform 0.8s ease-out 21.6s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(9) {
+  -webkit-transition: opacity 0.2s ease-out 21.8s, -webkit-transform 0.2s ease-out 21.8s;
+  transition: opacity 0.2s ease-out 21.8s, -webkit-transform 0.2s ease-out 21.8s;
+  transition: opacity 0.2s ease-out 21.8s, transform 0.2s ease-out 21.8s;
+  transition: opacity 0.2s ease-out 21.8s, transform 0.2s ease-out 21.8s, -webkit-transform 0.2s ease-out 21.8s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(9) .win-rare__item-wrapper {
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+          transform: scale(1) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.8s ease-out 21.8s;
+  transition: -webkit-transform 0.8s ease-out 21.8s;
+  transition: transform 0.8s ease-out 21.8s;
+  transition: transform 0.8s ease-out 21.8s, -webkit-transform 0.8s ease-out 21.8s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(10) {
+  -webkit-transition: opacity 0.2s ease-out 22s, -webkit-transform 0.2s ease-out 22s;
+  transition: opacity 0.2s ease-out 22s, -webkit-transform 0.2s ease-out 22s;
+  transition: opacity 0.2s ease-out 22s, transform 0.2s ease-out 22s;
+  transition: opacity 0.2s ease-out 22s, transform 0.2s ease-out 22s, -webkit-transform 0.2s ease-out 22s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(10) .win-rare__item-wrapper {
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+          transform: scale(1) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.8s ease-out 22s;
+  transition: -webkit-transform 0.8s ease-out 22s;
+  transition: transform 0.8s ease-out 22s;
+  transition: transform 0.8s ease-out 22s, -webkit-transform 0.8s ease-out 22s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(11) {
+  -webkit-transition: opacity 0.2s ease-out 22.2s, -webkit-transform 0.2s ease-out 22.2s;
+  transition: opacity 0.2s ease-out 22.2s, -webkit-transform 0.2s ease-out 22.2s;
+  transition: opacity 0.2s ease-out 22.2s, transform 0.2s ease-out 22.2s;
+  transition: opacity 0.2s ease-out 22.2s, transform 0.2s ease-out 22.2s, -webkit-transform 0.2s ease-out 22.2s;
+}
+.win-rare--open.win-rare--harward .win-rare__item:nth-child(11) .win-rare__item-wrapper {
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+          transform: scale(1) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.8s ease-out 22.2s;
+  transition: -webkit-transform 0.8s ease-out 22.2s;
+  transition: transform 0.8s ease-out 22.2s;
+  transition: transform 0.8s ease-out 22.2s, -webkit-transform 0.8s ease-out 22.2s;
+}
+.win-rare--top-skin .win-rare__item--open .win-rare__item-wrapper, .win-rare--premium .win-rare__item--open .win-rare__item-wrapper, .win-rare--birthday .win-rare__item--open .win-rare__item-wrapper, .win-rare--school .win-rare__item--open .win-rare__item-wrapper, .win-rare--universal .win-rare__item--open .win-rare__item-wrapper, .win-rare--vip .win-rare__item--open .win-rare__item-wrapper, .win-rare--clown .win-rare__item--open .win-rare__item-wrapper, .win-rare--halloween .win-rare__item--open .win-rare__item-wrapper, .win-rare--black .win-rare__item--open .win-rare__item-wrapper, .win-rare--color .win-rare__item--open .win-rare__item-wrapper, .win-rare--urus .win-rare__item--open .win-rare__item-wrapper, .win-rare--valve .win-rare__item--open .win-rare__item-wrapper, .win-rare--dust .win-rare__item--open .win-rare__item-wrapper, .win-rare--harward .win-rare__item--open .win-rare__item-wrapper {
   -webkit-transform: rotateY(180deg) !important;
           transform: rotateY(180deg) !important;
   -webkit-transition: -webkit-transform 0.3s ease-out !important;
@@ -38448,7 +38687,7 @@ span.contract__tab-coming svg {
   transition: transform 0.3s ease-out !important;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out !important;
 }
-.win-rare--top-skin .win-rare__item-wrapper, .win-rare--premium .win-rare__item-wrapper, .win-rare--birthday .win-rare__item-wrapper, .win-rare--school .win-rare__item-wrapper, .win-rare--universal .win-rare__item-wrapper, .win-rare--vip .win-rare__item-wrapper, .win-rare--clown .win-rare__item-wrapper, .win-rare--halloween .win-rare__item-wrapper, .win-rare--black .win-rare__item-wrapper, .win-rare--color .win-rare__item-wrapper, .win-rare--urus .win-rare__item-wrapper, .win-rare--valve .win-rare__item-wrapper, .win-rare--dust .win-rare__item-wrapper {
+.win-rare--top-skin .win-rare__item-wrapper, .win-rare--premium .win-rare__item-wrapper, .win-rare--birthday .win-rare__item-wrapper, .win-rare--school .win-rare__item-wrapper, .win-rare--universal .win-rare__item-wrapper, .win-rare--vip .win-rare__item-wrapper, .win-rare--clown .win-rare__item-wrapper, .win-rare--halloween .win-rare__item-wrapper, .win-rare--black .win-rare__item-wrapper, .win-rare--color .win-rare__item-wrapper, .win-rare--urus .win-rare__item-wrapper, .win-rare--valve .win-rare__item-wrapper, .win-rare--dust .win-rare__item-wrapper, .win-rare--harward .win-rare__item-wrapper {
   -webkit-transform: scale(0.6) translate3d(0, 1rem, 0);
           transform: scale(0.6) translate3d(0, 1rem, 0);
 }
@@ -43610,6 +43849,17 @@ span.giveaway__param-count-current {
 .giveaways-hero .container-sm {
   padding-left: 0;
   padding-right: 0;
+}
+
+.new-year .giveaways-hero {
+  background: linear-gradient(114.63deg, rgba(12, 12, 27, 0.02) 62.17%, #0c0c1b 90.34%), linear-gradient(284.52deg, rgba(12, 12, 27, 0) 49.67%, rgba(12, 12, 27, 0.76) 69.29%, #0c0c1b 88.91%), linear-gradient(180deg, rgba(12, 12, 27, 0) 69.14%, #0c0c1b 95.39%), linear-gradient(270deg, rgba(12, 12, 27, 0) 84.35%, #0c0c1b 94.3%), linear-gradient(90deg, rgba(12, 12, 27, 0) 87.82%, #0c0c1b 96.47%), center/cover no-repeat -webkit-image-set(url("../images/bg/bg-giveaway-new-year.webp") type("image/webp"), url("../images/bg/bg-giveaway-new-year.jpg") type("image/jpeg"));
+  background: linear-gradient(114.63deg, rgba(12, 12, 27, 0.02) 62.17%, #0c0c1b 90.34%), linear-gradient(284.52deg, rgba(12, 12, 27, 0) 49.67%, rgba(12, 12, 27, 0.76) 69.29%, #0c0c1b 88.91%), linear-gradient(180deg, rgba(12, 12, 27, 0) 69.14%, #0c0c1b 95.39%), linear-gradient(270deg, rgba(12, 12, 27, 0) 84.35%, #0c0c1b 94.3%), linear-gradient(90deg, rgba(12, 12, 27, 0) 87.82%, #0c0c1b 96.47%), center/cover no-repeat image-set(url("../images/bg/bg-giveaway-new-year.webp") type("image/webp"), url("../images/bg/bg-giveaway-new-year.jpg") type("image/jpeg"));
+}
+@media (max-width: 768px) {
+  .new-year .giveaways-hero {
+    background: linear-gradient(114.63deg, rgba(12, 12, 27, 0.02) 62.17%, #0c0c1b 90.34%), linear-gradient(284.52deg, rgba(12, 12, 27, 0) 49.67%, rgba(12, 12, 27, 0.76) 69.29%, #0c0c1b 88.91%), linear-gradient(180deg, rgba(12, 12, 27, 0) 69.14%, #0c0c1b 95.39%), linear-gradient(270deg, rgba(12, 12, 27, 0) 84.35%, #0c0c1b 94.3%), linear-gradient(90deg, rgba(12, 12, 27, 0) 87.82%, #0c0c1b 96.47%), center top/cover no-repeat -webkit-image-set(url("../images/bg/bg-giveaway-new-year-mobile.webp") type("image/webp"), url("../images/bg/bg-giveaway-new-year-mobile.jpg") type("image/jpeg"));
+    background: linear-gradient(114.63deg, rgba(12, 12, 27, 0.02) 62.17%, #0c0c1b 90.34%), linear-gradient(284.52deg, rgba(12, 12, 27, 0) 49.67%, rgba(12, 12, 27, 0.76) 69.29%, #0c0c1b 88.91%), linear-gradient(180deg, rgba(12, 12, 27, 0) 69.14%, #0c0c1b 95.39%), linear-gradient(270deg, rgba(12, 12, 27, 0) 84.35%, #0c0c1b 94.3%), linear-gradient(90deg, rgba(12, 12, 27, 0) 87.82%, #0c0c1b 96.47%), center top/cover no-repeat image-set(url("../images/bg/bg-giveaway-new-year-mobile.webp") type("image/webp"), url("../images/bg/bg-giveaway-new-year-mobile.jpg") type("image/jpeg"));
+  }
 }
 
 .giveaways-hero__title {
